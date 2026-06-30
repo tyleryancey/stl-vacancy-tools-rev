@@ -14,6 +14,8 @@ export const FILL_CROSSFADE_ZOOM = 13;
 
 export type Brand = "public" | "lsem";
 
-export const PARCELS_SOURCE = "parcels";
+export const PARCELS_SOURCE = "parcels"; // centroid points (circles, low zoom)
+export const PARCELS_POLY_SOURCE = "parcels_poly"; // real polygons (fills, high zoom)
 export const DATA_URL = "/data/parcels.geojson";
+export const DATA_POLY_URL = "/data/parcels-poly.geojson";
 export const META_URL = "/data/meta.json";

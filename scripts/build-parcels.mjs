@@ -8,6 +8,7 @@ import { mapParcel } from "./lib/mapping.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const SRC = path.join(ROOT, "data/raw/stl_vacancy_data.csv");
+const GEOM = path.join(ROOT, "data/raw/parcel_geometry.json");
 const OUT_DIR = path.join(ROOT, "public/data");
 
 const GOV_OWNER = /^(LRA|LCRA|CITY OF ST|LAND REUTILIZATION|UNITED STATES|STATE OF MISSOURI)/i;
@@ -24,7 +25,15 @@ export function buildParcels() {
     ownerCounts.set(o, (ownerCounts.get(o) || 0) + 1);
   }
 
+  // Real parcel polygon geometry (from scripts/fetch-geometry.mjs), keyed by Handle.
+  let geometry = {};
+  if (fs.existsSync(GEOM)) {
+    geometry = JSON.parse(fs.readFileSync(GEOM, "utf8"));
+  }
+
   const features = [];
+  const polyFeatures = [];
+  let withGeom = 0;
   let minLat = 90,
     maxLat = -90,
     minLng = 180,
@@ -51,11 +60,22 @@ export function buildParcels() {
       geometry: { type: "Point", coordinates: [p.lng, p.lat] },
       properties: p,
     });
+
+    // Polygon feature (same properties) when we have real geometry for this Handle.
+    const g = geometry[p.Handle];
+    if (g) {
+      withGeom++;
+      polyFeatures.push({ type: "Feature", geometry: g, properties: p });
+    }
   }
 
   const fc = { type: "FeatureCollection", features };
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, "parcels.geojson"), JSON.stringify(fc));
+  fs.writeFileSync(
+    path.join(OUT_DIR, "parcels-poly.geojson"),
+    JSON.stringify({ type: "FeatureCollection", features: polyFeatures })
+  );
 
   const meta = {
     generatedFrom: "stl_vacancy_data.csv",
@@ -70,6 +90,9 @@ export function buildParcels() {
   fs.writeFileSync(path.join(OUT_DIR, "meta.json"), JSON.stringify(meta, null, 2));
   console.log(
     `parcels.geojson: ${features.length} features (${buildings} buildings, ${lots} lots, ${lra} LRA, ${condemned} condemned)`
+  );
+  console.log(
+    `parcels-poly.geojson: ${polyFeatures.length} polygons (${((withGeom / features.length) * 100).toFixed(1)}% have real geometry)`
   );
   return { features, meta };
 }

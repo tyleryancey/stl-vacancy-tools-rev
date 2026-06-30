@@ -34,7 +34,8 @@ To refresh the source data from upstream: `npm run data:download && npm run data
 ## Data pipeline (`scripts/`, zero-dependency Node)
 
 - `download.mjs` — fetch the public vacancy CSV (22k parcels) to `data/raw/`.
-- `build-parcels.mjs` — CSV → `public/data/parcels.geojson` (+ `meta.json`).
+- `fetch-geometry.mjs` — fetches real parcel polygon geometry from the City of St. Louis assessor ArcGIS service (`maps8.stlouis-mo.gov`, layer 11), joined to our parcels by `Handle`, server-simplified → `data/raw/parcel_geometry.json` (98.6% coverage).
+- `build-parcels.mjs` — CSV → `public/data/parcels.geojson` (centroids) + `parcels-poly.geojson` (real polygons) + `meta.json`.
 - `build-mpo.mjs` — rebuild of the original `multi_property_processor`: owner tally → multi-property owners → fuzzy alias grouping → `public/data/mpo.json`.
 - `build-stats.mjs` — aggregates for the Stats page → `public/data/stats.json`.
 - `build-all.mjs` — runs all of the above (`npm run data`).
@@ -45,7 +46,10 @@ To refresh the source data from upstream: `npm run data:download && npm run data
 - [x] **Phase 1** — public-explorer parity: filters (type / certainty / ownership / owner-location / tax-delinquency / condemned / boarded), search (address / owner / neighborhood), MPO owner panel + map highlight, list view + CSV export, stats page, condemned overlay, neighborhood highlight, URL/hash deep-linking. _Deferred:_ real parcel **polygons + PMTiles** (needs St. Louis parcel geometry from city open data — currently rendered as centroid circles, which matches the original's low-zoom layer); Prop-NS / poverty-zone overlays and the vacancy-onset slider (fields absent from the public CSV).
 - [x] **Phase 2** — vacancy scoring & timeline engine: faithful TS port of `scoreAndTimeline` + `diminish` + the open-valve loop + Forestry/LRA kickers + verbal bands (`src/scoring/`), fed by **live `vcpp.stldata.org` city data** (CORS-open, fetched directly). Side panel shows the live Vacancy/Burden breakdown (per-factor contributions) + an "Indicators Over Time" event timeline. Validated against the published CSV scores (band agreement within ±2 points; all confirmed-vacant cases exact). _Deferred:_ the 48-month historical sparkline (needs stored monthly snapshots) and the crime/CSB/valuation **percentile comparison** (needs the `misc/compareData` histograms).
 - [x] **Phase 3** — auth + roles + the two-tier model: a swappable **data provider** (`src/services/` — self-contained **mock** default + a Firebase slot), a login gate ("LSEM staff only", faithful to §4.1) with demo accounts, the public↔LSEM **brand flip**, LSEM continuous-distress ramps (gray→blue single-owner / gray→red multi-owner via `Vacancy + Burden`) + LRA layers, color-coded **case markers**, a sortable **Cases table**, and a case-info block in the side panel. **All case data is clearly-labeled fictional sample data — no real LSEM PII.** _Deferred:_ most Cloud-Function enrichments (Street View / Zillow / CSB / OpenCorporates — need server secrets) and the legacy bulk case-upload tool.
-- [ ] **Phase 4** — design-system polish, responsive/print, latent-bug fixes, parity verification vs the live site, and the data-dependent deferrals (parcel polygons + PMTiles, historical sparkline, percentile comparison).
+- [~] **Phase 4** — data-dependent deferrals + polish.
+  - [x] **4a — real parcel polygons + crossfade**: sourced parcel geometry from the City of St. Louis assessor ArcGIS service (joined by `Handle`, 98.6% coverage), rendered as polygon fills that crossfade from the circle dot-map at z≈13 (faithful to §5.3) — both public and LSEM layer sets.
+  - [ ] 4b — PMTiles vector tiles (optimize the ~34 MB raw GeoJSON load).
+  - [ ] 4c — historical sparkline, percentile comparison, design polish, latent-bug fixes, live-site parity check.
 
 ### Demo logins (mock provider, any password)
 
