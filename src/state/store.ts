@@ -63,6 +63,7 @@ interface AppState {
   resetFilters: () => void;
   certaintyVisible: Record<VacDesc, boolean>;
   toggleCertainty: (d: VacDesc) => void;
+  setCertaintyVisible: (cv: Record<VacDesc, boolean>) => void;
 
   // overlays
   overlayCondemned: boolean;
@@ -131,6 +132,7 @@ export const useStore = create<AppState>((set) => ({
     set((s) => ({
       certaintyVisible: { ...s.certaintyVisible, [d]: !s.certaintyVisible[d] },
     })),
+  setCertaintyVisible: (certaintyVisible) => set({ certaintyVisible }),
 
   overlayCondemned: false,
   toggleOverlayCondemned: () =>

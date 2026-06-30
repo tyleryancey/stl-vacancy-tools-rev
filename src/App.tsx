@@ -32,6 +32,8 @@ function LsemLegend() {
   );
 }
 
+const EMBED = new URLSearchParams(window.location.search).has("embed");
+
 export default function App() {
   const dataReady = useStore((s) => s.dataReady);
   const view = useStore((s) => s.view);
@@ -40,12 +42,26 @@ export default function App() {
   useEffect(() => {
     loadMpo();
     loadTimelines(); // optional pre-baked sparklines; no-op if absent
-    useStore.getState().initAuth();
+    if (!EMBED) useStore.getState().initAuth(); // embed is public-only
   }, []);
 
   useEffect(() => {
     if (dataReady) applyDeepLink();
   }, [dataReady]);
+
+  // Embeddable widget (plan C-ii): stripped layout for iframing — map + legend
+  // only, honoring initial-view URL params. No header, panels, or auth.
+  if (EMBED) {
+    return (
+      <div className="app embed">
+        <main className="app-main">
+          <MapView />
+          <Legend />
+          {!dataReady && <div className="loading">Loading…</div>}
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="app">

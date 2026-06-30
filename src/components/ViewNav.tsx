@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { useStore } from "@/state/store";
 import type { ViewMode } from "@/state/store";
+import { buildPermalink } from "@/lib/deeplink";
 
 export function ViewNav() {
   const view = useStore((s) => s.view);
@@ -8,6 +10,19 @@ export function ViewNav() {
   const user = useStore((s) => s.user);
   const setLoginOpen = useStore((s) => s.setLoginOpen);
   const logout = useStore((s) => s.logout);
+  const [copied, setCopied] = useState(false);
+
+  const copyLink = async () => {
+    const url = buildPermalink();
+    try {
+      await navigator.clipboard.writeText(url);
+    } catch {
+      // clipboard may be blocked; fall back to updating the address bar
+      window.history.replaceState(null, "", url);
+    }
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1500);
+  };
 
   const views: { id: ViewMode; label: string }[] = [
     { id: "map", label: "Map" },
@@ -39,6 +54,9 @@ export function ViewNav() {
       </nav>
 
       <div className="header-nav">
+        <button className="auth-btn" onClick={copyLink} title="Copy a shareable link to this view">
+          {copied ? "Copied!" : "Copy link"}
+        </button>
         {user ? (
           <>
             <span className="logged-in-as">

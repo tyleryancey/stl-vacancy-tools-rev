@@ -41,6 +41,11 @@ Deployed to **GitHub Pages** via GitHub Actions (`.github/workflows/`):
 
 For a GitHub *project* page (`user.github.io/<repo>/`), set the repo variable `VITE_BASE=/<repo>/`; all asset URLs are base-path-aware via `import.meta.env.BASE_URL`. A custom domain / user page needs no `VITE_BASE`.
 
+## Sharing & embedding
+
+- **Permalinks / saved views** — the **Copy link** button serializes the full view (filters, certainty tiers, ownership, view tab, owner panel, neighborhood, list query, selected parcel, map camera) into a short, readable URL (e.g. `?v=list&own=lra&nbrhd=The Ville`); loading that URL restores the view.
+- **Embeddable widget** — append `?embed=1` for a stripped, header-less map (map + legend only) suitable for an `<iframe>`; it honors the same view params.
+
 ## Data pipeline (`scripts/`, zero-dependency Node)
 
 - `download.mjs` — fetch the public vacancy CSV (22k parcels) to `data/raw/`.
