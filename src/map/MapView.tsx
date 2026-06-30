@@ -1,7 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import maplibregl, { Map as MlMap, Popup } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
-import { MAP_STYLE, STL_CENTER, STL_DEFAULT_ZOOM, PARCELS_SOURCE, PARCELS_POLY_SOURCE, DATA_POLY_URL } from "@/config/constants";
+import { Protocol } from "pmtiles";
+import { MAP_STYLE, STL_CENTER, STL_DEFAULT_ZOOM, PARCELS_SOURCE, PARCELS_POLY_SOURCE, POLY_PMTILES_PATH } from "@/config/constants";
+
+// Register the pmtiles:// protocol once so MapLibre can read the polygon vector
+// tiles via HTTP range requests (only visible tiles load, not the full 18MB).
+const pmtilesProtocol = new Protocol();
+maplibregl.addProtocol("pmtiles", pmtilesProtocol.tile);
 import { addPublicLayers, removePublicLayers, PUBLIC_LAYER_IDS } from "@/map/layers/publicLayers";
 import { addLsemLayers, removeLsemLayers, LSEM_LAYER_IDS } from "@/map/layers/lsemLayers";
 import { applyPublicFilters } from "@/map/applyFilters";
@@ -46,12 +52,12 @@ export function MapView() {
     const hoverPopup = new Popup({ closeButton: false, closeOnClick: false, className: "address-popup" });
 
     map.on("load", async () => {
-      const [geojson, polyjson] = await Promise.all([
-        loadParcels(),
-        fetch(DATA_POLY_URL).then((r) => r.json()),
-      ]);
+      const geojson = await loadParcels();
       map.addSource(PARCELS_SOURCE, { type: "geojson", data: geojson });
-      map.addSource(PARCELS_POLY_SOURCE, { type: "geojson", data: polyjson });
+      map.addSource(PARCELS_POLY_SOURCE, {
+        type: "vector",
+        url: `pmtiles://${window.location.origin}${POLY_PMTILES_PATH}`,
+      });
       if (useStore.getState().brand === "lsem") addLsemLayers(map);
       else addPublicLayers(map);
       setLoaded(true);

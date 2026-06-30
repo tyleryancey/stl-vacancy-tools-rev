@@ -18,4 +18,6 @@ export const PARCELS_SOURCE = "parcels"; // centroid points (circles, low zoom)
 export const PARCELS_POLY_SOURCE = "parcels_poly"; // real polygons (fills, high zoom)
 export const DATA_URL = "/data/parcels.geojson";
 export const DATA_POLY_URL = "/data/parcels-poly.geojson";
+export const POLY_PMTILES_PATH = "/data/parcels-poly.pmtiles";
+export const POLY_SOURCE_LAYER = "poly"; // tippecanoe layer name
 export const META_URL = "/data/meta.json";

@@ -1,5 +1,5 @@
 import type { Map as MlMap, CircleLayerSpecification, FilterSpecification, ExpressionSpecification } from "maplibre-gl";
-import { PARCELS_SOURCE, PARCELS_POLY_SOURCE, FILL_CROSSFADE_ZOOM as Z } from "@/config/constants";
+import { PARCELS_SOURCE, PARCELS_POLY_SOURCE, POLY_SOURCE_LAYER, FILL_CROSSFADE_ZOOM as Z } from "@/config/constants";
 import { publicBuildingColor, publicLotColor } from "@/config/colors";
 
 // Public vacancy layers. Faithful to the original (§5.3/§5.5): each class is drawn
@@ -39,8 +39,8 @@ export const PUBLIC_FILTER_TARGETS: { id: string; base: FilterSpecification }[] 
 export function addPublicLayers(map: MlMap): void {
   map.addLayer({ id: "public_lot", type: "circle", source: PARCELS_SOURCE, filter: LOT_FILTER, paint: circlePaint(publicLotColor) });
   map.addLayer({ id: "public_bldg", type: "circle", source: PARCELS_SOURCE, filter: BUILDING_FILTER, paint: circlePaint(publicBuildingColor) });
-  map.addLayer({ id: "public_lot_fill", type: "fill", source: PARCELS_POLY_SOURCE, filter: LOT_FILTER, paint: fillPaint(publicLotColor) });
-  map.addLayer({ id: "public_bldg_fill", type: "fill", source: PARCELS_POLY_SOURCE, filter: BUILDING_FILTER, paint: fillPaint(publicBuildingColor) });
+  map.addLayer({ id: "public_lot_fill", type: "fill", source: PARCELS_POLY_SOURCE, "source-layer": POLY_SOURCE_LAYER, filter: LOT_FILTER, paint: fillPaint(publicLotColor) });
+  map.addLayer({ id: "public_bldg_fill", type: "fill", source: PARCELS_POLY_SOURCE, "source-layer": POLY_SOURCE_LAYER, filter: BUILDING_FILTER, paint: fillPaint(publicBuildingColor) });
 }
 
 export function removePublicLayers(map: MlMap): void {

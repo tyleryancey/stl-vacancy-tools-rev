@@ -1,5 +1,5 @@
 import type { Map as MlMap, ExpressionSpecification, FilterSpecification } from "maplibre-gl";
-import { PARCELS_SOURCE, PARCELS_POLY_SOURCE, FILL_CROSSFADE_ZOOM as Z } from "@/config/constants";
+import { PARCELS_SOURCE, PARCELS_POLY_SOURCE, POLY_SOURCE_LAYER, FILL_CROSSFADE_ZOOM as Z } from "@/config/constants";
 
 // Authenticated LSEM layer set (REVERSE-ENGINEERING.md §5.4/§5.5). Private
 // vacancies ramp on composite distress S = Vacancy + Burden (a faithful proxy
@@ -55,6 +55,7 @@ export function addLsemLayers(map: MlMap): void {
       id: d.base + "_fill",
       type: "fill",
       source: PARCELS_POLY_SOURCE,
+      "source-layer": POLY_SOURCE_LAYER,
       filter: d.filter,
       paint: { "fill-color": d.color, "fill-opacity": fillOpacity, "fill-outline-color": "rgba(80,80,80,0.5)" },
     });

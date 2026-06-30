@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "data:download": "node scripts/download.mjs",
-    "data": "node scripts/build-all.mjs"
+    "data:geometry": "node scripts/fetch-geometry.mjs",
+    "data": "node scripts/build-all.mjs",
+    "tiles": "tippecanoe -o public/data/parcels-poly.pmtiles --force -l poly -Z11 -z16 --coalesce-densest-as-needed --no-tile-size-limit --no-feature-limit public/data/parcels-poly.geojson"
   },
   "dependencies": {
     "maplibre-gl": "^4.7.1",
