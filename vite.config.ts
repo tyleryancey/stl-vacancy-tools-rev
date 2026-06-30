@@ -4,6 +4,9 @@ import { fileURLToPath, URL } from "node:url";
 
 // https://vite.dev/config/
 export default defineConfig({
+  // "/" locally and for a user/org page or custom domain; set VITE_BASE="/<repo>/"
+  // in CI when deploying to a GitHub *project* Pages subpath.
+  base: process.env.VITE_BASE || "/",
   plugins: [react()],
   resolve: {
     alias: {

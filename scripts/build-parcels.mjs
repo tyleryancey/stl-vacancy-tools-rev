@@ -9,7 +9,8 @@ import { mapParcel } from "./lib/mapping.mjs";
 const ROOT = path.resolve(import.meta.dirname, "..");
 const SRC = path.join(ROOT, "data/raw/stl_vacancy_data.csv");
 const GEOM = path.join(ROOT, "data/raw/parcel_geometry.json");
-const OUT_DIR = path.join(ROOT, "public/data");
+const OUT_DIR = path.join(ROOT, "public/data"); // shipped to dist by Vite
+const BUILD_DIR = path.join(ROOT, "data/build"); // intermediates (NOT shipped)
 
 const GOV_OWNER = /^(LRA|LCRA|CITY OF ST|LAND REUTILIZATION|UNITED STATES|STATE OF MISSOURI)/i;
 
@@ -71,9 +72,14 @@ export function buildParcels() {
 
   const fc = { type: "FeatureCollection", features };
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  fs.writeFileSync(path.join(OUT_DIR, "parcels.geojson"), JSON.stringify(fc));
+  fs.mkdirSync(BUILD_DIR, { recursive: true });
+  // Points backbone shipped as .json (gzips on static hosts; .geojson often ships
+  // as uncompressed octet-stream).
+  fs.writeFileSync(path.join(OUT_DIR, "parcels.json"), JSON.stringify(fc));
+  // Polygon GeoJSON is an intermediate consumed only by `npm run tiles` → PMTiles;
+  // write it OUTSIDE public/ so the 19MB file is not copied into dist/.
   fs.writeFileSync(
-    path.join(OUT_DIR, "parcels-poly.geojson"),
+    path.join(BUILD_DIR, "parcels-poly.geojson"),
     JSON.stringify({ type: "FeatureCollection", features: polyFeatures })
   );
 
@@ -89,10 +95,10 @@ export function buildParcels() {
   };
   fs.writeFileSync(path.join(OUT_DIR, "meta.json"), JSON.stringify(meta, null, 2));
   console.log(
-    `parcels.geojson: ${features.length} features (${buildings} buildings, ${lots} lots, ${lra} LRA, ${condemned} condemned)`
+    `parcels.json: ${features.length} features (${buildings} buildings, ${lots} lots, ${lra} LRA, ${condemned} condemned)`
   );
   console.log(
-    `parcels-poly.geojson: ${polyFeatures.length} polygons (${((withGeom / features.length) * 100).toFixed(1)}% have real geometry)`
+    `data/build/parcels-poly.geojson: ${polyFeatures.length} polygons (${((withGeom / features.length) * 100).toFixed(1)}% have real geometry)`
   );
   return { features, meta };
 }

@@ -8,13 +8,8 @@ dist/
 # Local Claude Code settings (per-user)
 .claude/settings.local.json
 
-# Generated / large data artifacts (regenerate with `npm run data`)
+# Generated / large data artifacts (regenerate with `npm run data` / `npm run tiles`)
 data/raw/
-public/data/*.geojson
-public/data/*.pmtiles
-
-# keep generated small JSON committed for convenience? no — regenerate
-public/data/parcels.geojson
-public/data/mpo.json
-public/data/stats.json
-public/data/meta.json
+data/build/
+public/data/*
+!public/data/.gitkeep

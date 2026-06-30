@@ -16,8 +16,17 @@ export type Brand = "public" | "lsem";
 
 export const PARCELS_SOURCE = "parcels"; // centroid points (circles, low zoom)
 export const PARCELS_POLY_SOURCE = "parcels_poly"; // real polygons (fills, high zoom)
-export const DATA_URL = "/data/parcels.geojson";
-export const DATA_POLY_URL = "/data/parcels-poly.geojson";
-export const POLY_PMTILES_PATH = "/data/parcels-poly.pmtiles";
 export const POLY_SOURCE_LAYER = "poly"; // tippecanoe layer name
-export const META_URL = "/data/meta.json";
+
+// Base-path-aware asset URL. import.meta.env.BASE_URL is "/" locally and
+// "/<repo>/" under a GitHub project Pages subpath; it always ends with "/".
+export const asset = (p: string): string => import.meta.env.BASE_URL + p.replace(/^\//, "");
+
+// Backbone served as .json (not .geojson) so static hosts gzip it (octet-stream
+// .geojson is shipped uncompressed). The polygon layer is served as PMTiles.
+export const DATA_URL = asset("data/parcels.json");
+export const POLY_PMTILES_PATH = asset("data/parcels-poly.pmtiles");
+export const META_URL = asset("data/meta.json");
+export const MPO_URL = asset("data/mpo.json");
+export const STATS_URL = asset("data/stats.json");
+export const TIMELINES_URL = asset("data/timelines.json");

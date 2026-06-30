@@ -1,0 +1,34 @@
+name: Refresh Parcel Geometry
+
+# Parcel boundaries change slowly, so geometry is NOT refetched on every deploy.
+# This workflow re-fetches it from the City of St. Louis assessor ArcGIS service
+# and publishes it as the `geometry` Release asset that deploy.yml seeds from.
+# Runs quarterly and on demand.
+on:
+  schedule:
+    - cron: "0 8 1 */3 *" # 08:00 UTC on the 1st of Jan/Apr/Jul/Oct
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run data:geometry
+      - name: Publish geometry as a Release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view geometry --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1 \
+            || gh release create geometry --repo "$GITHUB_REPOSITORY" \
+                 --title "Parcel geometry cache" \
+                 --notes "Auto-generated STL parcel polygon geometry; seed for the deploy workflow."
+          gh release upload geometry data/raw/parcel_geometry.json --repo "$GITHUB_REPOSITORY" --clobber

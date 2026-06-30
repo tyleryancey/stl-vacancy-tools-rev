@@ -12,7 +12,8 @@
     "data:download": "node scripts/download.mjs",
     "data:geometry": "node scripts/fetch-geometry.mjs",
     "data": "node scripts/build-all.mjs",
-    "tiles": "tippecanoe -o public/data/parcels-poly.pmtiles --force -l poly -Z11 -z16 --coalesce-densest-as-needed --no-tile-size-limit --no-feature-limit public/data/parcels-poly.geojson"
+    "data:assert": "node scripts/assert-data.mjs",
+    "tiles": "tippecanoe -o public/data/parcels-poly.pmtiles --force -l poly -Z11 -z16 --coalesce-densest-as-needed --no-tile-size-limit --no-feature-limit data/build/parcels-poly.geojson"
   },
   "dependencies": {
     "maplibre-gl": "^4.7.1",

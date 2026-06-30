@@ -1,0 +1,86 @@
+name: Build & Deploy
+
+# Rebuilds the data artifacts from the public vacancy CSV and deploys to GitHub
+# Pages. Runs on push to main, weekly (to pick up CSV updates), and on demand.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 7 * * 1" # weekly, Monday 07:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # --- tippecanoe (felt fork; mapbox/tippecanoe is archived) ---
+      - name: Cache tippecanoe binary
+        id: tippecanoe-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/bin/tippecanoe
+          key: tippecanoe-felt-v2.79
+      - name: Build tippecanoe (on cache miss)
+        if: steps.tippecanoe-cache.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update && sudo apt-get install -y build-essential libsqlite3-dev zlib1g-dev
+          git clone --depth 1 https://github.com/felt/tippecanoe /tmp/tippecanoe
+          make -C /tmp/tippecanoe -j2
+          mkdir -p ~/.local/bin && cp /tmp/tippecanoe/tippecanoe ~/.local/bin/
+      - name: Add tippecanoe to PATH + ensure runtime libs
+        run: |
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          sudo apt-get install -y libsqlite3-0 || true
+
+      # --- parcel geometry: durable seed from a Release asset (boundaries are
+      #     static; refreshed only by refresh-geometry.yml). Fallback: fetch live. ---
+      - name: Seed parcel geometry
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p data/raw
+          if gh release download geometry --repo "$GITHUB_REPOSITORY" \
+               --pattern parcel_geometry.json --output data/raw/parcel_geometry.json 2>/dev/null; then
+            echo "Seeded geometry from release."
+          else
+            echo "No geometry release found — fetching from city ArcGIS (first run)."
+            npm run data:geometry
+          fi
+
+      # --- data pipeline ---
+      - run: npm run data:download
+      - run: npm run data
+      - run: npm run data:assert # fails loudly if the polygon layer is empty
+      - run: npm run tiles
+
+      - name: Build
+        env:
+          VITE_BASE: ${{ vars.VITE_BASE || '/' }}
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -30,12 +30,21 @@ npm run dev       # http://localhost:5173
 ```
 
 To refresh the source data from upstream: `npm run data:download && npm run data`.
+Real parcel polygons: `npm run data:geometry && npm run data && npm run tiles` (needs [tippecanoe](https://github.com/felt/tippecanoe)).
+
+## Deploy
+
+Deployed to **GitHub Pages** via GitHub Actions (`.github/workflows/`):
+- **`deploy.yml`** — on push to `main`, a **weekly cron**, or manual dispatch: rebuilds the data (`data:download` → `data` → asserts the polygon layer is non-empty → `tiles`), builds, and publishes `dist/`. tippecanoe is built once and cached.
+- **`refresh-geometry.yml`** — quarterly/on-demand: re-fetches parcel geometry from the city ArcGIS service and publishes it as the `geometry` Release asset that `deploy.yml` seeds from (boundaries change slowly, so they aren't refetched every deploy).
+
+For a GitHub *project* page (`user.github.io/<repo>/`), set the repo variable `VITE_BASE=/<repo>/`; all asset URLs are base-path-aware via `import.meta.env.BASE_URL`. A custom domain / user page needs no `VITE_BASE`.
 
 ## Data pipeline (`scripts/`, zero-dependency Node)
 
 - `download.mjs` — fetch the public vacancy CSV (22k parcels) to `data/raw/`.
 - `fetch-geometry.mjs` — fetches real parcel polygon geometry from the City of St. Louis assessor ArcGIS service (`maps8.stlouis-mo.gov`, layer 11), joined to our parcels by `Handle`, server-simplified → `data/raw/parcel_geometry.json` (98.6% coverage).
-- `build-parcels.mjs` — CSV → `public/data/parcels.geojson` (centroids) + `parcels-poly.geojson` (real polygons) + `meta.json`.
+- `build-parcels.mjs` — CSV → `public/data/parcels.json` (centroid backbone, shipped) + `data/build/parcels-poly.geojson` (polygon intermediate, **not** shipped — baked into PMTiles by `npm run tiles`) + `meta.json`.
 - `build-mpo.mjs` — rebuild of the original `multi_property_processor`: owner tally → multi-property owners → fuzzy alias grouping → `public/data/mpo.json`.
 - `build-stats.mjs` — aggregates for the Stats page → `public/data/stats.json`.
 - `build-all.mjs` — runs all of the above (`npm run data`).

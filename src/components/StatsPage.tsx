@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useStore } from "@/state/store";
+import { STATS_URL } from "@/config/constants";
 import { fixOwnerName, numberWithCommas } from "@/lib/format";
 
 // Aggregate dashboard (REVERSE-ENGINEERING.md §10.10, stats.html). Reads a
@@ -76,7 +77,7 @@ export function StatsPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetch("/data/stats.json")
+    fetch(STATS_URL)
       .then((r) => r.json())
       .then((d: Stats) => {
         if (!cancelled) setStats(d);

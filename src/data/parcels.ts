@@ -1,5 +1,6 @@
 // Centralized parcel/MPO data access. Loads the generated artifacts once and
 // caches them so the map, search, list view, and MPO panel share one copy.
+import { DATA_URL, META_URL, MPO_URL } from "@/config/constants";
 import type { Parcel, DataMeta } from "@/types/parcel";
 
 export type ParcelFeature = GeoJSON.Feature<GeoJSON.Point, Parcel>;
@@ -23,7 +24,7 @@ let mpoCache: MpoData | null = null;
 
 export function loadParcels(): Promise<ParcelCollection> {
   if (!parcelsPromise) {
-    parcelsPromise = fetch("/data/parcels.geojson")
+    parcelsPromise = fetch(DATA_URL)
       .then((r) => r.json())
       .then((fc: ParcelCollection) => {
         parcelsCache = fc;
@@ -39,14 +40,14 @@ export function getParcels(): ParcelFeature[] {
 
 export function loadMeta(): Promise<DataMeta> {
   if (metaCache) return Promise.resolve(metaCache);
-  return fetch("/data/meta.json")
+  return fetch(META_URL)
     .then((r) => r.json())
     .then((m: DataMeta) => (metaCache = m));
 }
 
 export function loadMpo(): Promise<MpoData> {
   if (!mpoPromise) {
-    mpoPromise = fetch("/data/mpo.json")
+    mpoPromise = fetch(MPO_URL)
       .then((r) => r.json())
       .then((m: MpoData) => {
         mpoCache = m;
