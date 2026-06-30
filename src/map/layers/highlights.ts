@@ -52,6 +52,37 @@ export function setOwnerHighlight(map: MlMap, owners: string[] | null): void {
   );
 }
 
+const OWNER_HEAT = "owner_heatmap";
+
+// Concentration heatmap of one owner's parcels (plan C-i), painted beneath the
+// parcel dots. Reuses the points source filtered to the owner's alias set.
+export function setOwnerHeatmap(map: MlMap, owners: string[] | null): void {
+  if (map.getLayer(OWNER_HEAT)) map.removeLayer(OWNER_HEAT);
+  if (!owners || owners.length === 0) return;
+  map.addLayer(
+    {
+      id: OWNER_HEAT,
+      type: "heatmap",
+      source: PARCELS_SOURCE,
+      filter: ["in", ["get", "OwnerName"], ["literal", owners]],
+      paint: {
+        "heatmap-weight": 1,
+        "heatmap-intensity": ["interpolate", ["linear"], ["zoom"], 10, 1, 16, 3],
+        "heatmap-radius": ["interpolate", ["linear"], ["zoom"], 10, 14, 16, 40],
+        "heatmap-opacity": 0.75,
+        "heatmap-color": [
+          "interpolate", ["linear"], ["heatmap-density"],
+          0, "rgba(0,0,255,0)",
+          0.3, "rgba(0,150,255,0.5)",
+          0.6, "rgba(255,200,0,0.7)",
+          1, "rgba(255,0,0,0.9)",
+        ],
+      },
+    },
+    firstParcelLayer(map)
+  );
+}
+
 export function setCondemnedOverlay(map: MlMap, on: boolean): void {
   if (map.getLayer(CONDEMNED)) map.removeLayer(CONDEMNED);
   if (!on) return;

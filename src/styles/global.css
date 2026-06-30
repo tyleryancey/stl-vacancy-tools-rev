@@ -448,6 +448,21 @@ a:hover { color: var(--link-hover); }
 .pctile-fill { height: 100%; background: var(--teal); border-radius: 4px; min-width: 2px; }
 .pctile-note { font-size: 11px; color: var(--muted); }
 
+/* ---- C-i: owner heatmap toggle + neighborhood trends ---- */
+.mpo-heatmap-toggle {
+  margin-left: 8px; border: 1px solid var(--teal); background: #fff; color: var(--teal);
+  border-radius: 4px; padding: 1px 8px; font: inherit; font-size: 11px; cursor: pointer;
+}
+.mpo-heatmap-toggle.active { background: var(--teal); color: #fff; }
+
+.trend-note { color: var(--muted); font-size: 12px; margin: 0 0 10px; }
+.trend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+.trend-cell { border: 1px solid #eee; border-radius: 6px; padding: 8px 10px; }
+.trend-label { font-weight: 600; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.trend-spark { width: 100%; height: 36px; display: block; margin: 4px 0; }
+.trend-spark polyline { fill: none; stroke: #5561a0; stroke-width: 1.5; }
+.trend-meta { font-size: 11px; color: var(--muted); }
+
 @media (max-width: 540px) {
   .legend { display: none; }
   .side-panel { width: 100%; }

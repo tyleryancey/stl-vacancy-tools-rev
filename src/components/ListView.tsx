@@ -3,6 +3,7 @@ import { useStore, ALL_VAC_DESC, type ListQuery } from "@/state/store";
 import { getParcels } from "@/data/parcels";
 import { selectAndFly } from "@/lib/select";
 import { toTitleCase, fixOwnerName } from "@/lib/format";
+import { download, toGeoJson, dateStamp } from "@/lib/exportData";
 import type { Parcel } from "@/types/parcel";
 
 // Sortable, exportable table view (REVERSE-ENGINEERING.md §10.7:
@@ -185,21 +186,11 @@ export function ListView() {
   const onPickCondemned = () =>
     useStore.getState().setListQuery({ type: "condemned", value: "all" });
 
-  const exportCsv = () => {
-    const d = new Date();
-    const date = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(
-      d.getDate(),
-    ).padStart(2, "0")}`;
-    const raw = effectiveQuery.type === "condemned" ? "condemned" : effectiveQuery.value;
-    const safe = String(raw).replace(/[^\w-]+/g, "_").replace(/^_+|_+$/g, "") || "parcels";
-    const uri = "data:text/csv;charset=utf-8," + encodeURIComponent(buildCsv(rows));
-    const a = document.createElement("a");
-    a.href = uri;
-    a.download = `${safe}_${date}.csv`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-  };
+  const raw = effectiveQuery.type === "condemned" ? "condemned" : effectiveQuery.value;
+  const safeName = String(raw).replace(/[^\w-]+/g, "_").replace(/^_+|_+$/g, "") || "parcels";
+  const exportCsv = () => download(`${safeName}_${dateStamp()}.csv`, buildCsv(rows), "text/csv");
+  const exportGeoJson = () =>
+    download(`${safeName}_${dateStamp()}.geojson`, toGeoJson(rows), "application/geo+json");
 
   const nhdValue = effectiveQuery.type === "neighborhood" ? effectiveQuery.value : "";
   const wardValue = effectiveQuery.type === "ward" ? effectiveQuery.value : "";
@@ -259,6 +250,14 @@ export function ListView() {
             disabled={rows.length === 0}
           >
             Export CSV
+          </button>
+          <button
+            type="button"
+            className="list-export"
+            onClick={exportGeoJson}
+            disabled={rows.length === 0}
+          >
+            Export GeoJSON
           </button>
         </div>
       </div>

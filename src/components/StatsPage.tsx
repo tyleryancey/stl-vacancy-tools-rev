@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useStore } from "@/state/store";
 import { STATS_URL } from "@/config/constants";
-import { fixOwnerName, numberWithCommas } from "@/lib/format";
+import { loadParcels } from "@/data/parcels";
+import { loadTimelines } from "@/data/timelines";
+import { fixOwnerName, numberWithCommas, toTitleCase } from "@/lib/format";
 
 // Aggregate dashboard (REVERSE-ENGINEERING.md §10.10, stats.html). Reads a
 // pre-baked /data/stats.json (built by scripts/build-stats.mjs) so the page is
@@ -68,6 +70,72 @@ function BarRow({
       </div>
       <div className="stat-bar-count">{numberWithCommas(count)}</div>
     </div>
+  );
+}
+
+interface Trend {
+  nhd: string;
+  n: number;
+  avg: number[]; // 48-month average vacancy
+}
+
+// Aggregates the pre-baked per-parcel timelines into per-neighborhood 4-year
+// vacancy trends (plan C-i). Renders nothing if no timeline data is available.
+function NeighborhoodTrends() {
+  const [trends, setTrends] = useState<Trend[]>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    Promise.all([loadParcels(), loadTimelines()]).then(([fc, tl]) => {
+      if (cancelled) return;
+      const ids = Object.keys(tl);
+      if (ids.length === 0) return;
+      const nhdById = new Map(fc.features.map((f) => [f.properties.ParcelId, f.properties.NhdName]));
+      const acc = new Map<string, { sum: number[]; n: number }>();
+      for (const id of ids) {
+        const nhd = nhdById.get(id);
+        const arr = tl[id];
+        if (!nhd || !arr || arr.length !== 48) continue;
+        let e = acc.get(nhd);
+        if (!e) { e = { sum: new Array(48).fill(0), n: 0 }; acc.set(nhd, e); }
+        for (let i = 0; i < 48; i++) e.sum[i] += arr[i];
+        e.n++;
+      }
+      const out = [...acc.entries()]
+        .filter(([, e]) => e.n >= 5)
+        .map(([nhd, e]) => ({ nhd, n: e.n, avg: e.sum.map((s) => s / e.n) }))
+        .sort((a, b) => b.n - a.n)
+        .slice(0, 12);
+      setTrends(out);
+    });
+    return () => { cancelled = true; };
+  }, []);
+
+  if (trends.length === 0) return null;
+
+  const W = 120, H = 36;
+  return (
+    <section className="stats-section">
+      <h2>Vacancy trend by neighborhood (last 4 years)</h2>
+      <p className="trend-note">Average vacancy score over time, for neighborhoods with pre-computed timelines.</p>
+      <div className="trend-grid">
+        {trends.map((t) => {
+          const pts = t.avg.map((v, i) => `${((i / 47) * W).toFixed(1)},${(H - (v / 100) * H).toFixed(1)}`).join(" ");
+          const delta = Math.round(t.avg[47] - t.avg[0]);
+          return (
+            <div className="trend-cell" key={t.nhd}>
+              <div className="trend-label">{toTitleCase(t.nhd)}</div>
+              <svg className="trend-spark" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none">
+                <polyline points={pts} />
+              </svg>
+              <div className="trend-meta">
+                {t.n} parcels · {delta > 0 ? "+" : ""}{delta} pts
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 
@@ -172,6 +240,8 @@ export function StatsPage() {
           ))}
         </div>
       </section>
+
+      <NeighborhoodTrends />
 
       <div className="stats-dist">
         <section className="stats-section">

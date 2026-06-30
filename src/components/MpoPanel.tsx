@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useStore } from "@/state/store";
 import { getParcels, getAliases, getLeadName } from "@/data/parcels";
 import { selectAndFly } from "@/lib/select";
-import { setOwnerHighlight } from "@/map/layers/highlights";
+import { setOwnerHighlight, setOwnerHeatmap } from "@/map/layers/highlights";
 import { fixOwnerName, toTitleCase, numberWithCommas } from "@/lib/format";
 import type { Parcel } from "@/types/parcel";
 
@@ -21,8 +21,10 @@ export function MpoPanel() {
   const dataReady = useStore((s) => s.dataReady);
   const [aliases, setAliases] = useState<string[]>([]);
   const [items, setItems] = useState<Parcel[]>([]);
+  const [heatmapOn, setHeatmapOn] = useState(false);
 
   useEffect(() => {
+    setHeatmapOn(false); // reset when the owner changes
     // Nothing to compute/highlight until we have an owner, data, and a non-gov owner.
     if (!mpoOwner || !dataReady || GOV_RE.test(mpoOwner)) {
       setAliases([]);
@@ -48,6 +50,17 @@ export function MpoPanel() {
       if (m) setOwnerHighlight(m, null);
     };
   }, [mpoOwner, dataReady]);
+
+  // Owner concentration heatmap (toggle).
+  useEffect(() => {
+    const map = useStore.getState().map;
+    if (!map) return;
+    setOwnerHeatmap(map, heatmapOn ? aliases : null);
+    return () => {
+      const m = useStore.getState().map;
+      if (m) setOwnerHeatmap(m, null);
+    };
+  }, [heatmapOn, aliases]);
 
   if (mpoOwner === null) return null;
 
@@ -79,6 +92,15 @@ export function MpoPanel() {
         <>
           <div className="mpo-count">
             {numberWithCommas(count)} {count === 1 ? "property" : "properties"}
+            {count > 1 && (
+              <button
+                type="button"
+                className={`mpo-heatmap-toggle${heatmapOn ? " active" : ""}`}
+                onClick={() => setHeatmapOn((v) => !v)}
+              >
+                {heatmapOn ? "Hide heatmap" : "Heatmap"}
+              </button>
+            )}
           </div>
 
           {aliases.length > 1 && otherAliases.length > 0 && (
