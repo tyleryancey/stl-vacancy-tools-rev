@@ -1,0 +1,29 @@
+{
+  "name": "stl-vacancy-tools-rev",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Open-source rebuild of the STL Vacancy Explorer (stlvacancytools.com) — React + Vite + TS + MapLibre.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "data:download": "node scripts/download.mjs",
+    "data": "node scripts/build-all.mjs"
+  },
+  "dependencies": {
+    "maplibre-gl": "^4.7.1",
+    "pmtiles": "^3.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}

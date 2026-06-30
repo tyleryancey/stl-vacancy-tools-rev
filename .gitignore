@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.env
+.env.local
+*.log
+.DS_Store
+
+# Local Claude Code settings (per-user)
+.claude/settings.local.json
+
+# Generated / large data artifacts (regenerate with `npm run data`)
+data/raw/
+public/data/*.geojson
+public/data/*.pmtiles
+
+# keep generated small JSON committed for convenience? no — regenerate
+public/data/parcels.geojson
+public/data/mpo.json
+public/data/stats.json
+public/data/meta.json
