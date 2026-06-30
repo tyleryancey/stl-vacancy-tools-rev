@@ -434,6 +434,20 @@ a:hover { color: var(--link-hover); }
 .lsem-ramp.single { background: linear-gradient(to right, rgb(210,210,210), rgb(0,0,245)); }
 .lsem-ramp.multi { background: linear-gradient(to right, rgb(210,210,210), rgb(245,0,0)); }
 
+/* ---- Phase 4c: sparkline + percentile ---- */
+.indicators-time { margin-bottom: 14px; }
+.sparkline { width: 100%; height: 52px; display: block; margin-top: 4px; }
+.sparkline polygon { fill: #a6b1ec; stroke: #5561a0; stroke-width: 1; }
+.sparkline-flat { color: var(--muted); margin: 4px 0 0; font-size: 12px; }
+.sparkline-axis { display: flex; justify-content: space-between; font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+.pctile-row { margin-bottom: 12px; }
+.pctile-head { display: flex; justify-content: space-between; align-items: baseline; }
+.pctile-desc { font-weight: 600; color: var(--teal); font-size: 12px; }
+.pctile-track { background: #eef1f2; border-radius: 4px; height: 8px; overflow: hidden; margin: 4px 0 2px; }
+.pctile-fill { height: 100%; background: var(--teal); border-radius: 4px; min-width: 2px; }
+.pctile-note { font-size: 11px; color: var(--muted); }
+
 @media (max-width: 540px) {
   .legend { display: none; }
   .side-panel { width: 100%; }

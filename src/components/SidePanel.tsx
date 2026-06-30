@@ -1,7 +1,24 @@
 import { useStore } from "@/state/store";
 import { fixOwnerName, ordinal, numberWithCommas, toTitleCase } from "@/lib/format";
 import { ScorePanel } from "@/components/ScorePanel";
+import { percentileOf, percentileDesc } from "@/data/percentile";
 import type { Parcel } from "@/types/parcel";
+
+function PercentileBar({ label, field, value }: { label: string; field: "Vacancy" | "Burden"; value: number }) {
+  const pct = percentileOf(field, value);
+  return (
+    <div className="pctile-row">
+      <div className="pctile-head">
+        <span>{label}</span>
+        <span className="pctile-desc">{percentileDesc(pct)}</span>
+      </div>
+      <div className="pctile-track">
+        <div className="pctile-fill" style={{ width: `${pct}%` }} />
+      </div>
+      <div className="pctile-note">higher than {pct}% of vacant parcels citywide</div>
+    </div>
+  );
+}
 
 function Row({ label, value }: { label: string; value: React.ReactNode }) {
   if (value === "" || value === null || value === undefined) return null;
@@ -87,6 +104,12 @@ export function SidePanel() {
       <section className="panel-section">
         <h3>Vacancy &amp; burden (live)</h3>
         <ScorePanel parcel={parcel} />
+      </section>
+
+      <section className="panel-section">
+        <h3>Compared to all vacant parcels</h3>
+        <PercentileBar label="Vacancy likelihood" field="Vacancy" value={parcel.Vacancy} />
+        <PercentileBar label="Public burden" field="Burden" value={parcel.Burden} />
       </section>
 
       <a

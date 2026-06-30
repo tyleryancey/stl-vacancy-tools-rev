@@ -69,6 +69,17 @@ export interface ScoreParcel {
   IsLcra?: boolean;
 }
 
+// 48-month vacancy-score history, reproduced the way the original's Node batch
+// built `VacTimeline` (§7.1): re-run the scorer "as of" each past month via the
+// backDate path. Returns 48 totals, oldest (47 months ago) → newest (now).
+export function vacancyTimeline(data: CityData, parcel: ScoreParcel, now: number = Date.now()): number[] {
+  const out: number[] = [];
+  for (let i = 47; i >= 0; i--) {
+    out.push(scoreAndTimeline(data, parcel, now - i * MONTH).vacancy.total);
+  }
+  return out;
+}
+
 export function scoreAndTimeline(
   data: CityData,
   parcel: ScoreParcel,

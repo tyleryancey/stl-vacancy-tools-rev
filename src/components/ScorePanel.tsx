@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useStore } from "@/state/store";
 import { fetchCityData } from "@/scoring/cityData";
-import { scoreAndTimeline, type ScoreResult, type ScoreCategory, type Contribution, type TimelineEvent } from "@/scoring/scoreAndTimeline";
+import { scoreAndTimeline, vacancyTimeline, type ScoreResult, type ScoreCategory, type Contribution, type TimelineEvent } from "@/scoring/scoreAndTimeline";
 import { numberWithCommas } from "@/lib/format";
 import type { Parcel } from "@/types/parcel";
 
@@ -11,7 +11,37 @@ import type { Parcel } from "@/types/parcel";
 type State =
   | { status: "loading" }
   | { status: "error" }
-  | { status: "ok"; result: ScoreResult };
+  | { status: "ok"; result: ScoreResult; timeline: number[] | null };
+
+// 48-month vacancy-score sparkline ("Indicators Over Time", §7.9).
+function Sparkline({ values }: { values: number[] }) {
+  const unchanged = values.every((v) => v === values[values.length - 1]);
+  if (unchanged) {
+    return (
+      <section className="indicators-time">
+        <div className="score-name">Indicators Over Time</div>
+        <p className="sparkline-flat">Unchanged over the last 4 years.</p>
+      </section>
+    );
+  }
+  const step = 4.5;
+  const h = 48;
+  const pts = values.map((v, i) => `${(i * step).toFixed(1)},${(h - h * (v / 100) + 1).toFixed(1)}`);
+  const poly = `0,${h + 1} ${pts.join(" ")} ${((values.length - 1) * step).toFixed(1)},${h + 1}`;
+  return (
+    <section className="indicators-time">
+      <div className="score-name">Indicators Over Time</div>
+      <svg className="sparkline" viewBox={`0 0 ${(values.length - 1) * step} ${h + 2}`} preserveAspectRatio="none">
+        <polygon points={poly} />
+      </svg>
+      <div className="sparkline-axis">
+        <span>4 yrs ago</span>
+        <span>2 yrs</span>
+        <span>now</span>
+      </div>
+    </section>
+  );
+}
 
 const HUE: Record<string, string> = {
   vacancy: "#c12226",
@@ -70,7 +100,7 @@ function Timeline({ events }: { events: TimelineEvent[] }) {
   return (
     <section className="event-timeline">
       <button className="timeline-toggle" onClick={() => setOpen((o) => !o)}>
-        Indicators Over Time ({shown.length}) <span className={`tl-arrow ${open ? "down" : ""}`}>▸</span>
+        Event timeline ({shown.length}) <span className={`tl-arrow ${open ? "down" : ""}`}>▸</span>
       </button>
       {open && (
         <table className="timeline-table">
@@ -109,15 +139,19 @@ export function ScorePanel({ parcel }: { parcel: Parcel }) {
         setState({ status: "error" });
         return;
       }
-      const result = scoreAndTimeline(data, {
+      const sp = {
         Type: parcel.Type,
         OwnerName: parcel.OwnerName,
         Handle: parcel.Handle,
         ParcelId: parcel.ParcelId,
         IsLra: parcel.IsLra,
         IsLcra: parcel.IsLcra,
-      });
-      setState({ status: "ok", result });
+      };
+      const result = scoreAndTimeline(data, sp);
+      // Sparkline only for non-confirmed-vacant parcels (LRA/registry/condemned
+      // are pinned to 100 every month → flat), matching the original.
+      const timeline = result.vacant ? null : vacancyTimeline(data, sp);
+      setState({ status: "ok", result, timeline });
     });
     return () => {
       cancelled = true;
@@ -142,6 +176,7 @@ export function ScorePanel({ parcel }: { parcel: Parcel }) {
 
   return (
     <div className="score-panel">
+      {state.timeline && <Sparkline values={state.timeline} />}
       <ScoreSection label={vacancyLabel} score={r.vacancy} contributions={r.contributions.vacancy} kind="vacancy" />
       {r.vacant && r.vacantFactors.length > 0 && (
         <ul className="vacant-factors">
