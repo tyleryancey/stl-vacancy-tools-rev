@@ -37,6 +37,7 @@ Real parcel polygons: `npm run data:geometry && npm run data && npm run tiles` (
 Deployed to **GitHub Pages** via GitHub Actions (`.github/workflows/`):
 - **`deploy.yml`** — on push to `main`, a **weekly cron**, or manual dispatch: rebuilds the data (`data:download` → `data` → asserts the polygon layer is non-empty → `tiles`), builds, and publishes `dist/`. tippecanoe is built once and cached.
 - **`refresh-geometry.yml`** — quarterly/on-demand: re-fetches parcel geometry from the city ArcGIS service and publishes it as the `geometry` Release asset that `deploy.yml` seeds from (boundaries change slowly, so they aren't refetched every deploy).
+- **`refresh-timelines.yml`** — quarterly/on-demand: pre-computes the 48-month vacancy sparklines (`npm run data:timelines`, ~13k `vcpp` requests) and publishes `timelines.json` as the `timelines` Release asset. Optional optimization — if absent, the client recomputes sparklines live in-browser.
 
 For a GitHub *project* page (`user.github.io/<repo>/`), set the repo variable `VITE_BASE=/<repo>/`; all asset URLs are base-path-aware via `import.meta.env.BASE_URL`. A custom domain / user page needs no `VITE_BASE`.
 

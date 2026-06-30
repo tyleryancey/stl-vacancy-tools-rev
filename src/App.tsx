@@ -12,6 +12,7 @@ import { LoginModal } from "@/components/LoginModal";
 import { ViewNav } from "@/components/ViewNav";
 import { useStore } from "@/state/store";
 import { loadMpo } from "@/data/parcels";
+import { loadTimelines } from "@/data/timelines";
 import { applyDeepLink } from "@/lib/deeplink";
 
 function LsemLegend() {
@@ -38,6 +39,7 @@ export default function App() {
 
   useEffect(() => {
     loadMpo();
+    loadTimelines(); // optional pre-baked sparklines; no-op if absent
     useStore.getState().initAuth();
   }, []);
 

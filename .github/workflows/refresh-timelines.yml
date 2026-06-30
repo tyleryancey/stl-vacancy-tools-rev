@@ -1,0 +1,48 @@
+name: Refresh Score Timelines
+
+# Pre-computes the 48-month vacancy sparklines (plan A-iii) by running the scoring
+# engine over the vacant set against live city data (~13k vcpp requests — too heavy
+# for every deploy). Publishes timelines.json as the `timelines` Release asset that
+# deploy.yml seeds from. Quarterly + on demand.
+on:
+  schedule:
+    - cron: "30 8 1 */3 *" # 08:30 UTC on the 1st of Jan/Apr/Jul/Oct
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Seed parcel geometry (needed to build the parcel set)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p data/raw
+          gh release download geometry --repo "$GITHUB_REPOSITORY" \
+            --pattern parcel_geometry.json --output data/raw/parcel_geometry.json 2>/dev/null \
+            || npm run data:geometry
+
+      - run: npm run data:download
+      - run: npm run data
+      - run: npm run data:assert
+      - run: npm run data:timelines # fetches vcpp per non-LRA parcel
+
+      - name: Publish timelines as a Release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view timelines --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1 \
+            || gh release create timelines --repo "$GITHUB_REPOSITORY" \
+                 --title "Score timelines cache" \
+                 --notes "Pre-baked 48-month vacancy sparklines; seed for the deploy workflow."
+          gh release upload timelines public/data/timelines.json --repo "$GITHUB_REPOSITORY" --clobber

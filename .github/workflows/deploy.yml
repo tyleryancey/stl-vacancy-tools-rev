@@ -74,6 +74,16 @@ jobs:
       - run: npm run data:assert # fails loudly if the polygon layer is empty
       - run: npm run tiles
 
+      # Optional pre-baked sparklines (plan A-iii), published by refresh-timelines.yml.
+      # Absent → the client falls back to the live 48× recompute, so never fail here.
+      - name: Seed pre-baked timelines (optional)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download timelines --repo "$GITHUB_REPOSITORY" \
+            --pattern timelines.json --output public/data/timelines.json 2>/dev/null \
+            && echo "Seeded pre-baked timelines." || echo "No timelines release — client will live-recompute."
+
       - name: Build
         env:
           VITE_BASE: ${{ vars.VITE_BASE || '/' }}

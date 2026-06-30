@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useStore } from "@/state/store";
 import { fetchCityData } from "@/scoring/cityData";
 import { scoreAndTimeline, vacancyTimeline, type ScoreResult, type ScoreCategory, type Contribution, type TimelineEvent } from "@/scoring/scoreAndTimeline";
+import { getPrebakedTimeline } from "@/data/timelines";
 import { numberWithCommas } from "@/lib/format";
 import type { Parcel } from "@/types/parcel";
 
@@ -149,8 +150,11 @@ export function ScorePanel({ parcel }: { parcel: Parcel }) {
       };
       const result = scoreAndTimeline(data, sp);
       // Sparkline only for non-confirmed-vacant parcels (LRA/registry/condemned
-      // are pinned to 100 every month → flat), matching the original.
-      const timeline = result.vacant ? null : vacancyTimeline(data, sp);
+      // are pinned to 100 every month → flat), matching the original. Prefer the
+      // pre-baked snapshot (plan A-iii); fall back to the live 48× recompute.
+      const timeline = result.vacant
+        ? null
+        : getPrebakedTimeline(parcel.ParcelId) ?? vacancyTimeline(data, sp);
       setState({ status: "ok", result, timeline });
     });
     return () => {
