@@ -49,7 +49,7 @@ To refresh the source data from upstream: `npm run data:download && npm run data
 - [~] **Phase 4** — data-dependent deferrals + polish.
   - [x] **4a — real parcel polygons + crossfade**: sourced parcel geometry from the City of St. Louis assessor ArcGIS service (joined by `Handle`, 98.6% coverage), rendered as polygon fills that crossfade from the circle dot-map at z≈13 (faithful to §5.3) — both public and LSEM layer sets.
   - [x] **4b — PMTiles vector tiles**: the 18 MB polygon GeoJSON is baked into `parcels-poly.pmtiles` (tippecanoe) and served via the `pmtiles://` protocol — MapLibre loads only the visible tiles by HTTP range request (~43 KB for a street-level view instead of 18 MB upfront). Run `npm run tiles` to (re)build (requires `tippecanoe`).
-  - [ ] 4c — historical sparkline, percentile comparison, design polish, latent-bug fixes, live-site parity check.
+  - [x] **4c — historical sparkline + percentile + parity check**: the 48-month "Indicators Over Time" sparkline is reproduced by re-running the scorer via `backDate` per month (`vacancyTimeline`); a "Compared to all vacant parcels" percentile ranks Vacancy/Burden against the dataset (`src/data/percentile.ts`). Reviewed the original's catalogued latent bugs (§13) — the clean rebuild does not reproduce them. Verified visual + feature parity against the live original (`docs/screenshots/parity_live_original.png`).
 
 ### Demo logins (mock provider, any password)
 
