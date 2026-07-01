@@ -11,7 +11,14 @@ const OUT = path.join(ROOT, "data/raw/stl_vacancy_data.csv");
 async function fetchCsv(attempts = 4) {
   for (let i = 1; i <= attempts; i++) {
     try {
-      const res = await fetch(URL, { headers: { "User-Agent": "stl-vacancy-rebuild/0.1" } });
+      // Browser-like headers — the upstream/CDN rejects bare UAs with HTTP 415.
+      const res = await fetch(URL, {
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36",
+          Accept: "text/csv,text/plain,*/*",
+        },
+      });
       if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
       return Buffer.from(await res.arrayBuffer());
     } catch (e) {
