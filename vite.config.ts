@@ -7,6 +7,9 @@ export default defineConfig({
   // "/" locally and for a user/org page or custom domain; set VITE_BASE="/<repo>/"
   // in CI when deploying to a GitHub *project* Pages subpath.
   base: process.env.VITE_BASE || "/",
+  // Overridable so the e2e suite can serve its own small fixture dataset
+  // instead of the real generated public/data/*.
+  publicDir: process.env.VITE_PUBLIC_DIR || "public",
   plugins: [react()],
   resolve: {
     alias: {

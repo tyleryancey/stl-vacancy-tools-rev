@@ -13,3 +13,11 @@ data/raw/
 data/build/
 public/data/*
 !public/data/.gitkeep
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+
+# e2e fixture dataset, regenerated from e2e/fixtures/sample.csv by e2e/fixtures/build.mjs
+e2e/fixtures/public/

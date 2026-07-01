@@ -42,8 +42,6 @@ a:hover { color: var(--link-hover); }
   z-index: 10;
 }
 .brand-title { font-weight: 700; letter-spacing: 0.4px; }
-.header-nav a { color: #d7eef1; font-weight: 500; }
-.header-nav a:hover { color: #fff; }
 
 .app-main { position: relative; flex: 1 1 auto; min-height: 0; }
 .map-container { position: absolute; inset: 0; }
@@ -146,8 +144,9 @@ a:hover { color: var(--link-hover); }
 /* header layout: brand | view nav | (push) external link */
 .app-header { justify-content: flex-start; gap: 20px; }
 .header-nav { margin-left: auto; display: flex; align-items: center; gap: 12px; }
-.header-link { color: #d7eef1; font-weight: 500; }
-.header-link:hover { color: #fff; }
+/* #d7eef1 measured 4.44:1 on the teal header — under the 4.5:1 AA minimum. */
+.header-link { color: #fff; font-weight: 500; }
+.header-link:hover { text-decoration: underline; }
 
 .view-nav { display: flex; gap: 4px; }
 .view-nav-btn {
@@ -333,7 +332,7 @@ a:hover { color: var(--link-hover); }
 /* ---- Live score panel + timeline (Phase 2) ---- */
 .score-panel { font-size: 13px; }
 .score-loading, .score-error { color: var(--muted); padding: 6px 0; font-style: italic; }
-.score-error { color: #9a6a00; }
+.score-error { color: #8a5d00; }
 .score-section { margin-bottom: 14px; }
 .score-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
 .score-name { font-weight: 600; }
@@ -421,15 +420,15 @@ a:hover { color: var(--link-hover); }
 
 /* case info in side panel */
 .case-info { background: #fbf3e8; border-radius: 6px; padding: 10px 12px; }
-.case-info h3 { color: #9a6a00; border-color: #ecd9bc; }
-.case-sample-note { color: #9a6a00; font-size: 11px; margin-top: 6px; font-style: italic; }
+.case-info h3 { color: #8a5d00; border-color: #ecd9bc; }
+.case-sample-note { color: #8a5d00; font-size: 11px; margin-top: 6px; font-style: italic; }
 
 /* cases view */
 .cases-view { position: absolute; inset: 0; background: #fff; z-index: 8; display: flex; flex-direction: column; }
 .cases-toolbar { display: flex; align-items: center; gap: 16px; padding: 12px 16px; border-bottom: 1px solid #eee; }
 .cases-title { font-weight: 700; font-size: 16px; }
 .cases-count { color: var(--muted); }
-.cases-sample-tag { margin-left: auto; color: #9a6a00; font-size: 12px; background: #fbf3e8; padding: 4px 10px; border-radius: 4px; }
+.cases-sample-tag { margin-left: auto; color: #8a5d00; font-size: 12px; background: #fbf3e8; padding: 4px 10px; border-radius: 4px; }
 .cases-table th { font-size: 12px; }
 
 /* LSEM legend */

@@ -12,7 +12,7 @@ const GEOM = path.join(ROOT, "data/raw/parcel_geometry.json");
 const OUT_DIR = path.join(ROOT, "public/data"); // shipped to dist by Vite
 const BUILD_DIR = path.join(ROOT, "data/build"); // intermediates (NOT shipped)
 
-const GOV_OWNER = /^(LRA|LCRA|CITY OF ST|LAND REUTILIZATION|UNITED STATES|STATE OF MISSOURI)/i;
+export const GOV_OWNER = /^(LRA|LCRA|CITY OF ST|LAND REUTILIZATION|UNITED STATES|STATE OF MISSOURI)/i;
 
 export function buildParcels() {
   const rows = readCsvObjects(SRC);
