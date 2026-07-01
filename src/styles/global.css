@@ -9,7 +9,7 @@
   --panel-w: 360px;
   --header-h: 40px;
   --ink: #222;
-  --muted: #6b7280;
+  --muted: #565d6b; /* darkened for AA contrast on white (was #6b7280) */
 }
 
 * { box-sizing: border-box; }
@@ -41,7 +41,7 @@ a:hover { color: var(--link-hover); }
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
   z-index: 10;
 }
-.brand-title { font-weight: 700; letter-spacing: 0.2px; }
+.brand-title { font-weight: 700; letter-spacing: 0.4px; }
 .header-nav a { color: #d7eef1; font-weight: 500; }
 .header-nav a:hover { color: #fff; }
 
@@ -87,6 +87,10 @@ a:hover { color: var(--link-hover); }
   width: 14px; height: 14px; border-radius: 3px;
   border: 1px solid rgba(0,0,0,0.15); flex: 0 0 auto;
 }
+.legend-cvd {
+  display: flex; align-items: center; gap: 6px; cursor: pointer;
+  margin-top: 9px; padding-top: 8px; border-top: 1px solid #eee; font-size: 11px; color: var(--muted);
+}
 
 /* Side panel */
 .side-panel {
@@ -119,9 +123,9 @@ a:hover { color: var(--link-hover); }
   font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px;
 }
 .badge-red { background: #c12226; color: #fff; }
-.badge-green { background: #70a482; color: #fff; }
+.badge-green { background: #3f6b52; color: #fff; } /* darkened for AA contrast on white text */
 .badge-lra { background: #966432; color: #fff; }
-.badge-warn { background: #ff8700; color: #fff; }
+.badge-warn { background: #a85400; color: #fff; } /* darkened orange for AA contrast */
 .badge-muted { background: #e5e7eb; color: #374151; }
 
 .panel-section { margin-bottom: 18px; }
@@ -141,16 +145,16 @@ a:hover { color: var(--link-hover); }
 
 /* header layout: brand | view nav | (push) external link */
 .app-header { justify-content: flex-start; gap: 20px; }
-.header-nav { margin-left: auto; }
+.header-nav { margin-left: auto; display: flex; align-items: center; gap: 12px; }
 .header-link { color: #d7eef1; font-weight: 500; }
 .header-link:hover { color: #fff; }
 
 .view-nav { display: flex; gap: 4px; }
 .view-nav-btn {
-  background: rgba(255,255,255,0.12); color: #eaf6f7; border: none;
+  background: rgba(0,0,0,0.18); color: #fff; border: none; /* dark overlay → AA contrast on teal */
   padding: 4px 14px; border-radius: 4px; font: inherit; font-weight: 500; cursor: pointer;
 }
-.view-nav-btn:hover { background: rgba(255,255,255,0.22); }
+.view-nav-btn:hover { background: rgba(0,0,0,0.30); }
 .view-nav-btn.active { background: #fff; color: var(--teal); }
 
 /* ---- Filter panel (top-left card) ---- */
@@ -205,7 +209,7 @@ a:hover { color: var(--link-hover); }
 }
 .search-input-row {
   display: flex; align-items: center; background: #fff; border-radius: 6px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2); padding: 0 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.14); border: 1px solid rgba(0,0,0,0.06); padding: 0 10px;
 }
 .search-icon {
   width: 14px; height: 14px; margin-right: 6px; flex: 0 0 auto;
@@ -366,11 +370,11 @@ a:hover { color: var(--link-hover); }
 
 /* header auth */
 .auth-btn {
-  background: rgba(255,255,255,0.16); color: #fff; border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(0,0,0,0.16); color: #fff; border: 1px solid rgba(255,255,255,0.45);
   border-radius: 4px; padding: 4px 12px; font: inherit; font-weight: 500; cursor: pointer;
 }
-.auth-btn:hover { background: rgba(255,255,255,0.28); }
-.logged-in-as { color: #eaf6f7; font-size: 12px; display: inline-flex; align-items: center; gap: 6px; }
+.auth-btn:hover { background: rgba(0,0,0,0.28); }
+.logged-in-as { color: #fff; font-size: 12px; display: inline-flex; align-items: center; gap: 6px; }
 .user-role { background: rgba(255,255,255,0.2); padding: 1px 6px; border-radius: 8px; font-size: 10px; text-transform: uppercase; }
 .lsem-tag {
   background: #b3402e; color: #fff; font-size: 10px; font-weight: 700; padding: 1px 6px;
@@ -476,14 +480,16 @@ a:hover { color: var(--link-hover); }
   }
   .brand-title { font-size: 15px; flex-basis: 100%; }
   .view-nav { gap: 3px; }
-  .view-nav-btn { padding: 4px 10px; }
-  .header-nav { gap: 8px; }
+  .view-nav-btn { padding: 8px 12px; min-height: 40px; } /* ≥44px-ish touch target */
+  .header-nav { gap: 10px; }
+  .auth-btn { min-height: 38px; padding: 7px 12px; }
   .header-link { display: none; } /* drop the external link to save room */
 
   /* Search: nearly full-width, just below the (possibly two-row) header */
   .search-box { width: 92vw; top: 8px; }
+  .search-input { padding: 13px 4px; } /* taller tap area */
 
-  /* Right-docked panels become bottom sheets */
+  /* Right-docked panels become bottom sheets, with a drag-handle affordance */
   .side-panel,
   .mpo-panel {
     top: auto;
@@ -497,10 +503,26 @@ a:hover { color: var(--link-hover); }
     border-radius: 12px 12px 0 0;
     box-shadow: 0 -2px 14px rgba(0, 0, 0, 0.22);
     animation: slideUp 0.2s ease-out;
+    padding-top: 22px; /* room for the grabber */
   }
+  .side-panel::before,
+  .mpo-panel::before {
+    content: "";
+    position: absolute;
+    top: 8px; left: 50%; transform: translateX(-50%);
+    width: 40px; height: 4px; border-radius: 2px; background: #cbd0d6;
+  }
+  .panel-close { width: 44px; height: 44px; font-size: 30px; top: 4px; }
+  /* Bigger native map zoom controls (WCAG target-size) */
+  .maplibregl-ctrl-group button { width: 34px; height: 34px; }
 
-  /* Filter panel: narrower; starts collapsed (component default) */
-  .filter-panel { width: min(220px, 68vw); top: 8px; left: 8px; max-height: 70%; }
+  /* Filter panel: below the search box so its toggle isn't hidden by it (P0) */
+  .filter-panel { width: min(230px, 74vw); top: 60px; left: 8px; max-height: calc(100% - 72px); }
+  /* Larger tap targets for filter controls */
+  .filter-toggle, .filter-certainty { min-height: 38px; }
+  .filter-panel input[type="checkbox"] { width: 18px; height: 18px; }
+  .filter-segment { min-height: 40px; }
+  .filter-select { min-height: 40px; }
 
   .legend { display: none; }
 

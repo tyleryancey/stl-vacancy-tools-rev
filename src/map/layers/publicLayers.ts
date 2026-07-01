@@ -1,6 +1,6 @@
 import type { Map as MlMap, CircleLayerSpecification, FilterSpecification, ExpressionSpecification } from "maplibre-gl";
 import { PARCELS_SOURCE, PARCELS_POLY_SOURCE, POLY_SOURCE_LAYER, FILL_CROSSFADE_ZOOM as Z } from "@/config/constants";
-import { publicBuildingColor, publicLotColor } from "@/config/colors";
+import { publicBuildingColor, publicLotColor, publicBuildingColorCVD, publicLotColorCVD } from "@/config/colors";
 
 // Public vacancy layers. Faithful to the original (§5.3/§5.5): each class is drawn
 // twice — a circle from centroids (low zoom) and a polygon fill from real
@@ -45,4 +45,15 @@ export function addPublicLayers(map: MlMap): void {
 
 export function removePublicLayers(map: MlMap): void {
   for (const id of PUBLIC_LAYER_IDS) if (map.getLayer(id)) map.removeLayer(id);
+}
+
+// Swap the public building/lot colors between the default Reds/Greens and the
+// colorblind-safe Oranges/Blues (design-review P1). Safe to call anytime.
+export function applyPalette(map: MlMap, colorblind: boolean): void {
+  const bldg = colorblind ? publicBuildingColorCVD : publicBuildingColor;
+  const lot = colorblind ? publicLotColorCVD : publicLotColor;
+  if (map.getLayer("public_bldg")) map.setPaintProperty("public_bldg", "circle-color", bldg);
+  if (map.getLayer("public_bldg_fill")) map.setPaintProperty("public_bldg_fill", "fill-color", bldg);
+  if (map.getLayer("public_lot")) map.setPaintProperty("public_lot", "circle-color", lot);
+  if (map.getLayer("public_lot_fill")) map.setPaintProperty("public_lot_fill", "fill-color", lot);
 }

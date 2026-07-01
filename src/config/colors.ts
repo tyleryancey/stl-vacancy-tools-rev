@@ -32,6 +32,32 @@ export const publicLotColor: ExpressionSpecification = [
   "rgba(0,0,255,1)",
 ];
 
+// Colorblind-safe alternate palette (plan B / design-review P1). Red⇄green is the
+// most common CVD confusion, so buildings→Oranges and lots→Blues (the Okabe-Ito
+// orange/blue axis, distinguishable under deuteranopia/protanopia/tritanopia).
+export const publicBuildingColorCVD: ExpressionSpecification = [
+  "case",
+  ["==", ["get", "IsLra"], true], "rgba(153,77,0,1)",
+  ["==", ["get", "IsLcra"], true], "rgba(153,77,0,1)",
+  [">", ["get", "VacRegMonths"], 0], "rgba(153,77,0,1)",
+  ["==", ["get", "VacDesc"], "Definite"], "rgba(153,77,0,1)", // darkest orange
+  ["==", ["get", "VacDesc"], "Very Likely"], "rgba(224,123,26,1)",
+  ["==", ["get", "VacDesc"], "Possible"], "rgba(240,168,96,1)",
+  ["==", ["get", "VacDesc"], "Indeterminant"], "rgba(247,217,176,1)", // lightest
+  "rgba(0,0,255,1)",
+];
+export const publicLotColorCVD: ExpressionSpecification = [
+  "case",
+  ["==", ["get", "IsLra"], true], "rgba(26,82,118,1)",
+  ["==", ["get", "IsLcra"], true], "rgba(26,82,118,1)",
+  [">", ["get", "VacRegMonths"], 0], "rgba(26,82,118,1)",
+  ["==", ["get", "VacDesc"], "Definite"], "rgba(26,82,118,1)", // darkest blue
+  ["==", ["get", "VacDesc"], "Very Likely"], "rgba(61,132,198,1)",
+  ["==", ["get", "VacDesc"], "Possible"], "rgba(133,184,224,1)",
+  ["==", ["get", "VacDesc"], "Indeterminant"], "rgba(207,228,245,1)", // lightest
+  "rgba(0,0,255,1)",
+];
+
 // Legend swatches (UI).
 export const VACANCY_LEGEND = {
   building: [
@@ -45,6 +71,21 @@ export const VACANCY_LEGEND = {
     { label: "Very Likely", color: "rgb(149,189,164)" },
     { label: "Possible", color: "rgb(186,214,196)" },
     { label: "Indeterminant", color: "rgb(223,240,229)" },
+  ],
+} as const;
+
+export const VACANCY_LEGEND_CVD = {
+  building: [
+    { label: "Definite / LRA / registered", color: "rgb(153,77,0)" },
+    { label: "Very Likely", color: "rgb(224,123,26)" },
+    { label: "Possible", color: "rgb(240,168,96)" },
+    { label: "Indeterminant", color: "rgb(247,217,176)" },
+  ],
+  lot: [
+    { label: "Definite / LRA / registered", color: "rgb(26,82,118)" },
+    { label: "Very Likely", color: "rgb(61,132,198)" },
+    { label: "Possible", color: "rgb(133,184,224)" },
+    { label: "Indeterminant", color: "rgb(207,228,245)" },
   ],
 } as const;
 

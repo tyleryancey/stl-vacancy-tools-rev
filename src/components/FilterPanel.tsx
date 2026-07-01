@@ -73,9 +73,9 @@ const TAX_YRS_OPTIONS: { value: number; label: string }[] = [
 ];
 
 export function FilterPanel() {
-  // Start collapsed on small screens so the panel doesn't cover the map.
+  // Start collapsed on small/tablet screens so the panel doesn't crowd the map.
   const [collapsed, setCollapsed] = useState(
-    () => typeof window !== "undefined" && window.matchMedia("(max-width: 640px)").matches
+    () => typeof window !== "undefined" && window.matchMedia("(max-width: 900px)").matches
   );
 
   const dataReady = useStore((s) => s.dataReady);
@@ -83,10 +83,12 @@ export function FilterPanel() {
   const certaintyVisible = useStore((s) => s.certaintyVisible);
   const overlayCondemned = useStore((s) => s.overlayCondemned);
 
+  const colorblind = useStore((s) => s.colorblind);
   const setFilter = useStore((s) => s.setFilter);
   const resetFilters = useStore((s) => s.resetFilters);
   const toggleCertainty = useStore((s) => s.toggleCertainty);
   const toggleOverlayCondemned = useStore((s) => s.toggleOverlayCondemned);
+  const toggleColorblind = useStore((s) => s.toggleColorblind);
 
   if (!dataReady) {
     return (
@@ -215,6 +217,11 @@ export function FilterPanel() {
                 label="Condemned overlay"
                 checked={overlayCondemned}
                 onChange={toggleOverlayCondemned}
+              />
+              <Toggle
+                label="Colorblind-safe colors"
+                checked={colorblind}
+                onChange={toggleColorblind}
               />
             </div>
           </section>

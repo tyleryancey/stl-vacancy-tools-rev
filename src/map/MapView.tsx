@@ -8,7 +8,7 @@ import { MAP_STYLE, STL_CENTER, STL_DEFAULT_ZOOM, PARCELS_SOURCE, PARCELS_POLY_S
 // tiles via HTTP range requests (only visible tiles load, not the full 18MB).
 const pmtilesProtocol = new Protocol();
 maplibregl.addProtocol("pmtiles", pmtilesProtocol.tile);
-import { addPublicLayers, removePublicLayers, PUBLIC_LAYER_IDS } from "@/map/layers/publicLayers";
+import { addPublicLayers, removePublicLayers, applyPalette, PUBLIC_LAYER_IDS } from "@/map/layers/publicLayers";
 import { addLsemLayers, removeLsemLayers, LSEM_LAYER_IDS } from "@/map/layers/lsemLayers";
 import { applyPublicFilters } from "@/map/applyFilters";
 import { setNeighborhoodHighlight, setCondemnedOverlay } from "@/map/layers/highlights";
@@ -32,6 +32,7 @@ export function MapView() {
   const selectedParcel = useStore((s) => s.selectedParcel);
   const brand = useStore((s) => s.brand);
   const cases = useStore((s) => s.cases);
+  const colorblind = useStore((s) => s.colorblind);
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
@@ -60,6 +61,7 @@ export function MapView() {
       });
       if (useStore.getState().brand === "lsem") addLsemLayers(map);
       else addPublicLayers(map);
+      applyPalette(map, useStore.getState().colorblind); // honor persisted CVD setting
       setLoaded(true);
       useStore.getState().setDataReady(true);
 
@@ -101,6 +103,7 @@ export function MapView() {
     } else {
       removeLsemLayers(map);
       if (!map.getLayer("public_lot")) addPublicLayers(map);
+      applyPalette(map, useStore.getState().colorblind);
       applyPublicFilters(map, { filters: useStore.getState().filters, certaintyVisible: useStore.getState().certaintyVisible });
     }
   }, [brand, loaded]);
@@ -127,6 +130,12 @@ export function MapView() {
     const map = mapRef.current;
     if (map && loaded) applyPublicFilters(map, { filters, certaintyVisible });
   }, [filters, certaintyVisible, loaded]);
+
+  // reactive: colorblind-safe palette
+  useEffect(() => {
+    const map = mapRef.current;
+    if (map && loaded) applyPalette(map, colorblind);
+  }, [colorblind, loaded]);
 
   useEffect(() => {
     const map = mapRef.current;

@@ -69,6 +69,10 @@ interface AppState {
   overlayCondemned: boolean;
   toggleOverlayCondemned: () => void;
 
+  // colorblind-safe palette (persisted)
+  colorblind: boolean;
+  toggleColorblind: () => void;
+
   // neighborhood highlight
   highlightedNeighborhood: string | null;
   setHighlightedNeighborhood: (n: string | null) => void;
@@ -137,6 +141,24 @@ export const useStore = create<AppState>((set) => ({
   overlayCondemned: false,
   toggleOverlayCondemned: () =>
     set((s) => ({ overlayCondemned: !s.overlayCondemned })),
+
+  colorblind: (() => {
+    try {
+      return localStorage.getItem("stlv.colorblind") === "1";
+    } catch {
+      return false;
+    }
+  })(),
+  toggleColorblind: () =>
+    set((s) => {
+      const colorblind = !s.colorblind;
+      try {
+        localStorage.setItem("stlv.colorblind", colorblind ? "1" : "0");
+      } catch {
+        /* ignore */
+      }
+      return { colorblind };
+    }),
 
   highlightedNeighborhood: null,
   setHighlightedNeighborhood: (highlightedNeighborhood) =>
