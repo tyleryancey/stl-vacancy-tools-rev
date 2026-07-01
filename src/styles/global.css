@@ -12,6 +12,17 @@
   --muted: #565d6b; /* darkened for AA contrast on white (was #6b7280) */
 }
 
+/* Panel slide-ins, hover transitions, etc. — MapLibre's own flyTo/easeTo
+   camera moves already respect this natively (built into maplibre-gl). */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 * { box-sizing: border-box; }
 
 html, body, #root {
@@ -235,7 +246,7 @@ a:hover { color: var(--link-hover); }
   display: flex; flex-direction: column; align-items: flex-start; width: 100%;
   border: none; background: none; text-align: left; padding: 6px 14px; cursor: pointer; font: inherit;
 }
-.search-result:hover { background: #f0f6f7; }
+.search-result:hover, .search-result.active { background: #f0f6f7; }
 .search-result-main { font-weight: 500; }
 .search-result-sub { font-size: 11px; color: var(--muted); }
 

@@ -35,3 +35,18 @@ test("header + filter panel (map view) have no detectable a11y violations", asyn
     .analyze();
   expect(results.violations).toEqual([]);
 });
+
+test("search box (with results open) and login dialog have no detectable a11y violations", async ({ page }) => {
+  await gotoReady(page);
+
+  await page.locator(".search-input").fill("Highland");
+  await expect(page.locator(".search-result").first()).toBeVisible();
+  const searchResults = await new AxeBuilder({ page }).include(".search-box").analyze();
+  expect(searchResults.violations).toEqual([]);
+
+  await page.locator(".search-clear").click();
+  await page.locator(".auth-btn", { hasText: "Log in" }).click();
+  await expect(page.locator(".login-modal")).toBeVisible();
+  const dialogResults = await new AxeBuilder({ page }).include(".login-modal").analyze();
+  expect(dialogResults.violations).toEqual([]);
+});

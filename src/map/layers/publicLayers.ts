@@ -11,18 +11,27 @@ const notVacant: FilterSpecification = ["!=", ["get", "VacDesc"], "Not Vacant"];
 export const BUILDING_FILTER: FilterSpecification = ["all", ["==", ["get", "category"], "building"], notVacant];
 export const LOT_FILTER: FilterSpecification = ["all", ["==", ["get", "category"], "lot"], notVacant];
 
-// Circle radius (low zoom) + fade OUT just past z13.
-const circlePaint = (color: ExpressionSpecification): CircleLayerSpecification["paint"] => ({
+function prefersReducedMotion(): boolean {
+  return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+// Circle radius (low zoom) + fade OUT just past z13. Reduced-motion: a hard
+// cut at the crossfade zoom instead of blending across a ~1-zoom-level range.
+const circlePaint = (color: ExpressionSpecification, reduced: boolean): CircleLayerSpecification["paint"] => ({
   "circle-radius": ["interpolate", ["linear"], ["zoom"], 9, 1.5, 12, 3, 13, 3.5],
   "circle-color": color,
-  "circle-opacity": ["interpolate", ["linear"], ["zoom"], 12.9, 1, Z + 0.2, 0],
+  "circle-opacity": reduced
+    ? (["step", ["zoom"], 1, Z, 0] as ExpressionSpecification)
+    : (["interpolate", ["linear"], ["zoom"], 12.9, 1, Z + 0.2, 0] as ExpressionSpecification),
   "circle-stroke-width": 0,
 });
 
 // Polygon fill (high zoom) + fade IN just past z13.
-const fillPaint = (color: ExpressionSpecification) => ({
+const fillPaint = (color: ExpressionSpecification, reduced: boolean) => ({
   "fill-color": color,
-  "fill-opacity": ["interpolate", ["linear"], ["zoom"], 12.9, 0, Z + 0.2, 0.9] as ExpressionSpecification,
+  "fill-opacity": (reduced
+    ? ["step", ["zoom"], 0, Z, 0.9]
+    : ["interpolate", ["linear"], ["zoom"], 12.9, 0, Z + 0.2, 0.9]) as ExpressionSpecification,
   "fill-outline-color": "rgba(80,80,80,0.5)" as const,
 });
 
@@ -37,10 +46,11 @@ export const PUBLIC_FILTER_TARGETS: { id: string; base: FilterSpecification }[] 
 ];
 
 export function addPublicLayers(map: MlMap): void {
-  map.addLayer({ id: "public_lot", type: "circle", source: PARCELS_SOURCE, filter: LOT_FILTER, paint: circlePaint(publicLotColor) });
-  map.addLayer({ id: "public_bldg", type: "circle", source: PARCELS_SOURCE, filter: BUILDING_FILTER, paint: circlePaint(publicBuildingColor) });
-  map.addLayer({ id: "public_lot_fill", type: "fill", source: PARCELS_POLY_SOURCE, "source-layer": POLY_SOURCE_LAYER, filter: LOT_FILTER, paint: fillPaint(publicLotColor) });
-  map.addLayer({ id: "public_bldg_fill", type: "fill", source: PARCELS_POLY_SOURCE, "source-layer": POLY_SOURCE_LAYER, filter: BUILDING_FILTER, paint: fillPaint(publicBuildingColor) });
+  const reduced = prefersReducedMotion();
+  map.addLayer({ id: "public_lot", type: "circle", source: PARCELS_SOURCE, filter: LOT_FILTER, paint: circlePaint(publicLotColor, reduced) });
+  map.addLayer({ id: "public_bldg", type: "circle", source: PARCELS_SOURCE, filter: BUILDING_FILTER, paint: circlePaint(publicBuildingColor, reduced) });
+  map.addLayer({ id: "public_lot_fill", type: "fill", source: PARCELS_POLY_SOURCE, "source-layer": POLY_SOURCE_LAYER, filter: LOT_FILTER, paint: fillPaint(publicLotColor, reduced) });
+  map.addLayer({ id: "public_bldg_fill", type: "fill", source: PARCELS_POLY_SOURCE, "source-layer": POLY_SOURCE_LAYER, filter: BUILDING_FILTER, paint: fillPaint(publicBuildingColor, reduced) });
 }
 
 export function removePublicLayers(map: MlMap): void {
