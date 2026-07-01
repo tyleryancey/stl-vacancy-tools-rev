@@ -19,6 +19,10 @@ export const LSEM_ROLES: Role[] = ["Staff", "Evaluator", "Ext Firm", "Neighborho
 export const ALL_CASES_ROLES: Role[] = ["Staff", "Evaluator"];
 
 export interface User {
+  // Firebase Auth uid. The security rules key on request.auth.uid (e.g. the /users
+  // own-profile rule); a real provider must supply it. The mock uses a stable
+  // derived id. See docs/FIREBASE-SECURITY.md.
+  uid: string;
   email: string;
   displayName: string;
   role: Role;

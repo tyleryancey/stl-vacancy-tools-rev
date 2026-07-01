@@ -21,3 +21,9 @@ blob-report/
 
 # e2e fixture dataset, regenerated from e2e/fixtures/sample.csv by e2e/fixtures/build.mjs
 e2e/fixtures/public/
+
+# Firebase emulator artifacts (rules tests)
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log

@@ -12,6 +12,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
+    "test:rules": "firebase emulators:exec --only firestore --project demo-stlv \"node --test firebase/rules.test.mjs\"",
     "data:download": "node scripts/download.mjs",
     "data:geometry": "node scripts/fetch-geometry.mjs",
     "data": "node scripts/build-all.mjs",

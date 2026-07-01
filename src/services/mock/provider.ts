@@ -39,8 +39,8 @@ export class MockProvider implements DataProvider {
     // (i.e. they still see only the public experience) — mirrors the original,
     // where "public" is not synonymous with "anonymous" (§4.3).
     const user: User = acct
-      ? { email: key, displayName: acct.displayName, role: acct.role, emailVerified: true }
-      : { email: key, displayName: email.split("@")[0], role: null, emailVerified: true };
+      ? { uid: `mock:${key}`, email: key, displayName: acct.displayName, role: acct.role, emailVerified: true }
+      : { uid: `mock:${key}`, email: key, displayName: email.split("@")[0], role: null, emailVerified: true };
     this.user = user;
     try {
       localStorage.setItem(LS_KEY, JSON.stringify(user));

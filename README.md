@@ -41,6 +41,7 @@ New here? Start with **[CONTRIBUTING.md](./CONTRIBUTING.md)**.
 | **[CONTRIBUTING.md](./CONTRIBUTING.md)** | Setup, dev loop, testing, project layout, conventions & gotchas |
 | **[docs/DATA-PIPELINE.md](./docs/DATA-PIPELINE.md)** | Sources → scripts → artifacts, the slim backbone, live scoring vs. snapshots, refresh cadence |
 | **[docs/DEPLOY.md](./docs/DEPLOY.md)** | GitHub Pages runbook, Release-asset seeding, base-path/gzip gotchas, resolved-failure history |
+| **[docs/FIREBASE-SECURITY.md](./docs/FIREBASE-SECURITY.md)** | The case-tier security model — Firestore schema, custom claims, the server-enforced per-role read invariant, rules + tests |
 | **[docs/adr/](./docs/adr/)** | Architecture Decision Records (MapLibre, PMTiles/no-point-tiling, mock provider, ingestion, testing) |
 | **[REVERSE-ENGINEERING.md](./REVERSE-ENGINEERING.md)** | The full technical spec of the original that this build follows |
 
@@ -106,7 +107,9 @@ For a GitHub *project* page (`user.github.io/<repo>/`), set the repo variable `V
 - [x] **B — quality & confidence**: **Vitest** unit tests (scorer vs. checked-in `vcpp` fixtures + the data pipeline) and a **Playwright + axe-core** e2e suite (flows, deep-link round-trips, keyboard/ARIA), both gated in CI. Accessibility brought to **Lighthouse 100** on mobile *and* desktop (the a11y pass caught real WCAG contrast/target-size defects). Performance: the polygon PMTiles source is loaded lazily (only when zoomed in) and the points backbone was slimmed to the 25 fields the client reads (−21%); point-tiling the backbone was measured and rejected (worse at city-wide zoom — see [ADR 0002](./docs/adr/0002-pmtiles-and-no-point-tiling.md)).
 - [x] **E — responsive/print**: mobile bottom-sheet panels, collapsible filter drawer, and a print stylesheet.
 - [x] **D — docs**: this docset — [CONTRIBUTING](./CONTRIBUTING.md), [data-pipeline](./docs/DATA-PIPELINE.md), [deploy runbook](./docs/DEPLOY.md), and [ADRs](./docs/adr/).
-- [ ] **G — real backend**: a Firebase `DataProvider` against a documented schema with **server-enforced** case visibility (see [ADR 0003](./docs/adr/0003-swappable-dataprovider-mock-default.md)), Cloud-Function enrichments, and the bulk case-upload tool.
+- [~] **G — real backend**:
+  - [x] **G-i — case-tier security model** (spec + skeleton, no live project): a documented Firestore schema + custom-claims model + **query-constrained security rules** that enforce per-role case visibility server-side (`firestore.rules`), emulator rules tests (CI-gated) proving bad reads are denied, and a zero-dependency `FirebaseProvider` skeleton whose client read shape is unit-tested. Mock stays the default. See [docs/FIREBASE-SECURITY.md](./docs/FIREBASE-SECURITY.md) + [ADR 0006](./docs/adr/0006-firestore-case-tier-security.md).
+  - [ ] **G-ii/iii** — a live Firebase deployment, Cloud-Function enrichments (Street View / Zillow / CSB / OpenCorporates), and the bulk case-upload tool.
 
 ### Demo logins (mock provider, any password)
 

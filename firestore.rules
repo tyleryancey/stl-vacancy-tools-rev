@@ -1,0 +1,58 @@
+rules_version = '2';
+
+// Security rules for the LSEM case tier. See docs/FIREBASE-SECURITY.md.
+//
+// The invariant: rules gate reads per-query, so the read a role may ISSUE differs by
+// role. Admin roles (Staff/Evaluator) may list the whole apiCases collection; scoped
+// roles (Ext Firm/Neighborhood Client) may only run a query constrained to their own
+// email — an unconstrained list is DENIED by Firestore because it can't prove every
+// returned doc satisfies the rule. That is "server-enforced subset" with no Cloud
+// Function in the read path. Role + email come from tamper-proof custom claims, never
+// from client-writable state. Clients never write cases (a trusted server sync does).
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    function role() {
+      return isSignedIn() ? request.auth.token.role : null;
+    }
+    function caller() {
+      return request.auth.token.email;
+    }
+    function isAdminRole() {
+      return role() == 'Staff' || role() == 'Evaluator';
+    }
+    function isVerifiedScopedRole() {
+      return (role() == 'Ext Firm' || role() == 'Neighborhood Client')
+        && request.auth.token.email_verified == true;
+    }
+
+    // LSEM cases — fictional sample data in this rebuild.
+    match /apiCases/{caseId} {
+      // Staff/Evaluator: whole collection. Scoped roles: only docs listing their email,
+      // which forces the client's query to include
+      //   where('assigneeEmails','array-contains', <their email>)
+      // or the list is rejected. Everyone else: denied.
+      allow read: if isSignedIn() && (
+        isAdminRole()
+        || (isVerifiedScopedRole() && caller() in resource.data.assigneeEmails)
+      );
+      // Cases are populated by a trusted server sync (Admin SDK), never by clients.
+      allow write: if false;
+    }
+
+    // Self-service profile store. A user may touch ONLY their own doc, and it carries
+    // no role (role is a custom claim, not a client-writable field).
+    match /users/{uid} {
+      allow read, write: if isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Deny everything else by default.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

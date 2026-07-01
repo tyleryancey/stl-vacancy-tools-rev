@@ -10,10 +10,13 @@ export function getProvider(): DataProvider {
   if (provider) return provider;
   const kind = import.meta.env.VITE_DATA_PROVIDER || "mock";
   if (kind === "firebase") {
-    // A FirebaseProvider (Auth + RTDB /apiCases) would be constructed here.
-    // Not implemented in the open rebuild — the mock keeps it runnable with no
-    // external services and no real LSEM PII. Falls through to mock.
-    console.warn("VITE_DATA_PROVIDER=firebase requested but no Firebase provider is bundled; using mock.");
+    // A FirebaseProvider skeleton exists (services/firebase/provider.ts,
+    // createFirebaseProvider) with the correct server-enforced read shape + rules
+    // (docs/FIREBASE-SECURITY.md), but it isn't wired to a live project here: the
+    // `firebase` SDK is intentionally not bundled and no real LSEM PII is involved.
+    // To activate it, install `firebase`, adapt the SDK to the FirebaseDeps seam, and
+    // construct createFirebaseProvider({ auth, db }). Until then, fall through to mock.
+    console.warn("VITE_DATA_PROVIDER=firebase requested but no live Firebase provider is wired; using mock. See docs/FIREBASE-SECURITY.md.");
   }
   provider = new MockProvider();
   return provider;

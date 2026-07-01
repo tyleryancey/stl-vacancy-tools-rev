@@ -38,3 +38,22 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 7
+
+  # Firestore security-rules tests (roadmap G-i) against the emulator, which needs
+  # Java. The firebase tooling is installed on-demand here (not in package.json) to
+  # keep the default install lean — the mock backend is the shipped default.
+  rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - run: npm ci
+      - run: npm install --no-save firebase-tools@13 @firebase/rules-unit-testing@3 firebase@10
+      - run: npm run test:rules
