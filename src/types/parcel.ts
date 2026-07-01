@@ -10,16 +10,18 @@ export type VacDesc =
 
 export type ParcelCategory = "building" | "lot";
 
+// The shipped points backbone (public/data/parcels.json) carries only the fields
+// the client actually reads — see INDEX_FIELDS / slimParcel in
+// scripts/build-parcels.mjs. Those are the required members below. The optional
+// members are produced by the CSV pipeline (mapping.mjs) but dropped from the
+// shipped backbone to save ~21% of its bytes; nothing in src/ reads them today,
+// so they're marked optional to flag any future access as possibly-undefined.
 export interface Parcel {
   ParcelId: string;
   Handle: string;
   Address: string;
-  StAddrNum: string;
-  StNameFull: string;
-  Zip: string;
   Ward20: number;
   NhdName: string;
-  CensTract20: string;
   lat: number;
   lng: number;
   Type: string;
@@ -27,13 +29,9 @@ export interface Parcel {
   SqFt: number;
   OwnerName: string;
   OwnerState: string;
-  OwnerZip: string;
   OwnerLoc: "city" | "mo" | "outofstate" | "unknown";
-  BldgAge: number;
   Vacancy: number;
   VacDesc: VacDesc;
-  Vacancy2: number;
-  VacDesc2: string;
   Burden: number;
   BurdenCat: string;
   BoardUp: boolean;
@@ -42,13 +40,24 @@ export interface Parcel {
   TaxYrsDel: number;
   VacRegMonths: number;
   Forestry: string;
-  CSBVacancy: number;
-  CSBNuisance: number;
   Condemned: boolean;
-  BldgsRes: number;
-  BldgsCom: number;
-  ResUnits: number;
   isMpo: boolean; // owner holds >1 vacant property (LSEM single/multi split)
+
+  // Dropped from the shipped backbone (0 client reads) — present only in the
+  // raw CSV mapping output:
+  StAddrNum?: string;
+  StNameFull?: string;
+  Zip?: string;
+  CensTract20?: string;
+  OwnerZip?: string;
+  BldgAge?: number;
+  Vacancy2?: number;
+  VacDesc2?: string;
+  CSBVacancy?: number;
+  CSBNuisance?: number;
+  BldgsRes?: number;
+  BldgsCom?: number;
+  ResUnits?: number;
 }
 
 export interface DataMeta {

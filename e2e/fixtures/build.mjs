@@ -9,7 +9,7 @@ import path from "node:path";
 import { readCsvObjects } from "../../scripts/lib/csv.mjs";
 import { mapParcel } from "../../scripts/lib/mapping.mjs";
 import { computeMpo } from "../../scripts/build-mpo.mjs";
-import { GOV_OWNER } from "../../scripts/build-parcels.mjs";
+import { GOV_OWNER, slimParcel } from "../../scripts/build-parcels.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "../..");
 const SRC = path.join(ROOT, "e2e/fixtures/sample.csv");
@@ -42,7 +42,7 @@ for (const r of rows) {
   features.push({
     type: "Feature",
     geometry: { type: "Point", coordinates: [p.lng, p.lat] },
-    properties: p,
+    properties: slimParcel(p), // mirror the production backbone's slim field set
   });
 }
 

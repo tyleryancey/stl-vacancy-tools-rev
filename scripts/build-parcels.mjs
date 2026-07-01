@@ -14,6 +14,28 @@ const BUILD_DIR = path.join(ROOT, "data/build"); // intermediates (NOT shipped)
 
 export const GOV_OWNER = /^(LRA|LCRA|CITY OF ST|LAND REUTILIZATION|UNITED STATES|STATE OF MISSOURI)/i;
 
+// The only parcel fields any client code reads (verified by inventory during the
+// B-iii perf pass). The shipped points backbone carries just these — dropping the
+// 13 never-read fields (StAddrNum/StNameFull/Zip/CensTract20/OwnerZip/BldgAge/
+// Vacancy2/VacDesc2/CSBVacancy/CSBNuisance/BldgsRes/BldgsCom/ResUnits) trims the
+// backbone ~21% (1300->1022 KB gzipped) with no behavior change. NB: point-tiling
+// the backbone was measured and rejected — at the city-wide default zoom the whole
+// dataset is in view, so a points PMTiles fetches ~2.4MB (worse than the gzipped
+// JSON). Keep this in sync with the fields consumed in src/ (types/parcel.ts marks
+// the dropped ones optional).
+export const INDEX_FIELDS = [
+  "ParcelId", "Handle", "Address", "Ward20", "NhdName", "lat", "lng", "Type",
+  "category", "SqFt", "OwnerName", "OwnerState", "OwnerLoc", "Vacancy", "VacDesc",
+  "Burden", "BurdenCat", "BoardUp", "IsLra", "IsLcra", "TaxYrsDel", "VacRegMonths",
+  "Forestry", "Condemned", "isMpo",
+];
+
+export function slimParcel(p) {
+  const o = {};
+  for (const k of INDEX_FIELDS) o[k] = p[k];
+  return o;
+}
+
 export function buildParcels() {
   const rows = readCsvObjects(SRC);
 
@@ -56,13 +78,16 @@ export function buildParcels() {
     else buildings++;
     if (p.IsLra) lra++;
     if (p.Condemned) condemned++;
+    // Points backbone ships only the fields the client reads (slimParcel);
+    // the polygon layer keeps the full property set (it's lazy-loaded via
+    // PMTiles range requests, so its size isn't on the first-load critical path).
     features.push({
       type: "Feature",
       geometry: { type: "Point", coordinates: [p.lng, p.lat] },
-      properties: p,
+      properties: slimParcel(p),
     });
 
-    // Polygon feature (same properties) when we have real geometry for this Handle.
+    // Polygon feature (full properties) when we have real geometry for this Handle.
     const g = geometry[p.Handle];
     if (g) {
       withGeom++;
