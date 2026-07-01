@@ -1,0 +1,242 @@
+{
+  "PARCELID": "15639050000",
+  "IsLra": false,
+  "HANDLE": "11563000050",
+  "IsLcra": false,
+  "BuildingDivisionBoardUps": [],
+  "Violations": [],
+  "HCESInspections": [],
+  "PlumbingMechanicalElectrical": [],
+  "GeneralConstructionPermits": [],
+  "DemolitionPermits": [],
+  "VacantBuildingInfo": [],
+  "ForestryMaintenance": {
+    "PropertyType": "Commercial",
+    "CutInfo": {
+      "NextProjectedLotCutCompletion": "2023-08-10",
+      "LastLotCutCompletion": "2023-06-29",
+      "NextProjectedBuildingCutCompletion": "2023-09-01",
+      "LastBuildingCutCompletion": "2023-07-31"
+    },
+    "Services": []
+  },
+  "TaxHistory": [
+    {
+      "TaxYear": 2025,
+      "TaxAmt": 6475.45,
+      "TaxBal": 6475.45,
+      "AmtPaid": 0
+    },
+    {
+      "TaxYear": 2024,
+      "TaxAmt": 6647.16,
+      "TaxBal": 6647.16,
+      "AmtPaid": 0
+    },
+    {
+      "TaxYear": 2023,
+      "TaxAmt": 6373.92,
+      "TaxBal": 6373.92,
+      "AmtPaid": 0
+    },
+    {
+      "TaxYear": 2022,
+      "TaxAmt": 6577.64,
+      "TaxBal": 6577.64,
+      "AmtPaid": 0
+    },
+    {
+      "TaxYear": 2021,
+      "TaxAmt": 6569.76,
+      "TaxBal": 0,
+      "AmtPaid": 6569.76
+    },
+    {
+      "TaxYear": 2020,
+      "TaxAmt": 6527.27,
+      "TaxBal": 0,
+      "AmtPaid": 6527.27
+    },
+    {
+      "TaxYear": 2019,
+      "TaxAmt": 6508.4,
+      "TaxBal": 0,
+      "AmtPaid": 6508.4
+    },
+    {
+      "TaxYear": 2018,
+      "TaxAmt": 6679.84,
+      "TaxBal": 0,
+      "AmtPaid": 6679.84
+    },
+    {
+      "TaxYear": 2017,
+      "TaxAmt": 6583.96,
+      "TaxBal": 0,
+      "AmtPaid": 6583.96
+    },
+    {
+      "TaxYear": 2016,
+      "TaxAmt": 6654.48,
+      "TaxBal": 0,
+      "AmtPaid": 6654.48
+    },
+    {
+      "TaxYear": 2015,
+      "TaxAmt": 6128.59,
+      "TaxBal": 0,
+      "AmtPaid": 6128.59
+    },
+    {
+      "TaxYear": 2014,
+      "TaxAmt": 6125.4,
+      "TaxBal": 0,
+      "AmtPaid": 6125.4
+    },
+    {
+      "TaxYear": 2013,
+      "TaxAmt": 14763.84,
+      "TaxBal": 0,
+      "AmtPaid": 14763.84
+    },
+    {
+      "TaxYear": 2012,
+      "TaxAmt": 14619.84,
+      "TaxBal": 0,
+      "AmtPaid": 14619.84
+    },
+    {
+      "TaxYear": 2011,
+      "TaxAmt": 14155.2,
+      "TaxBal": 0,
+      "AmtPaid": 14155.2
+    },
+    {
+      "TaxYear": 2010,
+      "TaxAmt": 13693.92,
+      "TaxBal": 0,
+      "AmtPaid": 13693.92
+    },
+    {
+      "TaxYear": 2009,
+      "TaxAmt": 13258.4,
+      "TaxBal": 0,
+      "AmtPaid": 13258.4
+    }
+  ],
+  "ServiceRequests": [
+    {
+      "REQUESTID": 1818217,
+      "PROBLEMCODE": "Ppty Maint Code-Ext",
+      "DESCRIPTION": "Property Maintenance, Exterior",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2024-04-29T14:08:29.000Z",
+      "DATETIMECLOSED": "2024-05-21T13:38:03.847Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect for exterior building damage and code violations",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Comml"
+    },
+    {
+      "REQUESTID": 1818603,
+      "PROBLEMCODE": "Public Nuisance Rpt",
+      "DESCRIPTION": "Public Nuisance Rpt",
+      "SUBMITTO": "NST",
+      "DATETIMEINIT": "2024-04-30T11:24:07.123Z",
+      "DATETIMECLOSED": "2024-04-30T11:24:07.123Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Public Nuisance",
+      "EXPLANATION": "Submit a nuisance complaint for a specific property. Note: nuisance complaints are a \"logging\" service only and will automatically close when submitted.",
+      "GROUP": "Nuisance Complaint"
+    },
+    {
+      "REQUESTID": 1967107,
+      "PROBLEMCODE": "Mosquito Breeding",
+      "DESCRIPTION": "Mosquito Breeding",
+      "SUBMITTO": "VECTOR CNTRL",
+      "DATETIMEINIT": "2025-06-17T01:12:29.000Z",
+      "DATETIMECLOSED": null,
+      "STATUS": "DISPTCH",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Report of mosquito breeding site",
+      "EXPLANATION": "Only available from late Spring through early Fall.",
+      "GROUP": "Animals"
+    },
+    {
+      "REQUESTID": 1967155,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2025-06-17T08:41:49.000Z",
+      "DATETIMECLOSED": "2025-06-27T13:37:02.830Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "INDETERMINATE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 1980936,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2025-07-18T07:36:44.000Z",
+      "DATETIMECLOSED": null,
+      "STATUS": "CANCEL",
+      "DATECANCELLED": "2025-07-18T09:57:17.000Z",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 1980937,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2025-07-18T07:36:48.000Z",
+      "DATETIMECLOSED": null,
+      "STATUS": "CANCEL",
+      "DATECANCELLED": "2025-07-18T07:37:03.000Z",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 1988427,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2025-08-03T15:36:22.000Z",
+      "DATETIMECLOSED": "2025-08-03T21:21:47.437Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 2094301,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2026-06-17T13:32:58.000Z",
+      "DATETIMECLOSED": null,
+      "STATUS": "LETTER",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "INDETERMINATE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    }
+  ],
+  "updated_at": "2026-06-27"
+}

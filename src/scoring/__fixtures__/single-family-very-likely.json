@@ -1,0 +1,751 @@
+{
+  "PARCELID": "44779475000",
+  "IsLra": false,
+  "HANDLE": "14477020420",
+  "IsLcra": false,
+  "BuildingDivisionBoardUps": [],
+  "Violations": [
+    {
+      "DateEntered": "03/04/2022",
+      "InspType": "ES - Complaint",
+      "InspectDate": "09/07/2022",
+      "NbrOfViolations": 4,
+      "NbrOfClosedViolations": 4,
+      "CompliedDate": "09/14/2022"
+    },
+    {
+      "DateEntered": "09/14/2022",
+      "InspType": "ES - Complaint",
+      "InspectDate": "08/17/2023",
+      "NbrOfViolations": 4,
+      "NbrOfClosedViolations": 4,
+      "CompliedDate": "09/28/2023"
+    },
+    {
+      "DateEntered": "09/28/2023",
+      "InspType": "ES - Complaint",
+      "InspectDate": "04/28/2025",
+      "NbrOfViolations": 2,
+      "NbrOfClosedViolations": 2,
+      "CompliedDate": "03/19/2025"
+    }
+  ],
+  "HCESInspections": [
+    {
+      "InspectionID": 1474635,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "4711 CUPPLES PL",
+      "ProjectAKAAddress": "4711  CUPPLES",
+      "UnitNumber": "",
+      "CreatedDate": "2022-03-04",
+      "CurrentResult": "Non-Compliance - Re-Send",
+      "CurrentResultDate": "2022-09-14",
+      "OwnerName": "HOMES FOR SALE LLC",
+      "OwnerAddress": "1830 S OCEAN DR #2406",
+      "OwnerCity": "HALLANDALE",
+      "OwnerState": "FL",
+      "OwnerZipCode": "33009",
+      "NumberOfStories": "0.0",
+      "NumberOfUnits": "0",
+      "UseCode": "",
+      "Construction": "",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Porch",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.2",
+          "ViolationText": "Scrape and paint chipped, peeling and / or flaking paint on porch.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.2",
+          "ViolationText": "Paint all exterior window trim.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Cornice/Fascia",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.2",
+          "ViolationText": "Scrape and paint chipped, peeling and/or flaking paint on cornice/fascia.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Address",
+          "ViolationItem": "Defect - Rear",
+          "ViolationAnswer": "N",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.3",
+          "ViolationText": "Place or maintain 4 inch minimum house numbers on required place(s)"
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "Fee Letter"
+        },
+        {
+          "Result": "Non-Compliance - Re-Send"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1619163,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "4711 CUPPLES PL",
+      "ProjectAKAAddress": "4711  CUPPLES",
+      "UnitNumber": "",
+      "CreatedDate": "2022-09-14",
+      "CurrentResult": "Non-Compliance - Re-Send",
+      "CurrentResultDate": "2023-09-28",
+      "OwnerName": "HOMES FOR SALE LLC",
+      "OwnerAddress": "2424 CENTERGATE DR #201",
+      "OwnerCity": "HOLLYWOOD",
+      "OwnerState": "FL",
+      "OwnerZipCode": "33025",
+      "NumberOfStories": "0.0",
+      "NumberOfUnits": "0",
+      "UseCode": "",
+      "Construction": "",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Porch",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.2",
+          "ViolationText": "Scrape and paint chipped, peeling and / or flaking paint on porch.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.2",
+          "ViolationText": "Paint all exterior window trim.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Cornice/Fascia",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.2",
+          "ViolationText": "Scrape and paint chipped, peeling and/or flaking paint on cornice/fascia.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Address",
+          "ViolationItem": "Defect - Rear",
+          "ViolationAnswer": "N",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.3",
+          "ViolationText": "Place or maintain 4 inch minimum house numbers on required place(s)"
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "Fee Letter"
+        },
+        {
+          "Result": "Non-Compliance - Re-Send"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1858067,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "4711 CUPPLES PL",
+      "ProjectAKAAddress": "4711  CUPPLES",
+      "UnitNumber": "",
+      "CreatedDate": "2023-09-28",
+      "CurrentResult": "Complied",
+      "CurrentResultDate": "2025-03-19",
+      "OwnerName": "INTEGRITY INVESTMENTS LLC",
+      "OwnerAddress": "30 N GOULD ST STE R",
+      "OwnerCity": "SHERIDAN",
+      "OwnerState": "WY",
+      "OwnerZipCode": "82801",
+      "NumberOfStories": "0.0",
+      "NumberOfUnits": "0",
+      "UseCode": "",
+      "Construction": "",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Porch",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.2",
+          "ViolationText": "Scrape and paint chipped, peeling and / or flaking paint on porch.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.2",
+          "ViolationText": "Paint all exterior window trim.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Cornice/Fascia",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.2",
+          "ViolationText": "Scrape and paint chipped, peeling and/or flaking paint on cornice/fascia.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Address",
+          "ViolationItem": "Defect - Rear",
+          "ViolationAnswer": "N",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.3",
+          "ViolationText": "Place or maintain 4 inch minimum house numbers on required place(s)"
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "Fee Letter"
+        },
+        {
+          "Result": "Complied"
+        }
+      ]
+    }
+  ],
+  "PlumbingMechanicalElectrical": [],
+  "GeneralConstructionPermits": [],
+  "DemolitionPermits": [],
+  "VacantBuildingInfo": [],
+  "ForestryMaintenance": {
+    "PropertyType": "Rehab",
+    "CutInfo": {
+      "NextProjectedLotCutCompletion": "2023-08-29",
+      "LastLotCutCompletion": "2023-07-20",
+      "NextProjectedBuildingCutCompletion": "2023-08-08",
+      "LastBuildingCutCompletion": "2023-06-13"
+    },
+    "Services": [
+      {
+        "PropertyType": "Rehab",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2024-05-22T13:56:27.200Z",
+        "ServiceAmount": 108,
+        "LastDate": "2024-05-22T13:56:27.200Z"
+      },
+      {
+        "PropertyType": "Rehab",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2024-01-26T16:00:48.340Z",
+        "ServiceAmount": 108,
+        "LastDate": "2024-01-26T16:00:48.340Z"
+      },
+      {
+        "PropertyType": "Rehab",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2023-10-30T15:22:32.573Z",
+        "ServiceAmount": 108,
+        "LastDate": "2023-10-30T15:22:32.573Z"
+      },
+      {
+        "PropertyType": "Rehab",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2023-08-03T09:10:09.587Z",
+        "ServiceAmount": 108,
+        "LastDate": "2023-08-03T09:10:09.587Z"
+      },
+      {
+        "PropertyType": "Rehab",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2022-09-29T11:44:50.313Z",
+        "ServiceAmount": 108,
+        "LastDate": "2022-09-29T11:44:50.313Z"
+      },
+      {
+        "PropertyType": "Rehab",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2021-10-18T12:12:05.837Z",
+        "ServiceAmount": 108,
+        "LastDate": "2021-10-18T12:12:05.837Z"
+      },
+      {
+        "PropertyType": "Rehab",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2021-08-02T11:56:36.257Z",
+        "ServiceAmount": 108,
+        "LastDate": "2021-08-02T11:56:36.257Z"
+      },
+      {
+        "PropertyType": "Rehab",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2021-06-04T13:36:03.533Z",
+        "ServiceAmount": 216,
+        "LastDate": "2021-06-04T13:36:03.533Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2019-04-26T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Interest",
+        "ServiceDate": "2019-11-15T00:00:00.000Z",
+        "ServiceAmount": 9.72,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2018-06-07T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2018-06-27T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Interest",
+        "ServiceDate": "2018-11-15T00:00:00.000Z",
+        "ServiceAmount": 19.44,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2020-07-29T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Interest",
+        "ServiceDate": "2020-11-15T00:00:00.000Z",
+        "ServiceAmount": 9.72,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2007-04-16T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2007-06-11T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2004-06-12T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Occupied debris",
+        "ServiceType": "Building Board Up",
+        "ServiceDate": "2003-01-30T00:00:00.000Z",
+        "ServiceAmount": 63.8,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Occupied debris",
+        "ServiceType": "Light Debris",
+        "ServiceDate": "2003-03-18T00:00:00.000Z",
+        "ServiceAmount": 400,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Occupied debris",
+        "ServiceType": "Private Tree Removal",
+        "ServiceDate": "2001-06-30T00:00:00.000Z",
+        "ServiceAmount": 1137.86,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Occupied debris",
+        "ServiceType": "Interest",
+        "ServiceDate": "2001-11-15T00:00:00.000Z",
+        "ServiceAmount": 102.4,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2019-04-26T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Interest",
+        "ServiceDate": "2019-11-15T00:00:00.000Z",
+        "ServiceAmount": 9.72,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2018-06-07T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2018-06-27T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Interest",
+        "ServiceDate": "2018-11-15T00:00:00.000Z",
+        "ServiceAmount": 19.44,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2020-07-29T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Interest",
+        "ServiceDate": "2020-11-15T00:00:00.000Z",
+        "ServiceAmount": 9.72,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      }
+    ]
+  },
+  "TaxHistory": [
+    {
+      "TaxYear": 2025,
+      "TaxAmt": 174.54,
+      "TaxBal": 0,
+      "AmtPaid": 174.54
+    },
+    {
+      "TaxYear": 2024,
+      "TaxAmt": 173.64,
+      "TaxBal": 0,
+      "AmtPaid": 173.64
+    },
+    {
+      "TaxYear": 2023,
+      "TaxAmt": 166.47,
+      "TaxBal": 0,
+      "AmtPaid": 166.47
+    },
+    {
+      "TaxYear": 2022,
+      "TaxAmt": 169.36,
+      "TaxBal": 0,
+      "AmtPaid": 169.36
+    },
+    {
+      "TaxYear": 2021,
+      "TaxAmt": 169.14,
+      "TaxBal": 0,
+      "AmtPaid": 169.14
+    },
+    {
+      "TaxYear": 2020,
+      "TaxAmt": 168.04,
+      "TaxBal": 0,
+      "AmtPaid": 168.04
+    },
+    {
+      "TaxYear": 2019,
+      "TaxAmt": 167.57,
+      "TaxBal": 0,
+      "AmtPaid": 167.57
+    },
+    {
+      "TaxYear": 2018,
+      "TaxAmt": 165.25,
+      "TaxBal": 0,
+      "AmtPaid": 165.25
+    },
+    {
+      "TaxYear": 2017,
+      "TaxAmt": 162.89,
+      "TaxBal": 0,
+      "AmtPaid": 162.89
+    },
+    {
+      "TaxYear": 2016,
+      "TaxAmt": 263.53,
+      "TaxBal": 0,
+      "AmtPaid": 263.53
+    },
+    {
+      "TaxYear": 2015,
+      "TaxAmt": 241.27,
+      "TaxBal": 0,
+      "AmtPaid": 241.27
+    },
+    {
+      "TaxYear": 2014,
+      "TaxAmt": 326.09,
+      "TaxBal": 0,
+      "AmtPaid": 326.09
+    },
+    {
+      "TaxYear": 2013,
+      "TaxAmt": 326.18,
+      "TaxBal": 0,
+      "AmtPaid": 326.18
+    },
+    {
+      "TaxYear": 2012,
+      "TaxAmt": 384.13,
+      "TaxBal": 0,
+      "AmtPaid": 384.13
+    },
+    {
+      "TaxYear": 2011,
+      "TaxAmt": 370.33,
+      "TaxBal": 0,
+      "AmtPaid": 370.33
+    },
+    {
+      "TaxYear": 2010,
+      "TaxAmt": 645.15,
+      "TaxBal": 0,
+      "AmtPaid": 645.15
+    },
+    {
+      "TaxYear": 2009,
+      "TaxAmt": 620.87,
+      "TaxBal": 0,
+      "AmtPaid": 620.87
+    }
+  ],
+  "ServiceRequests": [
+    {
+      "REQUESTID": 113919,
+      "PROBLEMCODE": "Inspect Private Tree",
+      "DESCRIPTION": "Inspect Private Tree",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2010-01-21T09:51:51.000Z",
+      "DATETIMECLOSED": "2013-05-06T09:22:56.000Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "INDETERMINATE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect private tree - possibly hazardous",
+      "EXPLANATION": "Trees on private property are the property owner's responsibility to maintain. However, Forestry can inspect potentially hazardous trees. ",
+      "GROUP": "Trees"
+    },
+    {
+      "REQUESTID": 497739,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2013-06-19T08:19:25.447Z",
+      "DATETIMECLOSED": "2013-08-28T11:36:05.520Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 1594909,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2022-06-23T15:07:59.000Z",
+      "DATETIMECLOSED": "2022-06-23T15:16:18.727Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 1602638,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2022-07-13T08:58:09.000Z",
+      "DATETIMECLOSED": "2022-07-13T09:22:35.283Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 2000282,
+      "PROBLEMCODE": "Debris-Vacant Bldg",
+      "DESCRIPTION": "Debris-Vacant Bldg",
+      "SUBMITTO": "STREET DIVISION, 514",
+      "DATETIMEINIT": "2025-08-29T08:37:37.000Z",
+      "DATETIMECLOSED": "2025-08-29T09:22:58.557Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Debris around a vacant building",
+      "EXPLANATION": "Do NOT file requests related to the May 2025 Tornado here.",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 2008762,
+      "PROBLEMCODE": "Debris-alley/street",
+      "DESCRIPTION": "Debris-alley/street",
+      "SUBMITTO": "STREET DIVISION, 514",
+      "DATETIMEINIT": "2025-09-22T08:35:57.000Z",
+      "DATETIMECLOSED": null,
+      "STATUS": "CANCEL",
+      "DATECANCELLED": "2025-09-22T08:47:12.000Z",
+      "CALLERTYPE": "INDETERMINATE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Debris dumped in the street or alley",
+      "EXPLANATION": "Do NOT file debris requests related to the May 2025 tornado here.",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 2008770,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2025-09-22T08:42:56.000Z",
+      "DATETIMECLOSED": "2025-12-10T15:29:45.173Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 2008773,
+      "PROBLEMCODE": "Illegl Use-Opn Storg",
+      "DESCRIPTION": "Illegl Use-Opn Storg",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2025-09-22T08:45:30.510Z",
+      "DATETIMECLOSED": "2025-09-25T17:28:26.647Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect for violation of zoning code (including open storage)",
+      "EXPLANATION": "Any zoning code violations, including derelict vehicles, appliances, etc. on private property",
+      "GROUP": "Vehicles"
+    },
+    {
+      "REQUESTID": 2071236,
+      "PROBLEMCODE": "Illegl Use-Opn Storg",
+      "DESCRIPTION": "Illegl Use-Opn Storg",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2026-04-16T11:11:34.667Z",
+      "DATETIMECLOSED": "2026-04-17T15:47:54.933Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect for violation of zoning code (including open storage)",
+      "EXPLANATION": "Any zoning code violations, including derelict vehicles, appliances, etc. on private property",
+      "GROUP": "Vehicles"
+    },
+    {
+      "REQUESTID": 2081828,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2026-05-15T11:05:33.000Z",
+      "DATETIMECLOSED": null,
+      "STATUS": "DISPTCH",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "INDETERMINATE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 2097198,
+      "PROBLEMCODE": "Illegl Use-Opn Storg",
+      "DESCRIPTION": "Illegl Use-Opn Storg",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2026-06-25T11:58:06.000Z",
+      "DATETIMECLOSED": null,
+      "STATUS": "DISPTCH",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "INDETERMINATE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect for violation of zoning code (including open storage)",
+      "EXPLANATION": "Any zoning code violations, including derelict vehicles, appliances, etc. on private property",
+      "GROUP": "Vehicles"
+    }
+  ],
+  "updated_at": "2026-06-29"
+}

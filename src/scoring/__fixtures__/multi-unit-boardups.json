@@ -1,0 +1,2520 @@
+{
+  "PARCELID": "30049090000",
+  "IsLra": false,
+  "HANDLE": "13004000090",
+  "IsLcra": false,
+  "BuildingDivisionBoardUps": [
+    {
+      "Project Address": "6827   PENNSYLVANIA AV ",
+      "Date Requested": "2021-03-17T19:01:42.463Z",
+      "Date Boarded Up": "2021-03-29T00:00:00.000Z",
+      "Number of Openings": 1,
+      "Notes": "(1) Opening secured"
+    },
+    {
+      "Project Address": "6827   PENNSYLVANIA AV ",
+      "Date Requested": "2023-01-24T10:19:52.620Z",
+      "Date Boarded Up": "2023-02-02T00:00:00.000Z",
+      "Number of Openings": 0,
+      "Notes": "BACK UNSAFE"
+    },
+    {
+      "Project Address": "6827   PENNSYLVANIA AV ",
+      "Date Requested": "2023-01-26T12:48:15.497Z",
+      "Date Boarded Up": "2023-02-08T00:00:00.000Z",
+      "Number of Openings": 1,
+      "Notes": "unsafe"
+    },
+    {
+      "Project Address": "6827   PENNSYLVANIA AV ",
+      "Date Requested": "2023-03-03T09:03:08.193Z",
+      "Date Boarded Up": "2023-06-09T00:00:00.000Z",
+      "Number of Openings": 0,
+      "Notes": "CS"
+    },
+    {
+      "Project Address": "6827   PENNSYLVANIA AV ",
+      "Date Requested": "2021-12-30T14:54:26.730Z",
+      "Date Boarded Up": "2022-03-15T00:00:00.000Z",
+      "Number of Openings": 1,
+      "Notes": "BACK UNSAFE"
+    },
+    {
+      "Project Address": "6827   PENNSYLVANIA AV ",
+      "Date Requested": "2021-12-30T07:29:44.767Z",
+      "Date Boarded Up": "2022-01-04T00:00:00.000Z",
+      "Number of Openings": 1,
+      "Notes": "CITY SECURED"
+    },
+    {
+      "Project Address": "6827   PENNSYLVANIA AV ",
+      "Date Requested": "2017-02-21T18:23:45.713Z",
+      "Date Boarded Up": "2017-02-21T00:00:00.000Z",
+      "Number of Openings": 1,
+      "Notes": "Owner secured"
+    },
+    {
+      "Project Address": "6827   PENNSYLVANIA AV ",
+      "Date Requested": "2017-01-26T08:49:15.137Z",
+      "Date Boarded Up": "2017-02-09T00:00:00.000Z",
+      "Number of Openings": 1,
+      "Notes": "Back  unsafe"
+    },
+    {
+      "Project Address": "6827   PENNSYLVANIA AV ",
+      "Date Requested": "2022-05-23T07:43:27.117Z",
+      "Date Boarded Up": "2022-05-31T00:00:00.000Z",
+      "Number of Openings": 1,
+      "Notes": "OWNER SECURED"
+    },
+    {
+      "Project Address": "6827   PENNSYLVANIA AV ",
+      "Date Requested": "2023-05-22T08:26:59.967Z",
+      "Date Boarded Up": "2023-06-29T00:00:00.000Z",
+      "Number of Openings": 0,
+      "Notes": "CS"
+    },
+    {
+      "Project Address": "6827   PENNSYLVANIA AV ",
+      "Date Requested": "2020-10-07T07:23:48.860Z",
+      "Date Boarded Up": "2020-10-13T00:00:00.000Z",
+      "Number of Openings": 1,
+      "Notes": "CITY SECURED BACK UNSAFE"
+    }
+  ],
+  "Violations": [
+    {
+      "DateEntered": "08/11/2021",
+      "InspType": "ES - Complaint",
+      "InspectDate": "08/11/2021",
+      "NbrOfViolations": 6,
+      "NbrOfClosedViolations": 6,
+      "CompliedDate": "09/30/2021"
+    },
+    {
+      "DateEntered": "09/30/2021",
+      "InspType": "ES - Complaint",
+      "InspectDate": "09/30/2021",
+      "NbrOfViolations": 7,
+      "NbrOfClosedViolations": 0,
+      "CompliedDate": ""
+    },
+    {
+      "DateEntered": "12/29/2021",
+      "InspType": "ES - Complaint",
+      "InspectDate": "01/28/2022",
+      "NbrOfViolations": 1,
+      "NbrOfClosedViolations": 0,
+      "CompliedDate": ""
+    },
+    {
+      "DateEntered": "04/19/2023",
+      "InspType": "ES - Complaint",
+      "InspectDate": "05/19/2023",
+      "NbrOfViolations": 14,
+      "NbrOfClosedViolations": 0,
+      "CompliedDate": ""
+    },
+    {
+      "DateEntered": "05/03/2023",
+      "InspType": "ES - Complaint",
+      "InspectDate": "06/02/2023",
+      "NbrOfViolations": 10,
+      "NbrOfClosedViolations": 0,
+      "CompliedDate": ""
+    },
+    {
+      "DateEntered": "04/14/2025",
+      "InspType": "ES - Complaint",
+      "InspectDate": "05/14/2025",
+      "NbrOfViolations": 4,
+      "NbrOfClosedViolations": 0,
+      "CompliedDate": ""
+    }
+  ],
+  "HCESInspections": [
+    {
+      "InspectionID": 1884357,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA AV",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2025-04-14",
+      "CurrentResult": "Structural Condemnation",
+      "CurrentResultDate": "2025-04-14",
+      "OwnerName": "JAGGIE INVESTMENTS LLC",
+      "OwnerAddress": "4316 GRAVOIS AV",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63116",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "1",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Roof Defect",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Roof is defective."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Engineer's Report",
+          "ViolationAnswer": "Unit",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 110.7.1",
+          "ViolationText": "Submit a report with the seal of a Registered Design Professional describing the condition and safety of the item mentioned."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Sealed Drawings Required",
+          "ViolationAnswer": "Unit",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 110.7.1",
+          "ViolationText": "Building permit with plans sealed by a Registered Design Professional will be required. Contact inspector for information."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Building Permit Required",
+          "ViolationAnswer": "Unit",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 105.0",
+          "ViolationText": "Building permit will be required. Please contact inspector/supervisor before applying for permit. Phone number listed on attached sheet."
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Structural Condemnation"
+        }
+      ]
+    },
+    {
+      "InspectionID": 640492,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 Pennsylvania",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2017-01-26",
+      "CurrentResult": "Notice to Secure",
+      "CurrentResultDate": "2017-01-26",
+      "OwnerName": "SCHNEIDER, PATRICK T",
+      "OwnerAddress": "1120 GRANDVIEW PL",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63139",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "2",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [],
+      "Results": [
+        {
+          "Result": "Notice to Secure"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1223383,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA AVE",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2020-10-06",
+      "CurrentResult": "Notice to Secure",
+      "CurrentResultDate": "2020-10-06",
+      "OwnerName": "NEIGHBORHOOD PROPERTIES LLC",
+      "OwnerAddress": "230 S BEMISTON AV STE 1100",
+      "OwnerCity": "CLAYTON",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63105",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "2",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Door",
+          "ViolationItem": "Improper Secure",
+          "ViolationAnswer": "E,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 105.1",
+          "ViolationText": "Secure door as required (because of missing porch / stairs) or replace missing porch / stairs.  Permit required."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Broken/Missing",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13.1",
+          "ViolationText": "Replace broken or missing window pane(s)."
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Notice to Secure"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1287215,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6829 PENNSYLVANIA AVE",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2021-03-17",
+      "CurrentResult": "Notice to Secure",
+      "CurrentResultDate": "2021-03-17",
+      "OwnerName": "FUND DELTA SAINT LOUIS LLC",
+      "OwnerAddress": "230 S BEMISTON AV  STE 1100",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63105",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "4",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [],
+      "Results": [
+        {
+          "Result": "Notice to Secure"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1372466,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2021-09-30",
+      "CurrentResult": "Notice to Secure",
+      "CurrentResultDate": "2021-12-30",
+      "OwnerName": "FUND DELTA SAINT LOUIS LLC",
+      "OwnerAddress": "230 S BEMISTON AV  STE 1100",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63105",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "2",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Collapsed",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Clear area and rebuild partially collapsed wall.  Permit required.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Masonry Missing",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Replace missing bricks / block / stone on exterior wall(s).  Permit may be required.  Contact inspector.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Door",
+          "ViolationItem": "Improper Secure",
+          "ViolationAnswer": "E,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 105.1",
+          "ViolationText": "Secure door as required (because of missing porch / stairs) or replace missing porch / stairs.  Permit required."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Door",
+          "ViolationItem": "Defect/Missing",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.15",
+          "ViolationText": "Replace defective and / or missing door."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Broken/Missing",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13.1",
+          "ViolationText": "Replace broken or missing window pane(s)."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Cornice/Fascia",
+          "ViolationItem": "Defect",
+          "ViolationAnswer": "E",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.8",
+          "ViolationText": "Repair or replace defective cornice/facia.  A permit may be required."
+        },
+        {
+          "ViolationLocation": "Interior Unit - U",
+          "ViolationType": "Other",
+          "ViolationItem": "Secure",
+          "ViolationAnswer": "Unit",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ord 71835",
+          "ViolationText": "Failure to secure Certificate of Inspection within 30 days of original notification. Ord. 71835"
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Notice to Secure"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1408780,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA AVE",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2021-12-29",
+      "CurrentResult": "Notice to Secure",
+      "CurrentResultDate": "2021-12-29",
+      "OwnerName": "FUND DELTA SAINT LOUIS LLC",
+      "OwnerAddress": "230 S BEMISTON AV  STE 1100",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63105",
+      "NumberOfStories": "0.0",
+      "NumberOfUnits": "0",
+      "UseCode": "",
+      "Construction": "",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Interior Unit - U",
+          "ViolationType": "Other",
+          "ViolationItem": "Secure",
+          "ViolationAnswer": "Unit",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ord 71835",
+          "ViolationText": "Failure to secure Certificate of Inspection within 30 days of original notification. Ord. 71835"
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Notice to Secure"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1465591,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA AVE",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2022-05-20",
+      "CurrentResult": "Notice to Secure",
+      "CurrentResultDate": "2022-05-20",
+      "OwnerName": "FUND DELTA SAINT LOUIS LLC",
+      "OwnerAddress": "230 S BEMISTON AV  STE 810",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63105",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "4",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [],
+      "Results": [
+        {
+          "Result": "Notice to Secure"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1570040,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6829 PENNSYLVANIA AVE",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2023-01-24",
+      "CurrentResult": "Notice to Secure",
+      "CurrentResultDate": "2023-01-24",
+      "OwnerName": "FUND DELTA SAINT LOUIS LLC",
+      "OwnerAddress": "230 S BEMISTON AV  STE 810",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63105",
+      "NumberOfStories": "0.0",
+      "NumberOfUnits": "0",
+      "UseCode": "",
+      "Construction": "",
+      "OccupancyLimitNumber": "",
+      "Violations": [],
+      "Results": [
+        {
+          "Result": "Notice to Secure"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1571248,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA AVE",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2023-01-26",
+      "CurrentResult": "Notice to Secure",
+      "CurrentResultDate": "2023-01-26",
+      "OwnerName": "FUND DELTA SAINT LOUIS LLC",
+      "OwnerAddress": "230 S BEMISTON AV  STE 810",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63105",
+      "NumberOfStories": "0.0",
+      "NumberOfUnits": "0",
+      "UseCode": "",
+      "Construction": "",
+      "OccupancyLimitNumber": "",
+      "Violations": [],
+      "Results": [
+        {
+          "Result": "Notice to Secure"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1586160,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA AV",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2023-03-03",
+      "CurrentResult": "Notice to Secure",
+      "CurrentResultDate": "2023-03-03",
+      "OwnerName": "FUND DELTA SAINT LOUIS LLC",
+      "OwnerAddress": "230 S BEMISTON AV  STE 810",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63105",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "1",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [],
+      "Results": [
+        {
+          "Result": "Notice to Secure"
+        }
+      ]
+    },
+    {
+      "InspectionID": 871509,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 Pennsylvania",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2018-07-18",
+      "CurrentResult": "Abated",
+      "CurrentResultDate": "2019-01-31",
+      "OwnerName": "SCHNEIDER, PATRICK T",
+      "OwnerAddress": "1120 GRANDVIEW PL",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63139",
+      "NumberOfStories": "0.0",
+      "NumberOfUnits": "0",
+      "UseCode": "",
+      "Construction": "",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Parapet",
+          "ViolationItem": "Bulged",
+          "ViolationAnswer": "N,S",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Remove and relay (plumb and true) exterior bulged wall.  Permit required.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Cracked/Shifted",
+          "ViolationAnswer": "E,S,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Remove and replace damaged area of wall that is cracked / shifted.  Permit required.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Bulged",
+          "ViolationAnswer": "E,S",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Remove and relay (plumb and true) exterior bulged wall.  Permit required.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Collapsed",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Clear area and rebuild partially collapsed wall.  Permit required.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Masonry Missing",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Replace missing bricks / block / stone on exterior wall(s).  Permit may be required.  Contact inspector.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Porch",
+          "ViolationItem": "Concrete Steps",
+          "ViolationAnswer": "E",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.10",
+          "ViolationText": "Repair or replace spalled and broken concrete porch steps.  Permit may be required."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Porch",
+          "ViolationItem": "Guard/Hand Rail",
+          "ViolationAnswer": "E",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 307.1",
+          "ViolationText": "Repair or replace missing, loose or broken porch guardrail/handrail.  Permit may be required."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Porch",
+          "ViolationItem": "Step Rail",
+          "ViolationAnswer": "E",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.12",
+          "ViolationText": "Repair or replace missing, loose or broken guard/handrail on porch or stoop steps.  Permit may be required."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Door",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "E",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.2",
+          "ViolationText": "Scrape and paint chipped, peeling and / or flaking paint on doors.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Broken/Missing",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13.1",
+          "ViolationText": "Replace broken or missing window pane(s)."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.2",
+          "ViolationText": "Paint all exterior window trim.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Gutters/Downspout",
+          "ViolationItem": "Defect",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 507.2",
+          "ViolationText": "Repair or replace defective, leaking, loose and/or missing gutter/downspout."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Gutters/Downspout",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "E",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.2",
+          "ViolationText": "Scrape and paint chipped, peeling and/or flaking paint on gutters/downspouts.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Cornice/Fascia",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "E",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.2",
+          "ViolationText": "Scrape and paint chipped, peeling and/or flaking paint on cornice/fascia.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Cornice/Fascia",
+          "ViolationItem": "Defect",
+          "ViolationAnswer": "E",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.8",
+          "ViolationText": "Repair or replace defective cornice/facia.  A permit may be required."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Address",
+          "ViolationItem": "Defect - Rear",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.3",
+          "ViolationText": "Place or maintain 4 inch minimum house numbers on required place(s)"
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Walls Cracked",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Wall(s) are cracked."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Collapsed",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Wall(s) are collapsed."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Door/s missing",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Door/s are missing, building is open to unauthorized entry."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Window/s Missing",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Window/s are missing, building is open to unauthorized entry."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Interior Structural Deteriorated",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Interior structural members are rotten."
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Abated"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1884302,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 Pennsylvania",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2017-03-01",
+      "CurrentResult": "Abated",
+      "CurrentResultDate": "2025-04-14",
+      "OwnerName": "FUND DELTA SAINT LOUIS LLC",
+      "OwnerAddress": "3103 HICKORY ST",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63104",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "2",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Walls Cracked",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Wall(s) are cracked."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Collapsed",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Wall(s) are collapsed."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Door/s missing",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Door/s are missing, building is open to unauthorized entry."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Window/s Missing",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Window/s are missing, building is open to unauthorized entry."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Interior Structural Deteriorated",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Interior structural members are rotten."
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Structural Condemnation"
+        },
+        {
+          "Result": "Abated"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1995781,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA AVE",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2026-02-27",
+      "CurrentResult": "Abated",
+      "CurrentResultDate": "2026-03-31",
+      "OwnerName": "JAGGIE INVESTMENTS LLC",
+      "OwnerAddress": "4316 GRAVOIS AV",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63116",
+      "NumberOfStories": "0.0",
+      "NumberOfUnits": "0",
+      "UseCode": "",
+      "Construction": "",
+      "OccupancyLimitNumber": "",
+      "Violations": [],
+      "Results": [
+        {
+          "Result": "Abated"
+        }
+      ]
+    },
+    {
+      "InspectionID": 446884,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 pennsylvania",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2014-07-18",
+      "CurrentResult": "Non-Compliance - Re-Send",
+      "CurrentResultDate": "2016-01-08",
+      "OwnerName": "SCHNEIDER, PATRICK T",
+      "OwnerAddress": "1120 GRANDVIEW PL",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63139",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "2",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Broken/Missing",
+          "ViolationAnswer": "N,E,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13.1",
+          "ViolationText": "Replace broken or missing window pane(s)."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Frame/Sash",
+          "ViolationAnswer": "N,E,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13",
+          "ViolationText": "Repair or replace warped, rotted, or worn or missing window frame(s) sash(es)."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "N,E,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.2",
+          "ViolationText": "Paint all exterior window trim.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Trim",
+          "ViolationAnswer": "N,E,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13",
+          "ViolationText": "Replace defective window trim."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Open Storage",
+          "ViolationItem": "Illegal Residential",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Zoning Ordinance 26.16.030",
+          "ViolationText": "Remove open storage.  Open storage constitutes illegal use of premises in a residential zone.  Items listed but not limited to."
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "Fee Letter"
+        },
+        {
+          "Result": "Non-Compliance - Re-Send"
+        }
+      ]
+    },
+    {
+      "InspectionID": 795921,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 pennsylvania",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2016-01-08",
+      "CurrentResult": "Non-Compliance - Re-Send",
+      "CurrentResultDate": "2018-05-01",
+      "OwnerName": "SCHNEIDER, PATRICK T",
+      "OwnerAddress": "1120 GRANDVIEW PL",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63139",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "2",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Collapsed",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Clear area and rebuild partially collapsed wall.  Permit required.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Frame/Sash",
+          "ViolationAnswer": "N,E,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13",
+          "ViolationText": "Repair or replace warped, rotted, or worn or missing window frame(s) sash(es)."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "N,E,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.2",
+          "ViolationText": "Paint all exterior window trim.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Trim",
+          "ViolationAnswer": "N,E,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13",
+          "ViolationText": "Replace defective window trim."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Fences",
+          "ViolationItem": "Collapsed",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-302.7",
+          "ViolationText": "Repair or remove collapsed fence.  Permit may be required.  Contact inspector.  IBC SEC. 105.1"
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "Fee Letter"
+        },
+        {
+          "Result": "Fee Letter"
+        },
+        {
+          "Result": "Non-Compliance - Re-Send"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1310757,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2020-08-05",
+      "CurrentResult": "Non-Compliance - Re-Send",
+      "CurrentResultDate": "2021-08-11",
+      "OwnerName": "FUND DELTA SAINT LOUIS LLC",
+      "OwnerAddress": "230 S BEMISTON AV  STE 1100",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63105",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "2",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Collapsed",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Clear area and rebuild partially collapsed wall.  Permit required.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Masonry Missing",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Replace missing bricks / block / stone on exterior wall(s).  Permit may be required.  Contact inspector.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Door",
+          "ViolationItem": "Improper Secure",
+          "ViolationAnswer": "E,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70794 Sec. 105.1",
+          "ViolationText": "Secure door as required (because of missing porch / stairs) or replace missing porch / stairs.  Permit required."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Door",
+          "ViolationItem": "Defect/Missing",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.15",
+          "ViolationText": "Replace defective and / or missing door."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Broken/Missing",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13.1",
+          "ViolationText": "Replace broken or missing window pane(s)."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Cornice/Fascia",
+          "ViolationItem": "Defect",
+          "ViolationAnswer": "E",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.8",
+          "ViolationText": "Repair or replace defective cornice/facia.  A permit may be required."
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "Non-Compliance - Re-Send"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1351614,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2021-08-11",
+      "CurrentResult": "Non-Compliance - Re-Send",
+      "CurrentResultDate": "2021-09-30",
+      "OwnerName": "FUND DELTA SAINT LOUIS LLC",
+      "OwnerAddress": "230 S BEMISTON AV  STE 1100",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63105",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "2",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Collapsed",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Clear area and rebuild partially collapsed wall.  Permit required.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Masonry Missing",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Replace missing bricks / block / stone on exterior wall(s).  Permit may be required.  Contact inspector.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Door",
+          "ViolationItem": "Improper Secure",
+          "ViolationAnswer": "E,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70794 Sec. 105.1",
+          "ViolationText": "Secure door as required (because of missing porch / stairs) or replace missing porch / stairs.  Permit required."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Door",
+          "ViolationItem": "Defect/Missing",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.15",
+          "ViolationText": "Replace defective and / or missing door."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Broken/Missing",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13.1",
+          "ViolationText": "Replace broken or missing window pane(s)."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Cornice/Fascia",
+          "ViolationItem": "Defect",
+          "ViolationAnswer": "E",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Abated - ES",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.8",
+          "ViolationText": "Repair or replace defective cornice/facia.  A permit may be required."
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Non-Compliance - Re-Send"
+        }
+      ]
+    },
+    {
+      "InspectionID": 815796,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6828 Minnesota",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2017-03-08",
+      "CurrentResult": "Complied",
+      "CurrentResultDate": "2018-04-19",
+      "OwnerName": "SCHNEIDER, PATRICK T",
+      "OwnerAddress": "1120 GRANDVIEW PL",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63139",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "2",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Garage/Shed",
+          "ViolationItem": "Door Vehicle",
+          "ViolationAnswer": "E",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-302.7",
+          "ViolationText": "Provide/maintain vehicle garage door in good repair and capable of being closed and locked."
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "Complied"
+        }
+      ]
+    },
+    {
+      "InspectionID": 872981,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 pennsylvania",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2018-05-01",
+      "CurrentResult": "Complied",
+      "CurrentResultDate": "2018-11-27",
+      "OwnerName": "SCHNEIDER, PATRICK T",
+      "OwnerAddress": "1120 GRANDVIEW PL",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63139",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "2",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Collapsed",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Clear area and rebuild partially collapsed wall.  Permit required.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Frame/Sash",
+          "ViolationAnswer": "N,E,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13",
+          "ViolationText": "Repair or replace warped, rotted, or worn or missing window frame(s) sash(es)."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Paint",
+          "ViolationAnswer": "N,E,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.2",
+          "ViolationText": "Paint all exterior window trim.\n\nInterior/Exterior paint violations must be complied by re-inspection date or will be referred to the Health Dept for lead paint inspection."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Trim",
+          "ViolationAnswer": "N,E,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13",
+          "ViolationText": "Replace defective window trim."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Fences",
+          "ViolationItem": "Collapsed",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "Complied",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-302.7",
+          "ViolationText": "Repair or remove collapsed fence.  Permit may be required.  Contact inspector.  IBC SEC. 105.1"
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Violation Letter"
+        },
+        {
+          "Result": "ES Extended"
+        },
+        {
+          "Result": "Complied"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1465590,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA AVE",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2022-05-20",
+      "CurrentResult": "Complied",
+      "CurrentResultDate": "2022-11-30",
+      "OwnerName": "FUND DELTA SAINT LOUIS LLC",
+      "OwnerAddress": "230 S BEMISTON AV  STE 810",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63105",
+      "NumberOfStories": "0.0",
+      "NumberOfUnits": "0",
+      "UseCode": "",
+      "Construction": "",
+      "OccupancyLimitNumber": "",
+      "Violations": [],
+      "Results": [
+        {
+          "Result": "Complied"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1606200,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA AV",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2023-04-19",
+      "CurrentResult": "Emergency Structural Condemnation",
+      "CurrentResultDate": "2023-04-19",
+      "OwnerName": "JAGGIE INVESTMENTS LLC",
+      "OwnerAddress": "4316 GRAVOIS AV",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63116",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "2",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Cracked/Shifted",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Remove and replace damaged area of wall that is cracked / shifted.  Permit required.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Bulged",
+          "ViolationAnswer": "S",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Remove and relay (plumb and true) exterior bulged wall.  Permit required.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Collapsed",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Clear area and rebuild partially collapsed wall.  Permit required.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Walls",
+          "ViolationItem": "Masonry Missing",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.6",
+          "ViolationText": "Replace missing bricks / block / stone on exterior wall(s).  Permit may be required.  Contact inspector.  IBC SEC. 105.1"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Door",
+          "ViolationItem": "Defect/Missing",
+          "ViolationAnswer": "E,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.15",
+          "ViolationText": "Replace defective and / or missing door."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Basement A'Way",
+          "ViolationItem": "Hatch Cover",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.16",
+          "ViolationText": "Repair or replace rotted, broken, loose and / or missing basement hatchway cover frame."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Broken/Missing",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13.1",
+          "ViolationText": "Replace broken or missing window pane(s)."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Trim",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13",
+          "ViolationText": "Replace defective window trim."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Windows",
+          "ViolationItem": "Weathertight",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. 304.13",
+          "ViolationText": "Restore window(s) to weather tight condition."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Cornice/Fascia",
+          "ViolationItem": "Defect",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Minor",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.8",
+          "ViolationText": "Repair or replace defective cornice/facia.  A permit may be required."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Address",
+          "ViolationItem": "Defect - Rear",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70798 Sec. PM-304.3",
+          "ViolationText": "Place or maintain 4 inch minimum house numbers on required place(s)"
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Open Storage",
+          "ViolationItem": "Illegal Residential",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Zoning Ordinance 26.16.030",
+          "ViolationText": "Remove open storage.  Open storage constitutes illegal use of premises in a residential zone.  Items listed but not limited to."
+        },
+        {
+          "ViolationLocation": "Exterior - X",
+          "ViolationType": "Open Storage",
+          "ViolationItem": "Open storage",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "2018 IPMC Sec. 302.1",
+          "ViolationText": "All exterior property/premises shall be maintained in a safe and sanitary condition."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Item 1 Section 119.1",
+          "ViolationAnswer": "Unit",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.1",
+          "ViolationText": "The building or structure is in a dangerous condition which endangers either the lives or safety of persons, whether occupants or otherwise, or other property."
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Emergency Structural Condemnation"
+        }
+      ]
+    },
+    {
+      "InspectionID": 1611721,
+      "InspectionType": "ES - Complaint",
+      "ProjectAddress": "6827 PENNSYLVANIA AV",
+      "ProjectAKAAddress": "6827  PENNSYLVANIA",
+      "UnitNumber": "",
+      "CreatedDate": "2023-05-03",
+      "CurrentResult": "Emergency Structural Condemnation",
+      "CurrentResultDate": "2023-05-03",
+      "OwnerName": "JAGGIE INVESTMENTS LLC",
+      "OwnerAddress": "4316 GRAVOIS AV",
+      "OwnerCity": "ST LOUIS",
+      "OwnerState": "MO",
+      "OwnerZipCode": "63116",
+      "NumberOfStories": "2.0",
+      "NumberOfUnits": "2",
+      "UseCode": "RESIDENTIAL",
+      "Construction": "Brick",
+      "OccupancyLimitNumber": "",
+      "Violations": [
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Walls Cracked",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Wall(s) are cracked."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Bulged, Shifted",
+          "ViolationAnswer": "W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Wall(s) are bulged or shifted."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Door/s missing",
+          "ViolationAnswer": "E,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Door/s are missing, building is open to unauthorized entry."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Window/s Missing",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Window/s are missing, building is open to unauthorized entry."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Roof Defect",
+          "ViolationAnswer": "N,E,S,W",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.0",
+          "ViolationText": "Roof is defective."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Item 1 Section 119.1",
+          "ViolationAnswer": "Unit",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.1",
+          "ViolationText": "The building or structure is in a dangerous condition which endangers either the lives or safety of persons, whether occupants or otherwise, or other property."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Item 3 Section 119.1",
+          "ViolationAnswer": "Unit",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.1",
+          "ViolationText": "The building, structure or premise is a fire hazard for any reason."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Item 6 Section 119.1",
+          "ViolationAnswer": "Unit",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.1",
+          "ViolationText": "The structure has been so damaged that it is no longer safe or suitable for it's actual or intended purpose."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Item 15 Section 119.1",
+          "ViolationAnswer": "Unit",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.1",
+          "ViolationText": "Building/structure/premise is used or intended to be used for purposes which are illegal and may endanger the health or safety of persons."
+        },
+        {
+          "ViolationLocation": "Condemnation",
+          "ViolationType": "Condemnation",
+          "ViolationItem": "Item 13 Section 119.1",
+          "ViolationAnswer": "",
+          "ViolationSeverity": "Major",
+          "ViolationResolution": "",
+          "ViolationPMCode": "Ordinance 70794 Sec. 119.1",
+          "ViolationText": "The building, structure or premise has been constructed, exists or is being maintained in violation of any provisions of this code or of any law of the City of St Louis."
+        }
+      ],
+      "Results": [
+        {
+          "Result": "Emergency Structural Condemnation"
+        }
+      ]
+    }
+  ],
+  "PlumbingMechanicalElectrical": [
+    {
+      "AppType": "AP",
+      "AppDescription": "",
+      "UnitNum": "",
+      "ProjectType": null,
+      "MainStrucType": null,
+      "AppDate": "2025-04-02T13:39:57.270Z",
+      "IssueDate": "2025-04-02T00:00:00.000Z",
+      "CompleteDate": "2025-04-04T09:55:04.840Z",
+      "CancelDate": null,
+      "EstProjectCost": 3200,
+      "StrucType1": null,
+      "StrucType2": null,
+      "StrucType3": null,
+      "NbrOfUnits": "4"
+    }
+  ],
+  "GeneralConstructionPermits": [
+    {
+      "PermitID": 577950,
+      "PermitType": "Repair",
+      "ApplicationDate": "2023-11-01T00:00:00.000Z",
+      "ApprovalDate": "2023-11-01T00:00:00.000Z",
+      "DescriptionOfWork": "STRUCRUAL REPAIRS PER PLANS (CFD 30 DAYS) PVBS",
+      "ExpirationDate": "Unavailable in older Permits",
+      "EstimatedCompletionDate": "Unavailable in older Permits",
+      "DateMarkedCompleted": "2024-01-02T00:00:00.000Z",
+      "CurrentStatus": "Unavailable in older Permits",
+      "ProjectParcelID": 90,
+      "ProjectHandle": "13004000090",
+      "ProjectWard": 11,
+      "ProjectX": "Unavailable in older Permits",
+      "ProjectY": "Unavailable in older permits",
+      "ProjectAddress": "6827   PENNSYLVANIA AV",
+      "UnitNumber": " ",
+      "ProjectZipCode": "Unavailable in older Permits",
+      "ProjectType": "Repair",
+      "ProjectCost": 55000,
+      "StructureType": "Multi Family",
+      "OwnerName": "FUND DELTA SAINT LOUIS LLC"
+    }
+  ],
+  "DemolitionPermits": [],
+  "VacantBuildingInfo": [],
+  "ForestryMaintenance": {
+    "PropertyType": "Unknown",
+    "CutInfo": {
+      "NextProjectedLotCutCompletion": "2023-08-10",
+      "LastLotCutCompletion": "2023-06-29",
+      "NextProjectedBuildingCutCompletion": "2023-09-01",
+      "LastBuildingCutCompletion": "2023-07-31"
+    },
+    "Services": [
+      {
+        "PropertyType": "Unknown",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2021-08-26T11:17:22.750Z",
+        "ServiceAmount": 108,
+        "LastDate": "2021-08-26T11:17:22.750Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2020-06-16T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2020-08-29T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Light Debris",
+        "ServiceDate": "2019-02-04T00:00:00.000Z",
+        "ServiceAmount": 200,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2019-10-17T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Light Debris",
+        "ServiceDate": "2019-02-04T00:00:00.000Z",
+        "ServiceAmount": 200,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2019-10-17T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2013-05-21T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2020-06-16T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2020-08-29T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Building",
+        "ServiceType": "Weed-Grass",
+        "ServiceDate": "2013-05-21T00:00:00.000Z",
+        "ServiceAmount": 108,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      }
+    ]
+  },
+  "TaxHistory": [
+    {
+      "TaxYear": 2025,
+      "TaxAmt": 468.43,
+      "TaxBal": 0,
+      "AmtPaid": 468.43
+    },
+    {
+      "TaxYear": 2024,
+      "TaxAmt": 450.74,
+      "TaxBal": 0,
+      "AmtPaid": 450.74
+    },
+    {
+      "TaxYear": 2023,
+      "TaxAmt": 429.97,
+      "TaxBal": 0,
+      "AmtPaid": 429.97
+    },
+    {
+      "TaxYear": 2022,
+      "TaxAmt": 402.48,
+      "TaxBal": 0,
+      "AmtPaid": 402.48
+    },
+    {
+      "TaxYear": 2021,
+      "TaxAmt": 401.94,
+      "TaxBal": 0,
+      "AmtPaid": 401.94
+    },
+    {
+      "TaxYear": 2020,
+      "TaxAmt": 387.55,
+      "TaxBal": 0,
+      "AmtPaid": 387.55
+    },
+    {
+      "TaxYear": 2019,
+      "TaxAmt": 386.3,
+      "TaxBal": 0,
+      "AmtPaid": 386.3
+    },
+    {
+      "TaxYear": 2018,
+      "TaxAmt": 319.33,
+      "TaxBal": 0,
+      "AmtPaid": 319.33
+    },
+    {
+      "TaxYear": 2017,
+      "TaxAmt": 314.34,
+      "TaxBal": 0,
+      "AmtPaid": 314.34
+    },
+    {
+      "TaxYear": 2016,
+      "TaxAmt": 318.01,
+      "TaxBal": 0,
+      "AmtPaid": 318.01
+    },
+    {
+      "TaxYear": 2015,
+      "TaxAmt": 290.61,
+      "TaxBal": 0,
+      "AmtPaid": 290.61
+    },
+    {
+      "TaxYear": 2014,
+      "TaxAmt": 307.89,
+      "TaxBal": 0,
+      "AmtPaid": 307.89
+    },
+    {
+      "TaxYear": 2013,
+      "TaxAmt": 307.98,
+      "TaxBal": 0,
+      "AmtPaid": 307.98
+    },
+    {
+      "TaxYear": 2012,
+      "TaxAmt": 429.86,
+      "TaxBal": 0,
+      "AmtPaid": 429.86
+    },
+    {
+      "TaxYear": 2011,
+      "TaxAmt": 414.3,
+      "TaxBal": 0,
+      "AmtPaid": 414.3
+    },
+    {
+      "TaxYear": 2010,
+      "TaxAmt": 477.02,
+      "TaxBal": 0,
+      "AmtPaid": 477.02
+    },
+    {
+      "TaxYear": 2009,
+      "TaxAmt": 459.36,
+      "TaxBal": 0,
+      "AmtPaid": 459.36
+    }
+  ],
+  "ServiceRequests": [
+    {
+      "REQUESTID": 628869,
+      "PROBLEMCODE": "Ppty Maint Code-Ext",
+      "DESCRIPTION": "Ppty Maint Code-Ext",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2014-07-10T14:11:41.197Z",
+      "DATETIMECLOSED": "2014-07-21T11:08:20.317Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect for exterior building damage and code violations",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Comml"
+    },
+    {
+      "REQUESTID": 628872,
+      "PROBLEMCODE": "Illegl Use-Opn Storg",
+      "DESCRIPTION": "Illegl Use-Opn Storg",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2014-07-10T14:13:42.073Z",
+      "DATETIMECLOSED": "2014-07-21T11:07:06.230Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect for violation of zoning code (including open storage)",
+      "EXPLANATION": "Any zoning code violations, including derelict vehicles, appliances, etc. on private property",
+      "GROUP": "Vehicles"
+    },
+    {
+      "REQUESTID": 628876,
+      "PROBLEMCODE": "Weeds-Occupied Ppty",
+      "DESCRIPTION": "Weeds-Occupied Ppty",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2014-07-10T14:15:54.367Z",
+      "DATETIMECLOSED": "2014-07-29T16:57:11.373Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect occupied property for high grass/weeds",
+      "EXPLANATION": "",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 755971,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2015-07-31T16:28:35.440Z",
+      "DATETIMECLOSED": "2015-08-04T08:30:38.407Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 756098,
+      "PROBLEMCODE": "Weeds-Occupied Ppty",
+      "DESCRIPTION": "Weeds-Occupied Ppty",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2015-08-02T10:24:31.000Z",
+      "DATETIMECLOSED": null,
+      "STATUS": "CANCEL",
+      "DATECANCELLED": "2015-08-03T15:12:58.907Z",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect occupied property for high grass/weeds",
+      "EXPLANATION": "",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 799007,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2015-12-11T14:30:03.503Z",
+      "DATETIMECLOSED": "2015-12-17T15:03:51.733Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 931146,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2017-01-20T11:07:05.757Z",
+      "DATETIMECLOSED": "2017-01-26T10:42:39.333Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 940622,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2017-02-22T10:09:02.903Z",
+      "DATETIMECLOSED": "2017-03-14T14:31:56.260Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 989950,
+      "PROBLEMCODE": "Illegal dumpg report",
+      "DESCRIPTION": "Illegal dumpg report",
+      "SUBMITTO": "ENVIRONMENTAL INVESTIGATIONS",
+      "DATETIMEINIT": "2017-07-07T12:57:45.057Z",
+      "DATETIMECLOSED": "2018-02-07T07:39:23.693Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "I witnessed someone illegally dumping",
+      "EXPLANATION": "",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 989952,
+      "PROBLEMCODE": "Debris-Occupied Bldg",
+      "DESCRIPTION": "Debris-Occupied Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2017-07-07T12:57:54.637Z",
+      "DATETIMECLOSED": "2017-08-15T10:22:00.663Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "INDETERMINATE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Debris on an occupied property",
+      "EXPLANATION": "",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 1069598,
+      "PROBLEMCODE": "Illegl Use-Opn Storg",
+      "DESCRIPTION": "Illegl Use-Opn Storg",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2018-03-09T10:01:08.540Z",
+      "DATETIMECLOSED": "2018-03-27T15:13:47.873Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect for violation of zoning code (including open storage)",
+      "EXPLANATION": "Any zoning code violations, including derelict vehicles, appliances, etc. on private property",
+      "GROUP": "Vehicles"
+    },
+    {
+      "REQUESTID": 1121354,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2018-07-19T15:11:38.480Z",
+      "DATETIMECLOSED": "2018-07-23T15:33:22.030Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 1175704,
+      "PROBLEMCODE": "Debris-Vacant Bldg",
+      "DESCRIPTION": "Debris-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2019-01-09T13:42:08.000Z",
+      "DATETIMECLOSED": "2019-02-05T09:44:09.857Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Debris around a vacant building",
+      "EXPLANATION": "Do NOT file requests related to the May 2025 Tornado here.",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 1276427,
+      "PROBLEMCODE": "Weeds-Occupied Ppty",
+      "DESCRIPTION": "Weeds-Occupied Ppty",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2019-10-08T09:53:57.000Z",
+      "DATETIMECLOSED": "2019-10-28T15:25:51.337Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "INDETERMINATE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect occupied property for high grass/weeds",
+      "EXPLANATION": "",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 1281531,
+      "PROBLEMCODE": "Illegal dumpg report",
+      "DESCRIPTION": "Illegal dumpg report",
+      "SUBMITTO": "ENVIRONMENTAL INVESTIGATIONS",
+      "DATETIMEINIT": "2019-10-23T14:15:07.000Z",
+      "DATETIMECLOSED": "2019-11-13T16:04:32.807Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "I witnessed someone illegally dumping",
+      "EXPLANATION": "",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 1281534,
+      "PROBLEMCODE": "Debris-alley/street",
+      "DESCRIPTION": "Debris-alley/street",
+      "SUBMITTO": "STREET DIVISION, 514",
+      "DATETIMEINIT": "2019-10-23T14:17:33.000Z",
+      "DATETIMECLOSED": "2019-10-26T17:26:49.047Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "INDETERMINATE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Debris dumped in the street or alley",
+      "EXPLANATION": "Do NOT file debris requests related to the May 2025 tornado here.",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 1322049,
+      "PROBLEMCODE": "Cntnr overflow/bulky",
+      "DESCRIPTION": "Cntnr overflow/bulky",
+      "SUBMITTO": "REFUSE",
+      "DATETIMEINIT": "2020-03-17T16:48:55.000Z",
+      "DATETIMECLOSED": "2020-03-18T12:13:59.690Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "INDETERMINATE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Container is overflowing",
+      "EXPLANATION": "Trash, yard waste, or recycling container is overflowing and needs to be emptied.",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 1370360,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2020-07-27T16:56:16.563Z",
+      "DATETIMECLOSED": "2020-08-06T07:34:18.607Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "TWITTER",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 1397943,
+      "PROBLEMCODE": "Ppty Maint Code-Ext",
+      "DESCRIPTION": "Ppty Maint Code-Ext",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2020-09-30T12:45:09.000Z",
+      "DATETIMECLOSED": "2020-10-13T13:35:06.357Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect for exterior building damage and code violations",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Comml"
+    },
+    {
+      "REQUESTID": 1442517,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2021-03-14T11:36:20.690Z",
+      "DATETIMECLOSED": "2021-04-02T11:00:13.200Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 1496231,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2021-08-11T12:35:43.000Z",
+      "DATETIMECLOSED": "2021-08-11T13:04:34.600Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 1536242,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2021-12-21T11:29:03.000Z",
+      "DATETIMECLOSED": "2022-01-06T09:11:21.430Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 1565532,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2022-04-10T19:02:11.000Z",
+      "DATETIMECLOSED": "2022-06-01T11:30:41.810Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 1565533,
+      "PROBLEMCODE": "Vehicle Towing",
+      "DESCRIPTION": "Vehicle Towing",
+      "SUBMITTO": "STREET DEPT, 510",
+      "DATETIMEINIT": "2022-04-10T19:03:36.000Z",
+      "DATETIMECLOSED": "2022-04-30T14:45:31.977Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Derelict, vandalized, inoperable, or abandoned vehicle",
+      "EXPLANATION": "Report derelict, vandalized, inoperable or abandoned vehicles",
+      "GROUP": "Vehicles"
+    },
+    {
+      "REQUESTID": 1573500,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2022-05-04T12:03:51.000Z",
+      "DATETIMECLOSED": null,
+      "STATUS": "CANCEL",
+      "DATECANCELLED": "2022-05-04T16:38:50.000Z",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 1573501,
+      "PROBLEMCODE": "Cntnr overflow/bulky",
+      "DESCRIPTION": "Cntnr overflow/bulky",
+      "SUBMITTO": "REFUSE",
+      "DATETIMEINIT": "2022-05-04T12:05:55.000Z",
+      "DATETIMECLOSED": "2022-05-06T07:23:47.667Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Container is overflowing",
+      "EXPLANATION": "Trash, yard waste, or recycling container is overflowing and needs to be emptied.",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 1576131,
+      "PROBLEMCODE": "Weeds-Vacant Bldg",
+      "DESCRIPTION": "Weeds-Vacant Bldg",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2022-05-11T09:12:41.000Z",
+      "DATETIMECLOSED": "2022-05-11T10:21:13.900Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass around vacant building",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 1591213,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2022-06-16T08:13:36.273Z",
+      "DATETIMECLOSED": null,
+      "STATUS": "PENDING",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 1650569,
+      "PROBLEMCODE": "Debris-alley/street",
+      "DESCRIPTION": "Debris-alley/street",
+      "SUBMITTO": "STREET DIVISION, 514",
+      "DATETIMEINIT": "2022-11-30T12:47:56.000Z",
+      "DATETIMECLOSED": "2022-11-30T13:15:31.200Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Debris dumped in the street or alley",
+      "EXPLANATION": "Do NOT file debris requests related to the May 2025 tornado here.",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 1650571,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2022-11-30T12:49:30.000Z",
+      "DATETIMECLOSED": "2023-01-24T08:33:12.107Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 1663631,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2023-01-12T17:14:48.000Z",
+      "DATETIMECLOSED": "2023-01-26T12:17:52.820Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 1669668,
+      "PROBLEMCODE": "Building Collapse",
+      "DESCRIPTION": "Building Collapse",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2023-02-02T16:32:50.000Z",
+      "DATETIMECLOSED": "2023-02-06T07:35:48.167Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Building collapsed",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 1672244,
+      "PROBLEMCODE": "Ppty Maint Code-Ext",
+      "DESCRIPTION": "Ppty Maint Code-Ext",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2023-02-10T14:41:53.000Z",
+      "DATETIMECLOSED": "2024-08-26T23:28:22.180Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect for exterior building damage and code violations",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Comml"
+    },
+    {
+      "REQUESTID": 1675192,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2023-02-21T21:48:26.000Z",
+      "DATETIMECLOSED": "2023-02-22T12:39:33.167Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 1705464,
+      "PROBLEMCODE": "Vacnt Bldg Unsecured",
+      "DESCRIPTION": "Vacnt Bldg Unsecured",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2023-05-19T13:04:27.000Z",
+      "DATETIMECLOSED": "2023-05-22T08:39:28.637Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant building needs to be boarded up",
+      "EXPLANATION": "",
+      "GROUP": "Prpty Insp Exterior"
+    },
+    {
+      "REQUESTID": 1866508,
+      "PROBLEMCODE": "Graffiti-Private",
+      "DESCRIPTION": "Graffiti-Private",
+      "SUBMITTO": "OP BRIGHTSIDE",
+      "DATETIMEINIT": "2024-08-28T15:30:38.000Z",
+      "DATETIMECLOSED": "2024-10-21T11:17:28.783Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Graffiti on private property",
+      "EXPLANATION": "",
+      "GROUP": "Graffiti"
+    },
+    {
+      "REQUESTID": 1944349,
+      "PROBLEMCODE": "Bulky items missed",
+      "DESCRIPTION": "Bulky items missed",
+      "SUBMITTO": "REFUSE",
+      "DATETIMEINIT": "2025-04-28T15:15:17.000Z",
+      "DATETIMECLOSED": "2025-04-29T11:26:16.840Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Weekly bulk collection missed",
+      "EXPLANATION": "Bulk collection must be set out by 6:00 am Monday of collection week.  Collection will, generally, be made by 5:00 pm  Friday of your collection week. Due to employee and equipment shortages, collections may be delayed.",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 1969938,
+      "PROBLEMCODE": "Debris-Vacant Bldg",
+      "DESCRIPTION": "Debris-Vacant Bldg",
+      "SUBMITTO": "STREET DIVISION, 514",
+      "DATETIMEINIT": "2025-06-24T09:51:42.000Z",
+      "DATETIMECLOSED": "2025-06-25T09:34:59.757Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Debris around a vacant building",
+      "EXPLANATION": "Do NOT file requests related to the May 2025 Tornado here.",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 2019047,
+      "PROBLEMCODE": "Graffiti-Private",
+      "DESCRIPTION": "Graffiti-Private",
+      "SUBMITTO": "OP BRIGHTSIDE",
+      "DATETIMEINIT": "2025-10-21T13:59:13.000Z",
+      "DATETIMECLOSED": "2025-11-18T12:44:55.963Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Graffiti on private property",
+      "EXPLANATION": "",
+      "GROUP": "Graffiti"
+    },
+    {
+      "REQUESTID": 2055020,
+      "PROBLEMCODE": "Illegl Use-Opn Storg",
+      "DESCRIPTION": "Illegl Use-Opn Storg",
+      "SUBMITTO": "BUILDING DIV",
+      "DATETIMEINIT": "2026-02-26T14:46:08.000Z",
+      "DATETIMECLOSED": "2026-03-31T16:26:24.440Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect for violation of zoning code (including open storage)",
+      "EXPLANATION": "Any zoning code violations, including derelict vehicles, appliances, etc. on private property",
+      "GROUP": "Vehicles"
+    },
+    {
+      "REQUESTID": 2055023,
+      "PROBLEMCODE": "Debris-Vacant Bldg",
+      "DESCRIPTION": "Debris-Vacant Bldg",
+      "SUBMITTO": "STREET DIVISION, 514",
+      "DATETIMEINIT": "2026-02-26T14:48:35.000Z",
+      "DATETIMECLOSED": "2026-02-26T14:58:54.367Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Debris around a vacant building",
+      "EXPLANATION": "Do NOT file requests related to the May 2025 Tornado here.",
+      "GROUP": "Trash/Debris/Green Waste"
+    }
+  ],
+  "updated_at": "2026-06-27"
+}

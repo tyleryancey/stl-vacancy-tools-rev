@@ -1,0 +1,1725 @@
+{
+  "PARCELID": "37539150000",
+  "IsLra": false,
+  "HANDLE": "13753000150",
+  "IsLcra": false,
+  "BuildingDivisionBoardUps": [],
+  "Violations": [],
+  "HCESInspections": [],
+  "PlumbingMechanicalElectrical": [
+    {
+      "AppType": "AP",
+      "AppDescription": "Hoffman",
+      "UnitNum": "",
+      "ProjectType": null,
+      "MainStrucType": null,
+      "AppDate": "2021-11-03T06:32:31.687Z",
+      "IssueDate": "2021-11-03T00:00:00.000Z",
+      "CompleteDate": "2021-12-07T16:34:00.100Z",
+      "CancelDate": null,
+      "EstProjectCost": 12000,
+      "StrucType1": null,
+      "StrucType2": null,
+      "StrucType3": null,
+      "NbrOfUnits": "0"
+    },
+    {
+      "AppType": "AE",
+      "AppDescription": "2020 VISION",
+      "UnitNum": "",
+      "ProjectType": null,
+      "MainStrucType": null,
+      "AppDate": "2021-09-23T11:08:43.670Z",
+      "IssueDate": "2021-09-23T13:32:51.380Z",
+      "CompleteDate": "2022-06-15T16:16:45.843Z",
+      "CancelDate": null,
+      "EstProjectCost": 22190,
+      "StrucType1": null,
+      "StrucType2": null,
+      "StrucType3": null,
+      "NbrOfUnits": "0"
+    },
+    {
+      "AppType": "AE",
+      "AppDescription": "2020 VISION",
+      "UnitNum": "",
+      "ProjectType": null,
+      "MainStrucType": null,
+      "AppDate": "2021-09-23T10:59:34.890Z",
+      "IssueDate": "2021-09-23T13:33:11.830Z",
+      "CompleteDate": "2021-10-01T13:44:39.763Z",
+      "CancelDate": null,
+      "EstProjectCost": 950,
+      "StrucType1": null,
+      "StrucType2": null,
+      "StrucType3": null,
+      "NbrOfUnits": "0"
+    },
+    {
+      "AppType": "AP",
+      "AppDescription": "",
+      "UnitNum": "",
+      "ProjectType": null,
+      "MainStrucType": null,
+      "AppDate": "2021-11-24T11:22:15.983Z",
+      "IssueDate": "2021-11-24T00:00:00.000Z",
+      "CompleteDate": "2022-06-16T09:59:40.277Z",
+      "CancelDate": null,
+      "EstProjectCost": 18630,
+      "StrucType1": null,
+      "StrucType2": null,
+      "StrucType3": null,
+      "NbrOfUnits": "0"
+    },
+    {
+      "AppType": "AM",
+      "AppDescription": "20/20 Vision Development",
+      "UnitNum": "",
+      "ProjectType": null,
+      "MainStrucType": null,
+      "AppDate": "2022-01-10T11:52:00.007Z",
+      "IssueDate": "2022-01-11T00:00:00.000Z",
+      "CompleteDate": "2022-06-15T16:42:48.580Z",
+      "CancelDate": null,
+      "EstProjectCost": 36000,
+      "StrucType1": null,
+      "StrucType2": null,
+      "StrucType3": null,
+      "NbrOfUnits": "0"
+    }
+  ],
+  "GeneralConstructionPermits": [
+    {
+      "PermitID": 562941,
+      "PermitType": "New Const.",
+      "ApplicationDate": "2021-06-01T00:00:00.000Z",
+      "ApprovalDate": "2021-09-02T00:00:00.000Z",
+      "DescriptionOfWork": "CONSTRUCT 2 FEE SIMPLE TOWNHOMES PER PLANS",
+      "ExpirationDate": "Unavailable in older Permits",
+      "EstimatedCompletionDate": "Unavailable in older Permits",
+      "DateMarkedCompleted": "1900-01-01T00:00:00.000Z",
+      "CurrentStatus": "Unavailable in older Permits",
+      "ProjectParcelID": 150,
+      "ProjectHandle": "13753000150",
+      "ProjectWard": 18,
+      "ProjectX": "Unavailable in older Permits",
+      "ProjectY": "Unavailable in older permits",
+      "ProjectAddress": "4024   ENRIGHT AV",
+      "UnitNumber": " ",
+      "ProjectZipCode": "Unavailable in older Permits",
+      "ProjectType": "New Const.",
+      "ProjectCost": 375000,
+      "StructureType": "1 or 2 Family",
+      "OwnerName": "MINCY, MARRISSA"
+    }
+  ],
+  "DemolitionPermits": [],
+  "VacantBuildingInfo": [],
+  "ForestryMaintenance": {
+    "PropertyType": "Unknown",
+    "CutInfo": {
+      "NextProjectedLotCutCompletion": "2023-09-12",
+      "LastLotCutCompletion": "2023-07-31",
+      "NextProjectedBuildingCutCompletion": "2023-08-21",
+      "LastBuildingCutCompletion": "2023-06-29"
+    },
+    "Services": [
+      {
+        "PropertyType": "Unknown",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2021-09-22T11:12:34.530Z",
+        "ServiceAmount": 49.84,
+        "LastDate": "2021-09-22T11:12:34.530Z"
+      },
+      {
+        "PropertyType": "Unknown",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2021-06-07T07:52:21.027Z",
+        "ServiceAmount": 99.68,
+        "LastDate": "2021-06-07T07:52:21.027Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2019-05-03T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2019-06-06T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2019-07-05T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2019-08-07T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2019-08-30T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2019-09-30T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2019-11-15T00:00:00.000Z",
+        "ServiceAmount": 26.86,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2017-05-05T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2017-06-21T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2017-08-03T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2017-09-07T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2017-11-15T00:00:00.000Z",
+        "ServiceAmount": 17.91,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2016-05-02T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2016-05-25T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2016-07-19T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2012-04-16T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2012-04-30T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2012-06-07T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2012-07-11T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2012-08-13T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2012-08-24T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2012-11-15T00:00:00.000Z",
+        "ServiceAmount": 26.86,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-05-04T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-05-28T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-07-01T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-08-17T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-09-07T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-09-29T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2011-11-15T00:00:00.000Z",
+        "ServiceAmount": 26.86,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2010-05-11T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2010-06-29T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2010-08-07T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2010-09-27T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2010-11-15T00:00:00.000Z",
+        "ServiceAmount": 17.91,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2012-04-16T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2012-04-30T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2012-06-07T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2012-07-11T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2012-08-13T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2012-08-24T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2012-11-15T00:00:00.000Z",
+        "ServiceAmount": 26.86,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2007-04-20T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2007-05-18T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2007-06-15T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2007-07-14T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2007-08-06T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2007-08-28T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2007-09-20T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2007-11-15T00:00:00.000Z",
+        "ServiceAmount": 29.29,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2016-05-02T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2016-05-25T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2016-07-19T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2016-08-16T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2016-09-02T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2016-11-15T00:00:00.000Z",
+        "ServiceAmount": 22.38,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Heavy Debris",
+        "ServiceDate": "2017-04-18T00:00:00.000Z",
+        "ServiceAmount": 220,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2017-06-02T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2005-04-15T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2005-05-20T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2001-05-14T00:00:00.000Z",
+        "ServiceAmount": 39.52,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2001-07-20T00:00:00.000Z",
+        "ServiceAmount": 39.52,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2001-11-15T00:00:00.000Z",
+        "ServiceAmount": 7.11,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2016-08-16T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2016-09-02T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2016-11-15T00:00:00.000Z",
+        "ServiceAmount": 22.38,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Heavy Debris",
+        "ServiceDate": "2017-04-18T00:00:00.000Z",
+        "ServiceAmount": 220,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2017-06-02T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2013-04-09T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2013-05-16T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2013-06-10T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2013-07-09T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2013-08-01T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2013-08-19T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2013-11-15T00:00:00.000Z",
+        "ServiceAmount": 26.86,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2019-05-03T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2019-06-06T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2019-07-05T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2019-08-07T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2019-08-30T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2019-09-30T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2019-11-15T00:00:00.000Z",
+        "ServiceAmount": 26.86,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2013-04-09T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2013-05-16T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2013-06-10T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2013-07-09T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2013-08-01T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2013-08-19T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2013-11-15T00:00:00.000Z",
+        "ServiceAmount": 26.86,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2008-06-26T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2008-07-23T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2008-08-23T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2008-09-20T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2008-11-15T00:00:00.000Z",
+        "ServiceAmount": 17.91,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2006-04-26T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2006-05-26T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2006-06-20T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2006-09-29T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2006-11-15T00:00:00.000Z",
+        "ServiceAmount": 16.74,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1996-08-17T00:00:00.000Z",
+        "ServiceAmount": 37.2,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1996-09-06T00:00:00.000Z",
+        "ServiceAmount": 37.2,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "1997-02-24T00:00:00.000Z",
+        "ServiceAmount": 13.39,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1997-05-22T00:00:00.000Z",
+        "ServiceAmount": 37.2,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1997-06-18T00:00:00.000Z",
+        "ServiceAmount": 37.2,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1997-07-24T00:00:00.000Z",
+        "ServiceAmount": 37.2,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "1997-12-30T00:00:00.000Z",
+        "ServiceAmount": 10.04,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1996-06-24T00:00:00.000Z",
+        "ServiceAmount": 37.2,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1996-07-17T00:00:00.000Z",
+        "ServiceAmount": 37.2,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2018-05-10T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2018-06-05T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2018-07-18T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2018-11-15T00:00:00.000Z",
+        "ServiceAmount": 13.43,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2015-04-29T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2015-06-03T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2015-08-06T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2015-09-14T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2015-11-15T00:00:00.000Z",
+        "ServiceAmount": 17.91,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2018-05-10T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2018-06-05T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2018-07-18T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2018-11-15T00:00:00.000Z",
+        "ServiceAmount": 13.43,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2017-05-05T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2017-06-21T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2017-08-03T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2017-09-07T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2017-11-15T00:00:00.000Z",
+        "ServiceAmount": 17.91,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2015-04-29T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2015-06-03T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2015-08-06T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2015-09-14T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2015-11-15T00:00:00.000Z",
+        "ServiceAmount": 17.91,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2004-04-12T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2004-05-06T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2004-06-01T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2004-06-26T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2004-07-15T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2004-08-02T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2004-08-21T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2004-09-24T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2004-11-15T00:00:00.000Z",
+        "ServiceAmount": 33.48,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2002-04-17T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2002-05-11T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2002-07-01T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2002-08-06T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2002-08-27T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2002-09-13T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2002-11-15T00:00:00.000Z",
+        "ServiceAmount": 25.11,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2000-04-26T00:00:00.000Z",
+        "ServiceAmount": 39.52,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2000-05-13T00:00:00.000Z",
+        "ServiceAmount": 39.52,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2000-06-02T00:00:00.000Z",
+        "ServiceAmount": 39.52,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2000-09-16T00:00:00.000Z",
+        "ServiceAmount": 39.52,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2000-11-15T00:00:00.000Z",
+        "ServiceAmount": 14.22,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2020-04-28T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2020-05-28T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2020-07-07T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2020-08-12T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2020-11-15T00:00:00.000Z",
+        "ServiceAmount": 17.91,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-08-09T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2014-04-09T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2014-05-02T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2014-05-17T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2014-06-23T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2014-07-14T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2014-11-15T00:00:00.000Z",
+        "ServiceAmount": 26.86,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2009-07-15T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2009-07-29T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2009-11-15T00:00:00.000Z",
+        "ServiceAmount": 8.95,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2020-04-28T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2020-05-28T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2020-07-07T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2020-08-12T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2020-11-15T00:00:00.000Z",
+        "ServiceAmount": 17.91,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-08-09T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2014-04-09T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2014-05-02T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2014-05-17T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2014-06-23T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2014-07-14T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2014-11-15T00:00:00.000Z",
+        "ServiceAmount": 26.86,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-05-04T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-05-28T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-07-01T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-08-17T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-09-07T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2011-09-29T00:00:00.000Z",
+        "ServiceAmount": 49.75,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2011-11-15T00:00:00.000Z",
+        "ServiceAmount": 26.86,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2005-06-11T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2005-07-02T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2005-07-26T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2005-08-23T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2005-09-28T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2005-11-15T00:00:00.000Z",
+        "ServiceAmount": 29.29,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2006-07-15T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2003-04-30T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2003-05-31T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2003-06-25T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2003-07-23T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2003-08-11T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "2003-08-27T00:00:00.000Z",
+        "ServiceAmount": 46.5,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "2003-11-15T00:00:00.000Z",
+        "ServiceAmount": 25.11,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1999-07-21T00:00:00.000Z",
+        "ServiceAmount": 39.52,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1999-08-16T00:00:00.000Z",
+        "ServiceAmount": 39.52,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "1999-11-15T00:00:00.000Z",
+        "ServiceAmount": 14.22,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1999-05-19T00:00:00.000Z",
+        "ServiceAmount": 39.52,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1999-06-15T00:00:00.000Z",
+        "ServiceAmount": 39.52,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1998-06-19T00:00:00.000Z",
+        "ServiceAmount": 39.52,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Grass Maint",
+        "ServiceDate": "1998-07-20T00:00:00.000Z",
+        "ServiceAmount": 39.52,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      },
+      {
+        "PropertyType": "Vacant Lot",
+        "ServiceType": "Interest",
+        "ServiceDate": "1998-12-23T00:00:00.000Z",
+        "ServiceAmount": 7.11,
+        "LastDate": "2020-11-30T00:00:00.000Z"
+      }
+    ]
+  },
+  "TaxHistory": [
+    {
+      "TaxYear": 2025,
+      "TaxAmt": 867.13,
+      "TaxBal": 0,
+      "AmtPaid": 867.13
+    },
+    {
+      "TaxYear": 2024,
+      "TaxAmt": 886,
+      "TaxBal": 0,
+      "AmtPaid": 886
+    },
+    {
+      "TaxYear": 2023,
+      "TaxAmt": 815.82,
+      "TaxBal": 0,
+      "AmtPaid": 815.82
+    },
+    {
+      "TaxYear": 2022,
+      "TaxAmt": 47.12,
+      "TaxBal": 0,
+      "AmtPaid": 47.12
+    },
+    {
+      "TaxYear": 2020,
+      "TaxAmt": 0,
+      "TaxBal": 0,
+      "AmtPaid": 0
+    }
+  ],
+  "ServiceRequests": [
+    {
+      "REQUESTID": 954442,
+      "PROBLEMCODE": "Debris-Vacant Lot",
+      "DESCRIPTION": "Debris-Vacant Lot",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2017-04-06T13:58:23.237Z",
+      "DATETIMECLOSED": "2017-04-20T16:19:03.460Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "NSO",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Debris on a vacant lot",
+      "EXPLANATION": "Do NOT file requests related to the May 2025 Tornado here.",
+      "GROUP": "Trash/Debris/Green Waste"
+    },
+    {
+      "REQUESTID": 1260618,
+      "PROBLEMCODE": "Unsatisfy Cut - VLot",
+      "DESCRIPTION": "Unsatisfy Cut - VLot",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2019-08-23T14:20:35.000Z",
+      "DATETIMECLOSED": "2019-08-24T07:23:52.527Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Vacant lot cut incomplete",
+      "EXPLANATION": "",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 1534084,
+      "PROBLEMCODE": "Sidewalk Repair",
+      "DESCRIPTION": "Sidewalk Repair",
+      "SUBMITTO": "STREET DEPT, 510",
+      "DATETIMEINIT": "2021-12-13T15:23:59.000Z",
+      "DATETIMECLOSED": "2022-03-01T10:40:41.197Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "WEB",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect sidewalks, ramps, and/or curbs",
+      "EXPLANATION": "Have Street Department inspectors look at a sidewalk or curb for repair, replacement, cite commercial properties, or queue a ramp for repair. If address is a residential property, request may be added to the 50/50 sidewalk repair program queue.",
+      "GROUP": "Disability Issues"
+    },
+    {
+      "REQUESTID": 1561927,
+      "PROBLEMCODE": "Sidewalk Repair",
+      "DESCRIPTION": "Sidewalk Repair",
+      "SUBMITTO": "STREET DEPT, 510",
+      "DATETIMEINIT": "2022-03-30T08:24:27.000Z",
+      "DATETIMECLOSED": "2022-04-13T14:54:23.543Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect sidewalks, ramps, and/or curbs",
+      "EXPLANATION": "Have Street Department inspectors look at a sidewalk or curb for repair, replacement, cite commercial properties, or queue a ramp for repair. If address is a residential property, request may be added to the 50/50 sidewalk repair program queue.",
+      "GROUP": "Disability Issues"
+    },
+    {
+      "REQUESTID": 1581465,
+      "PROBLEMCODE": "City Tree Down",
+      "DESCRIPTION": "City Tree Down",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2022-05-24T08:50:55.000Z",
+      "DATETIMECLOSED": "2022-06-13T09:21:41.017Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "City tree or limb is down and blocking the right-of-way",
+      "EXPLANATION": "A City tree or limb has fallen and is blocking a street, alley, sidewalk, or other right-of-way.",
+      "GROUP": "Trees"
+    },
+    {
+      "REQUESTID": 1584927,
+      "PROBLEMCODE": "Weeds-Vacant Lot",
+      "DESCRIPTION": "Weeds-Vacant Lot",
+      "SUBMITTO": "FORESTRY",
+      "DATETIMEINIT": "2022-06-02T09:18:42.000Z",
+      "DATETIMECLOSED": "2022-06-02T09:35:36.957Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "High weeds/grass on vacant lot",
+      "EXPLANATION": "Seasonal Only. Service is available from March 1 through September 30.",
+      "GROUP": "Weeds/Grass"
+    },
+    {
+      "REQUESTID": 1616462,
+      "PROBLEMCODE": "Sidewalk Repair",
+      "DESCRIPTION": "Sidewalk Repair",
+      "SUBMITTO": "STREET DEPT, 510",
+      "DATETIMEINIT": "2022-08-17T08:45:50.000Z",
+      "DATETIMECLOSED": "2022-12-20T07:46:35.253Z",
+      "STATUS": "CLOSED",
+      "DATECANCELLED": "",
+      "CALLERTYPE": "PHONE",
+      "PLAIN_ENGLISH_NAME_FOR_PROBLEMCODE": "Inspect sidewalks, ramps, and/or curbs",
+      "EXPLANATION": "Have Street Department inspectors look at a sidewalk or curb for repair, replacement, cite commercial properties, or queue a ramp for repair. If address is a residential property, request may be added to the 50/50 sidewalk repair program queue.",
+      "GROUP": "Disability Issues"
+    }
+  ],
+  "updated_at": "2026-06-26"
+}

@@ -49,8 +49,7 @@ function normalize(name) {
   return s;
 }
 
-export function buildMpo() {
-  const rows = readCsvObjects(SRC);
+export function computeMpo(rows) {
   const counts = new Map();
   for (const r of rows) {
     const name = (r.OwnerName || "").trim();
@@ -98,6 +97,13 @@ export function buildMpo() {
       leadName: g.leadName,
     };
   });
+
+  return { mpos, mpoGroups, entries };
+}
+
+export function buildMpo() {
+  const rows = readCsvObjects(SRC);
+  const { mpos, mpoGroups, entries } = computeMpo(rows);
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(
