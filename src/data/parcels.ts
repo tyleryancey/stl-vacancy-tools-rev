@@ -1,6 +1,6 @@
 // Centralized parcel/MPO data access. Loads the generated artifacts once and
 // caches them so the map, search, list view, and MPO panel share one copy.
-import { DATA_URL, META_URL, MPO_URL } from "@/config/constants";
+import { DATA_URL, META_URL, MPO_URL, CONDEMNED_URL } from "@/config/constants";
 import type { Parcel, DataMeta } from "@/types/parcel";
 
 export type ParcelFeature = GeoJSON.Feature<GeoJSON.Point, Parcel>;
@@ -22,14 +22,33 @@ let metaCache: DataMeta | null = null;
 let mpoPromise: Promise<MpoData> | null = null;
 let mpoCache: MpoData | null = null;
 
+interface CondemnedData {
+  scanned: string[];
+  condemned: string[];
+}
+
 export function loadParcels(): Promise<ParcelCollection> {
   if (!parcelsPromise) {
-    parcelsPromise = fetch(DATA_URL)
-      .then((r) => r.json())
-      .then((fc: ParcelCollection) => {
-        parcelsCache = fc;
-        return fc;
-      });
+    parcelsPromise = Promise.all([
+      fetch(DATA_URL).then((r) => r.json() as Promise<ParcelCollection>),
+      // Optional re-scored condemnation status (build-condemned.mjs); absent → keep CSV flag.
+      fetch(CONDEMNED_URL)
+        .then((r) => (r.ok ? (r.json() as Promise<CondemnedData>) : null))
+        .catch(() => null),
+    ]).then(([fc, cond]) => {
+      if (cond?.scanned && cond?.condemned) {
+        const scanned = new Set(cond.scanned);
+        const isCondemned = new Set(cond.condemned);
+        // Only correct parcels we actually re-scored; leave others on the CSV value.
+        for (const f of fc.features) {
+          if (scanned.has(f.properties.ParcelId)) {
+            f.properties.Condemned = isCondemned.has(f.properties.ParcelId);
+          }
+        }
+      }
+      parcelsCache = fc;
+      return fc;
+    });
   }
   return parcelsPromise;
 }

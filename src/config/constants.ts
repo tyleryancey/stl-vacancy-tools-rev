@@ -30,3 +30,4 @@ export const META_URL = asset("data/meta.json");
 export const MPO_URL = asset("data/mpo.json");
 export const STATS_URL = asset("data/stats.json");
 export const TIMELINES_URL = asset("data/timelines.json");
+export const CONDEMNED_URL = asset("data/condemned.json");

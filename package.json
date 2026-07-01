@@ -15,6 +15,7 @@
     "data:assert": "node scripts/assert-data.mjs",
     "data:timelines": "esbuild scripts/build-timelines.mjs --bundle --platform=node --format=esm --packages=external --outfile=data/build/timelines.bundle.mjs && node data/build/timelines.bundle.mjs",
     "data:ingest": "esbuild scripts/ingest/ingest.mjs --bundle --platform=node --format=esm --packages=external --outfile=data/build/ingest.bundle.mjs && node data/build/ingest.bundle.mjs",
+    "data:condemned": "esbuild scripts/build-condemned.mjs --bundle --platform=node --format=esm --packages=external --outfile=data/build/condemned.bundle.mjs && node data/build/condemned.bundle.mjs",
     "tiles": "tippecanoe -o public/data/parcels-poly.pmtiles --force -l poly -Z11 -z16 --coalesce-densest-as-needed --no-tile-size-limit --no-feature-limit data/build/parcels-poly.geojson"
   },
   "dependencies": {

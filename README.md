@@ -32,6 +32,8 @@ npm run dev       # http://localhost:5173
 To refresh the source data from upstream: `npm run data:download && npm run data`.
 Real parcel polygons: `npm run data:geometry && npm run data && npm run tiles` (needs [tippecanoe](https://github.com/felt/tippecanoe)).
 
+Current condemnation status: `npm run data:condemned` re-scores parcels against live city data → `condemned.json`; on load the client patches the CSV's stale `Condemned` flag so the map/filter/list reflect *currently*-condemned parcels (~1,939) rather than the CSV snapshot (2,376). Matches the original site's live count (~1,953). Absent → the CSV flag is used.
+
 ### Independent ingestion (experimental)
 
 `npm run data:ingest` (`scripts/ingest/`) is a research-track proof-of-concept for a *fully independent* clone: it starts from the City of St. Louis **assessor** parcel list (not the published CSV), pulls each parcel's city data from `vcpp`, runs the **same scoring engine** the app uses, and **derives** vacancy from the result — then emits its own CSV-compatible rows and reports fidelity vs the published CSV. On a 180-parcel sample it reproduced the published VacDesc bands 26/26 and vacancy within ±10 for 25/26 overlapping parcels. It samples (`LIMIT`) by default; a full run over all ~135k parcels is heavy and is **not** the default data path (the app consumes the published CSV).

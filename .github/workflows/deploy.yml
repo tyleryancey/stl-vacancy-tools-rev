@@ -77,15 +77,19 @@ jobs:
       - run: npm run data:assert # fails loudly if the polygon layer is empty
       - run: npm run tiles
 
-      # Optional pre-baked sparklines (plan A-iii), published by refresh-timelines.yml.
-      # Absent → the client falls back to the live 48× recompute, so never fail here.
-      - name: Seed pre-baked timelines (optional)
+      # Optional re-scored caches (sparklines + current-condemned set), published
+      # by refresh-timelines.yml. Absent → the client falls back to the CSV flag /
+      # live recompute, so never fail here.
+      - name: Seed re-scored caches (optional)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release download timelines --repo "$GITHUB_REPOSITORY" \
             --pattern timelines.json --output public/data/timelines.json 2>/dev/null \
-            && echo "Seeded pre-baked timelines." || echo "No timelines release — client will live-recompute."
+            && echo "Seeded pre-baked timelines." || echo "No timelines cache — client will live-recompute."
+          gh release download timelines --repo "$GITHUB_REPOSITORY" \
+            --pattern condemned.json --output public/data/condemned.json 2>/dev/null \
+            && echo "Seeded re-scored condemned set." || echo "No condemned cache — map uses the CSV flag."
 
       - name: Build
         env:

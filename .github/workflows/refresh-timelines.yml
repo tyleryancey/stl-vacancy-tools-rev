@@ -36,13 +36,14 @@ jobs:
       - run: npm run data
       - run: npm run data:assert
       - run: npm run data:timelines # fetches vcpp per non-LRA parcel
+      - run: npm run data:condemned # re-scores CSV-condemned parcels for current status
 
-      - name: Publish timelines as a Release asset
+      - name: Publish re-scored caches as Release assets
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release view timelines --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1 \
             || gh release create timelines --repo "$GITHUB_REPOSITORY" \
-                 --title "Score timelines cache" \
-                 --notes "Pre-baked 48-month vacancy sparklines; seed for the deploy workflow."
-          gh release upload timelines public/data/timelines.json --repo "$GITHUB_REPOSITORY" --clobber
+                 --title "Re-scored caches" \
+                 --notes "Pre-baked vacancy sparklines + current-condemned set; seeds for the deploy workflow."
+          gh release upload timelines public/data/timelines.json public/data/condemned.json --repo "$GITHUB_REPOSITORY" --clobber
