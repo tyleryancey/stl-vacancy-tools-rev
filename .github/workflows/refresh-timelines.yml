@@ -22,6 +22,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run data:download # needed before geometry seed + data build
 
       - name: Seed parcel geometry (needed to build the parcel set)
         env:
@@ -32,7 +33,6 @@ jobs:
             --pattern parcel_geometry.json --output data/raw/parcel_geometry.json 2>/dev/null \
             || npm run data:geometry
 
-      - run: npm run data:download
       - run: npm run data
       - run: npm run data:assert
       - run: npm run data:timelines # fetches vcpp per non-LRA parcel

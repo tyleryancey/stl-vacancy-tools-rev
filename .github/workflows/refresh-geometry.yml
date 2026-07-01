@@ -22,6 +22,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run data:download # data:geometry reads the CSV to pick parcels
       - run: npm run data:geometry
       - name: Publish geometry as a Release asset
         env:

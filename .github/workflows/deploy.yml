@@ -53,6 +53,10 @@ jobs:
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
           sudo apt-get install -y libsqlite3-0 || true
 
+      # Download the source CSV first — data:geometry (below) reads it to know
+      # which parcels to keep.
+      - run: npm run data:download
+
       # --- parcel geometry: durable seed from a Release asset (boundaries are
       #     static; refreshed only by refresh-geometry.yml). Fallback: fetch live. ---
       - name: Seed parcel geometry
@@ -69,7 +73,6 @@ jobs:
           fi
 
       # --- data pipeline ---
-      - run: npm run data:download
       - run: npm run data
       - run: npm run data:assert # fails loudly if the polygon layer is empty
       - run: npm run tiles
