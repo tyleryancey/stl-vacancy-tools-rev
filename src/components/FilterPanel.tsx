@@ -73,7 +73,10 @@ const TAX_YRS_OPTIONS: { value: number; label: string }[] = [
 ];
 
 export function FilterPanel() {
-  const [collapsed, setCollapsed] = useState(false);
+  // Start collapsed on small screens so the panel doesn't cover the map.
+  const [collapsed, setCollapsed] = useState(
+    () => typeof window !== "undefined" && window.matchMedia("(max-width: 640px)").matches
+  );
 
   const dataReady = useStore((s) => s.dataReady);
   const filters = useStore((s) => s.filters);

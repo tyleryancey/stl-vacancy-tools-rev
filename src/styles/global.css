@@ -463,10 +463,106 @@ a:hover { color: var(--link-hover); }
 .trend-spark polyline { fill: none; stroke: #5561a0; stroke-width: 1.5; }
 .trend-meta { font-size: 11px; color: var(--muted); }
 
-@media (max-width: 540px) {
+/* ============================ Responsive / mobile (E) ============================ */
+@media (max-width: 640px) {
+  /* Header: let it wrap to two rows instead of overflowing; the flex column
+     layout reflows .app-main automatically. */
+  .app-header {
+    height: auto;
+    min-height: var(--header-h);
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    padding: 5px 10px;
+  }
+  .brand-title { font-size: 15px; flex-basis: 100%; }
+  .view-nav { gap: 3px; }
+  .view-nav-btn { padding: 4px 10px; }
+  .header-nav { gap: 8px; }
+  .header-link { display: none; } /* drop the external link to save room */
+
+  /* Search: nearly full-width, just below the (possibly two-row) header */
+  .search-box { width: 92vw; top: 8px; }
+
+  /* Right-docked panels become bottom sheets */
+  .side-panel,
+  .mpo-panel {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 62vh;
+    max-height: 72vh;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -2px 14px rgba(0, 0, 0, 0.22);
+    animation: slideUp 0.2s ease-out;
+  }
+
+  /* Filter panel: narrower; starts collapsed (component default) */
+  .filter-panel { width: min(220px, 68vw); top: 8px; left: 8px; max-height: 70%; }
+
   .legend { display: none; }
-  .side-panel { width: 100%; }
-  .filter-panel { width: 210px; }
-  .stat-bar-row { grid-template-columns: 120px 1fr 48px; }
+
+  /* Stats + tables */
+  .stat-bar-row { grid-template-columns: 110px 1fr 44px; }
+  .stats-page { padding: 16px 12px; }
+  .list-table th,
+  .list-table td { padding: 7px 8px; }
+  .cases-toolbar { flex-wrap: wrap; }
+  .cases-sample-tag { margin-left: 0; }
   .login-modal { width: 92vw; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* ============================ Print (E) ============================ */
+@media print {
+  /* Hide the interactive chrome — the map is a WebGL canvas that can't print. */
+  .app-header,
+  .map-container,
+  .maplibregl-control-container,
+  .filter-panel,
+  .search-box,
+  .legend,
+  .panel-close,
+  .list-toolbar,
+  .cases-toolbar,
+  .timeline-toggle,
+  .mpo-heatmap-toggle,
+  .panel-link,
+  .loading {
+    display: none !important;
+  }
+
+  html, body, #root, .app, .app-main { position: static; height: auto; overflow: visible; background: #fff; color: #000; }
+
+  /* Print whichever content view is active, as static full-width black-on-white. */
+  .side-panel,
+  .mpo-panel,
+  .list-view,
+  .stats-page,
+  .cases-view {
+    position: static !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    animation: none !important;
+    padding: 0 !important;
+  }
+
+  /* Expand any collapsed event lists / tables for print */
+  .event-timeline .timeline-table,
+  .list-table-wrap { overflow: visible !important; }
+  .list-table th { position: static !important; }
+
+  a { color: #000; text-decoration: none; }
+  .badge { border: 1px solid #000; color: #000 !important; background: #fff !important; }
 }
