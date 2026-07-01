@@ -38,8 +38,8 @@ const DEFS: Def[] = [
 
 export const LSEM_LAYER_IDS = DEFS.flatMap((d) => [d.base, d.base + "_fill"]);
 
-export function addLsemLayers(map: MlMap): void {
-  // circles (low zoom)
+// Circles only (low zoom) — cheap, source is the already-loaded points GeoJSON.
+export function addLsemCircleLayers(map: MlMap): void {
   for (const d of DEFS) {
     map.addLayer({
       id: d.base,
@@ -49,7 +49,12 @@ export function addLsemLayers(map: MlMap): void {
       paint: { "circle-radius": radius, "circle-color": d.color, "circle-opacity": circleOpacity },
     });
   }
-  // polygon fills (high zoom)
+}
+
+// Polygon fills (high zoom) — assumes PARCELS_POLY_SOURCE is already registered.
+// Callers add this lazily (see POLY_LOAD_ZOOM) so the ~1.2MB polygon tileset
+// isn't fetched until the user actually zooms in close to the crossfade.
+export function addLsemFillLayers(map: MlMap): void {
   for (const d of DEFS) {
     map.addLayer({
       id: d.base + "_fill",

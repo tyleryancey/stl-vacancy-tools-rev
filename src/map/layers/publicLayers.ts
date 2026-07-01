@@ -45,10 +45,18 @@ export const PUBLIC_FILTER_TARGETS: { id: string; base: FilterSpecification }[] 
   { id: "public_bldg_fill", base: BUILDING_FILTER },
 ];
 
-export function addPublicLayers(map: MlMap): void {
+// Circles only (low zoom) — cheap, source is the already-loaded points GeoJSON.
+export function addPublicCircleLayers(map: MlMap): void {
   const reduced = prefersReducedMotion();
   map.addLayer({ id: "public_lot", type: "circle", source: PARCELS_SOURCE, filter: LOT_FILTER, paint: circlePaint(publicLotColor, reduced) });
   map.addLayer({ id: "public_bldg", type: "circle", source: PARCELS_SOURCE, filter: BUILDING_FILTER, paint: circlePaint(publicBuildingColor, reduced) });
+}
+
+// Polygon fills (high zoom) — assumes PARCELS_POLY_SOURCE is already registered.
+// Callers add this lazily (see POLY_LOAD_ZOOM) so the ~1.2MB polygon tileset
+// isn't fetched until the user actually zooms in close to the crossfade.
+export function addPublicFillLayers(map: MlMap): void {
+  const reduced = prefersReducedMotion();
   map.addLayer({ id: "public_lot_fill", type: "fill", source: PARCELS_POLY_SOURCE, "source-layer": POLY_SOURCE_LAYER, filter: LOT_FILTER, paint: fillPaint(publicLotColor, reduced) });
   map.addLayer({ id: "public_bldg_fill", type: "fill", source: PARCELS_POLY_SOURCE, "source-layer": POLY_SOURCE_LAYER, filter: BUILDING_FILTER, paint: fillPaint(publicBuildingColor, reduced) });
 }

@@ -12,6 +12,16 @@ export const MAP_STYLE =
 // Zoom at which the circle map should give way to polygon fills (Phase 1).
 export const FILL_CROSSFADE_ZOOM = 13;
 
+// The polygon PMTiles source + fill layers are registered lazily, once the
+// user zooms in close to the crossfade — not on initial map load. That
+// source's tiles are ~1.2MB even at the default city-wide zoom (where the
+// fill layers are fully transparent anyway), so deferring it noticeably cuts
+// first-load payload for the common case of never zooming in that far. Must
+// stay above STL_DEFAULT_ZOOM (12.5) so it doesn't fire immediately on load,
+// and below where the crossfade opacity blend actually starts (12.9) so the
+// tiles have arrived by the time they need to become visible.
+export const POLY_LOAD_ZOOM = 12.7;
+
 export type Brand = "public" | "lsem";
 
 export const PARCELS_SOURCE = "parcels"; // centroid points (circles, low zoom)

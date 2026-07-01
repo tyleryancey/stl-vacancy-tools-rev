@@ -2,14 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import maplibregl, { Map as MlMap, Popup } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { Protocol } from "pmtiles";
-import { MAP_STYLE, STL_CENTER, STL_DEFAULT_ZOOM, PARCELS_SOURCE, PARCELS_POLY_SOURCE, POLY_PMTILES_PATH } from "@/config/constants";
+import { MAP_STYLE, STL_CENTER, STL_DEFAULT_ZOOM, PARCELS_SOURCE, PARCELS_POLY_SOURCE, POLY_PMTILES_PATH, POLY_LOAD_ZOOM } from "@/config/constants";
 
 // Register the pmtiles:// protocol once so MapLibre can read the polygon vector
 // tiles via HTTP range requests (only visible tiles load, not the full 18MB).
 const pmtilesProtocol = new Protocol();
 maplibregl.addProtocol("pmtiles", pmtilesProtocol.tile);
-import { addPublicLayers, removePublicLayers, applyPalette, PUBLIC_LAYER_IDS } from "@/map/layers/publicLayers";
-import { addLsemLayers, removeLsemLayers, LSEM_LAYER_IDS } from "@/map/layers/lsemLayers";
+import { addPublicCircleLayers, addPublicFillLayers, removePublicLayers, applyPalette, PUBLIC_LAYER_IDS } from "@/map/layers/publicLayers";
+import { addLsemCircleLayers, addLsemFillLayers, removeLsemLayers, LSEM_LAYER_IDS } from "@/map/layers/lsemLayers";
 import { applyPublicFilters } from "@/map/applyFilters";
 import { setNeighborhoodHighlight, setCondemnedOverlay } from "@/map/layers/highlights";
 import { setCaseMarkers, clearCaseMarkers } from "@/map/layers/caseMarkers";
@@ -23,6 +23,7 @@ const CLICKABLE_LAYERS = [...PUBLIC_LAYER_IDS, ...LSEM_LAYER_IDS] as string[];
 export function MapView() {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MlMap | null>(null);
+  const polyLoadedRef = useRef(false);
   const [loaded, setLoaded] = useState(false);
 
   const filters = useStore((s) => s.filters);
@@ -36,6 +37,10 @@ export function MapView() {
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
+    // Kick off the parcel fetch immediately, in parallel with the map's own
+    // style/sprite/glyph network chain, instead of waiting for map "load".
+    const parcelsPromise = loadParcels();
+
     const map = new maplibregl.Map({
       container: containerRef.current,
       style: MAP_STYLE,
@@ -52,18 +57,44 @@ export function MapView() {
 
     const hoverPopup = new Popup({ closeButton: false, closeOnClick: false, className: "address-popup" });
 
-    map.on("load", async () => {
-      const geojson = await loadParcels();
-      map.addSource(PARCELS_SOURCE, { type: "geojson", data: geojson });
+    // The polygon PMTiles source + fill layers are ~1.2MB even though they're
+    // fully transparent below the crossfade zoom (MapLibre loads a layer's
+    // tiles regardless of its paint opacity). Defer registering them until the
+    // user is actually within a zoom level of needing them.
+    function maybeLoadPolyLayers() {
+      if (polyLoadedRef.current || map.getZoom() < POLY_LOAD_ZOOM) return;
+      // A zoom event can fire before the style finishes loading; bail without
+      // setting the ref so the explicit call in the "load" handler retries.
+      if (!map.isStyleLoaded()) return;
+      polyLoadedRef.current = true;
       map.addSource(PARCELS_POLY_SOURCE, {
         type: "vector",
         url: `pmtiles://${window.location.origin}${POLY_PMTILES_PATH}`,
       });
-      if (useStore.getState().brand === "lsem") addLsemLayers(map);
-      else addPublicLayers(map);
+      const s = useStore.getState();
+      if (s.brand === "lsem") {
+        addLsemFillLayers(map);
+      } else {
+        addPublicFillLayers(map);
+        applyPalette(map, s.colorblind);
+        applyPublicFilters(map, { filters: s.filters, certaintyVisible: s.certaintyVisible });
+      }
+    }
+    map.on("zoom", maybeLoadPolyLayers);
+    // isStyleLoaded() can be transiently false right after a zoom (new base-map
+    // tiles loading) even past the threshold; "idle" fires once that settles,
+    // so it's a reliable backstop for retrying (cheap no-op once flag is set).
+    map.on("idle", maybeLoadPolyLayers);
+
+    map.on("load", async () => {
+      const geojson = await parcelsPromise;
+      map.addSource(PARCELS_SOURCE, { type: "geojson", data: geojson });
+      if (useStore.getState().brand === "lsem") addLsemCircleLayers(map);
+      else addPublicCircleLayers(map);
       applyPalette(map, useStore.getState().colorblind); // honor persisted CVD setting
       setLoaded(true);
       useStore.getState().setDataReady(true);
+      maybeLoadPolyLayers(); // covers loading already zoomed in (e.g. a deeplink)
 
       // Bind click/hover for every parcel layer (public + LSEM); MapLibre fires
       // these only for layers that currently exist.
@@ -99,10 +130,16 @@ export function MapView() {
     if (!map || !loaded) return;
     if (brand === "lsem") {
       removePublicLayers(map);
-      if (!map.getLayer(LSEM_LAYER_IDS[0])) addLsemLayers(map);
+      if (!map.getLayer(LSEM_LAYER_IDS[0])) {
+        addLsemCircleLayers(map);
+        if (polyLoadedRef.current) addLsemFillLayers(map);
+      }
     } else {
       removeLsemLayers(map);
-      if (!map.getLayer("public_lot")) addPublicLayers(map);
+      if (!map.getLayer("public_lot")) {
+        addPublicCircleLayers(map);
+        if (polyLoadedRef.current) addPublicFillLayers(map);
+      }
       applyPalette(map, useStore.getState().colorblind);
       applyPublicFilters(map, { filters: useStore.getState().filters, certaintyVisible: useStore.getState().certaintyVisible });
     }
