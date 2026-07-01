@@ -89,6 +89,8 @@ a:hover { color: var(--link-hover); }
   display: flex; align-items: center; gap: 6px; cursor: pointer;
   margin-top: 9px; padding-top: 8px; border-top: 1px solid #eee; font-size: 11px; color: var(--muted);
 }
+/* WCAG target-size: default checkbox renders at 13x13, under the 24x24 minimum. */
+.legend-cvd input[type="checkbox"] { width: 24px; height: 24px; }
 
 /* Side panel */
 .side-panel {
