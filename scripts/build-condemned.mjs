@@ -50,11 +50,17 @@ async function worker(queue) {
     const data = await fetchVcpp(p.ParcelId);
     done++;
     if (!data) { fail++; continue; }
-    scanned.push(p.ParcelId);
-    const r = scoreAndTimeline(data, {
-      Type: p.Type, OwnerName: p.OwnerName, Handle: p.Handle, ParcelId: p.ParcelId, IsLra: p.IsLra, IsLcra: p.IsLcra,
-    });
-    if (r.condemned) condemned.push(p.ParcelId);
+    try {
+      const r = scoreAndTimeline(data, {
+        Type: p.Type, OwnerName: p.OwnerName, Handle: p.Handle, ParcelId: p.ParcelId, IsLra: p.IsLra, IsLcra: p.IsLcra,
+      });
+      scanned.push(p.ParcelId); // only count as scanned if scoring succeeded
+      if (r.condemned) condemned.push(p.ParcelId);
+    } catch (e) {
+      // A single malformed vcpp payload must not abort the whole batch.
+      fail++;
+      if (fail <= 5) console.warn(`  scoring failed for ${p.ParcelId}: ${e.message}`);
+    }
     if (done % 250 === 0) console.log(`  ${done}/${candidates.length} (${condemned.length} condemned, ${fail} fetch-fail)`);
   }
 }

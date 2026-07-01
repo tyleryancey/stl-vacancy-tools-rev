@@ -3,13 +3,17 @@
 import type { Parcel } from "@/types/parcel";
 
 export function download(filename: string, content: string, mime: string): void {
-  const uri = `data:${mime};charset=utf-8,` + encodeURIComponent(content);
+  // Blob + object URL (not a data: URI) so large exports don't hit the browser's
+  // data-URI size cap (~2MB in Chrome) and silently fail.
+  const blob = new Blob([content], { type: `${mime};charset=utf-8` });
+  const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
-  a.href = uri;
+  a.href = url;
   a.download = filename;
   document.body.appendChild(a);
   a.click();
   a.remove();
+  URL.revokeObjectURL(url);
 }
 
 // FeatureCollection of parcel centroids with full properties.

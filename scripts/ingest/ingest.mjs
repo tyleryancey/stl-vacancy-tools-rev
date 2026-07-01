@@ -98,23 +98,31 @@ async function worker(queue) {
     const { a, c } = queue.shift();
     const data = await fetchVcpp(a.ParcelId);
     if (!data) { failed++; continue; }
-    const type = deriveType(a);
-    const r = scoreAndTimeline(data, { Type: type, OwnerName: a.OwnerName, Handle: a.Handle, ParcelId: a.ParcelId });
-    scored++;
-    // DERIVE vacancy from the engine output (the independence step)
-    const isVacant = r.vacant || r.vacancy.verbal !== "Not Vacant";
-    if (!isVacant) continue;
-    vacant++;
-    rows.push({
-      ParcelId: a.ParcelId, Handle: a.Handle, StAddrNum: a.LowAddrNum,
-      StNameFull: [a.StPreDir, a.StName, a.StType].filter(Boolean).join(" "),
-      Zip: a.ZIP, Ward20: a.Ward20, NhdName: a.Nbrhd,
-      Lat: c?.y?.toFixed(5) ?? "", Lng: c?.x?.toFixed(5) ?? "",
-      Type: type, OwnerName: a.OwnerName, OwnerState: a.OwnerState, OwnerZip: a.OwnerZIP,
-      Vacancy: r.vacancy.total, VacancyCat: r.vacancy.verbal, Burden: r.burden.total, BurdenCat: r.burden.verbal,
-      IsLRA: r.vacant && /^(LRA|LCRA)/i.test(a.OwnerName || "") ? "true" : "",
-      TaxYrsDel: r.taxYrsDel, Condemned: r.condemned ? "true" : "",
-    });
+    // LRA/LCRA ownership is a property of the owner, independent of vacancy status.
+    const isLra = /^(LRA|LCRA)/i.test(a.OwnerName || "");
+    try {
+      const type = deriveType(a);
+      // Pass IsLra so the scorer applies the LRA confirmed-vacant/burden logic.
+      const r = scoreAndTimeline(data, { Type: type, OwnerName: a.OwnerName, Handle: a.Handle, ParcelId: a.ParcelId, IsLra: isLra });
+      scored++;
+      // DERIVE vacancy from the engine output (the independence step)
+      const isVacant = r.vacant || r.vacancy.verbal !== "Not Vacant";
+      if (!isVacant) continue;
+      vacant++;
+      rows.push({
+        ParcelId: a.ParcelId, Handle: a.Handle, StAddrNum: a.LowAddrNum,
+        StNameFull: [a.StPreDir, a.StName, a.StType].filter(Boolean).join(" "),
+        Zip: a.ZIP, Ward20: a.Ward20, NhdName: a.Nbrhd,
+        Lat: c?.y?.toFixed(5) ?? "", Lng: c?.x?.toFixed(5) ?? "",
+        Type: type, OwnerName: a.OwnerName, OwnerState: a.OwnerState, OwnerZip: a.OwnerZIP,
+        Vacancy: r.vacancy.total, VacancyCat: r.vacancy.verbal, Burden: r.burden.total, BurdenCat: r.burden.verbal,
+        IsLRA: isLra ? "true" : "",
+        TaxYrsDel: r.taxYrsDel, Condemned: r.condemned ? "true" : "",
+      });
+    } catch (e) {
+      failed++;
+      if (failed <= 5) console.warn(`  scoring failed for ${a.ParcelId}: ${e.message}`);
+    }
   }
 }
 const queue = [...sample]; // one shared queue; workers drain it cooperatively

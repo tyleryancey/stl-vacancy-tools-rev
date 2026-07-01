@@ -47,8 +47,10 @@ export function applyDeepLink(): void {
   const v = params.get("v") as ViewMode | null;
   if (v && ["map", "list", "stats", "cases"].includes(v)) s.setView(v);
   else {
-    if (params.has("list")) s.setView("list");
-    if (params.has("stats")) s.setView("stats");
+    // Legacy valueless ?list / ?stats view switch — must NOT trigger on the new
+    // `list=type:value` param (which only carries the list query, not the view).
+    if (params.get("list") === "") s.setView("list");
+    if (params.get("stats") === "") s.setView("stats");
   }
 
   // filters
@@ -66,7 +68,9 @@ export function applyDeepLink(): void {
 
   const cert = params.get("cert");
   if (cert !== null) {
-    const idxs = new Set(cert.split(",").map(Number));
+    // filter out "" first — Number("") is 0, which would wrongly re-enable tier 0
+    // for an all-hidden (cert=) permalink.
+    const idxs = new Set(cert.split(",").filter((x) => x !== "").map(Number));
     const cv = { ...s.certaintyVisible };
     ALL_VAC_DESC.forEach((d, i) => (cv[d] = idxs.has(i)));
     s.setCertaintyVisible(cv);
@@ -75,7 +79,12 @@ export function applyDeepLink(): void {
   const mpo = params.get("mpo");
   if (mpo) s.openMpoPanel(mpo);
   const nbrhd = params.get("nbrhd");
-  if (nbrhd) s.setHighlightedNeighborhood(nbrhd);
+  if (nbrhd) {
+    s.setHighlightedNeighborhood(nbrhd);
+    // Also seed the list query so the List tab shows this neighborhood (an
+    // explicit list= param below overrides this if present).
+    s.setListQuery({ type: "neighborhood", value: nbrhd });
+  }
   const list = params.get("list");
   if (list) {
     const i = list.indexOf(":");
@@ -97,6 +106,10 @@ export function applyDeepLink(): void {
   const sel = params.get("sel") || window.location.hash.replace(/^#/, "").trim();
   if (sel) {
     const parcel = findByParcelId(sel, getParcels());
-    if (parcel) selectAndFly(parcel);
+    if (parcel) {
+      selectAndFly(parcel); // NB: this forces view=map
+      // Restore the shared view if the permalink asked for a non-map one.
+      if (v && v !== "map" && ["list", "stats", "cases"].includes(v)) s.setView(v);
+    }
   }
 }

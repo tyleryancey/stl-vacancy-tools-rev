@@ -16,12 +16,13 @@ export function ViewNav() {
     const url = buildPermalink();
     try {
       await navigator.clipboard.writeText(url);
+      setCopied(true); // only claim success when the write actually succeeded
+      window.setTimeout(() => setCopied(false), 1500);
     } catch {
-      // clipboard may be blocked; fall back to updating the address bar
+      // Clipboard blocked/unavailable — surface the link in the address bar so
+      // the user can copy it manually (don't show a false "Copied!").
       window.history.replaceState(null, "", url);
     }
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1500);
   };
 
   const views: { id: ViewMode; label: string }[] = [

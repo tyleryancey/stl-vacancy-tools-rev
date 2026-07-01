@@ -88,17 +88,22 @@ function NeighborhoodTrends() {
     let cancelled = false;
     Promise.all([loadParcels(), loadTimelines()]).then(([fc, tl]) => {
       if (cancelled) return;
-      const ids = Object.keys(tl);
-      if (ids.length === 0) return;
-      const nhdById = new Map(fc.features.map((f) => [f.properties.ParcelId, f.properties.NhdName]));
+      // Hide the section entirely when no timelines have been pre-baked — a
+      // trend built purely from flat-filled values would be uninformative.
+      if (Object.keys(tl).length === 0) return;
       const acc = new Map<string, { sum: number[]; n: number }>();
-      for (const id of ids) {
-        const nhd = nhdById.get(id);
-        const arr = tl[id];
-        if (!nhd || !arr || arr.length !== 48) continue;
-        let e = acc.get(nhd);
-        if (!e) { e = { sum: new Array(48).fill(0), n: 0 }; acc.set(nhd, e); }
-        for (let i = 0; i < 48; i++) e.sum[i] += arr[i];
+      // Average over EVERY vacant parcel in the neighborhood: use its stored
+      // (varying) 48-month series when present, else a flat series at its current
+      // score. Aggregating only over parcels-that-changed would exclude the
+      // stably-vacant majority and bias the trend low.
+      for (const f of fc.features) {
+        const p = f.properties;
+        if (!p.NhdName) continue;
+        const series = tl[p.ParcelId];
+        const hasSeries = Array.isArray(series) && series.length === 48;
+        let e = acc.get(p.NhdName);
+        if (!e) { e = { sum: new Array(48).fill(0), n: 0 }; acc.set(p.NhdName, e); }
+        for (let i = 0; i < 48; i++) e.sum[i] += hasSeries ? series[i] : p.Vacancy;
         e.n++;
       }
       const out = [...acc.entries()]

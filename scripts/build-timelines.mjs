@@ -54,12 +54,18 @@ async function worker(queue) {
     done++;
     if (!data) { failed++; }
     else {
-      const tl = vacancyTimeline(data, {
-        Type: p.Type, OwnerName: p.OwnerName, Handle: p.Handle, ParcelId: p.ParcelId, IsLra: p.IsLra, IsLcra: p.IsLcra,
-      });
-      // Only store timelines that actually vary — flat ones render as "Unchanged"
-      // client-side without needing the data.
-      if (!tl.every((v) => v === tl[tl.length - 1])) { out[p.ParcelId] = tl; stored++; }
+      try {
+        const tl = vacancyTimeline(data, {
+          Type: p.Type, OwnerName: p.OwnerName, Handle: p.Handle, ParcelId: p.ParcelId, IsLra: p.IsLra, IsLcra: p.IsLcra,
+        });
+        // Only store timelines that actually vary — flat ones render as "Unchanged"
+        // client-side without needing the data.
+        if (!tl.every((v) => v === tl[tl.length - 1])) { out[p.ParcelId] = tl; stored++; }
+      } catch (e) {
+        // A single malformed vcpp payload must not abort the whole batch.
+        failed++;
+        if (failed <= 5) console.warn(`  scoring failed for ${p.ParcelId}: ${e.message}`);
+      }
     }
     if (done % 250 === 0) console.log(`  ${done}/${targets.length} (${stored} stored, ${failed} failed)`);
   }

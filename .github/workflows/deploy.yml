@@ -40,12 +40,13 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.local/bin/tippecanoe
-          key: tippecanoe-felt-v2.79
+          key: tippecanoe-felt-2.79.0
       - name: Build tippecanoe (on cache miss)
         if: steps.tippecanoe-cache.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update && sudo apt-get install -y build-essential libsqlite3-dev zlib1g-dev
-          git clone --depth 1 https://github.com/felt/tippecanoe /tmp/tippecanoe
+          # Pin the tag so the built binary actually matches the cache key label.
+          git clone --depth 1 --branch 2.79.0 https://github.com/felt/tippecanoe /tmp/tippecanoe
           make -C /tmp/tippecanoe -j2
           mkdir -p ~/.local/bin && cp /tmp/tippecanoe/tippecanoe ~/.local/bin/
       - name: Add tippecanoe to PATH + ensure runtime libs

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useStore } from "@/state/store";
 import { fetchCityData } from "@/scoring/cityData";
 import { scoreAndTimeline, vacancyTimeline, type ScoreResult, type ScoreCategory, type Contribution, type TimelineEvent } from "@/scoring/scoreAndTimeline";
-import { getPrebakedTimeline } from "@/data/timelines";
+import { loadTimelines, getPrebakedTimeline } from "@/data/timelines";
 import { numberWithCommas } from "@/lib/format";
 import type { Parcel } from "@/types/parcel";
 
@@ -134,7 +134,9 @@ export function ScorePanel({ parcel }: { parcel: Parcel }) {
   useEffect(() => {
     let cancelled = false;
     setState({ status: "loading" });
-    fetchCityData(parcel.ParcelId).then((data) => {
+    // Load the (optional) pre-baked timelines in parallel so getPrebakedTimeline
+    // below reflects it; loadTimelines is memoized so this fetches at most once.
+    Promise.all([fetchCityData(parcel.ParcelId), loadTimelines()]).then(([data]) => {
       if (cancelled) return;
       if (!data) {
         setState({ status: "error" });

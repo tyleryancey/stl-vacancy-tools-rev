@@ -12,7 +12,6 @@ import { LoginModal } from "@/components/LoginModal";
 import { ViewNav } from "@/components/ViewNav";
 import { useStore } from "@/state/store";
 import { loadMpo } from "@/data/parcels";
-import { loadTimelines } from "@/data/timelines";
 import { applyDeepLink } from "@/lib/deeplink";
 
 function LsemLegend() {
@@ -41,7 +40,8 @@ export default function App() {
 
   useEffect(() => {
     loadMpo();
-    loadTimelines(); // optional pre-baked sparklines; no-op if absent
+    // timelines.json is lazy-loaded by ScorePanel / StatsPage on first use, so
+    // embed and map-only sessions never fetch it.
     if (!EMBED) useStore.getState().initAuth(); // embed is public-only
   }, []);
 
