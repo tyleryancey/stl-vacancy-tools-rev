@@ -32,6 +32,34 @@ npm run dev       # http://localhost:5173
 To refresh the source data from upstream: `npm run data:download && npm run data`.
 Real parcel polygons: `npm run data:geometry && npm run data && npm run tiles` (needs [tippecanoe](https://github.com/felt/tippecanoe)).
 
+New here? Start with **[CONTRIBUTING.md](./CONTRIBUTING.md)**.
+
+## Documentation
+
+| Doc | What |
+|---|---|
+| **[CONTRIBUTING.md](./CONTRIBUTING.md)** | Setup, dev loop, testing, project layout, conventions & gotchas |
+| **[docs/DATA-PIPELINE.md](./docs/DATA-PIPELINE.md)** | Sources → scripts → artifacts, the slim backbone, live scoring vs. snapshots, refresh cadence |
+| **[docs/DEPLOY.md](./docs/DEPLOY.md)** | GitHub Pages runbook, Release-asset seeding, base-path/gzip gotchas, resolved-failure history |
+| **[docs/adr/](./docs/adr/)** | Architecture Decision Records (MapLibre, PMTiles/no-point-tiling, mock provider, ingestion, testing) |
+| **[REVERSE-ENGINEERING.md](./REVERSE-ENGINEERING.md)** | The full technical spec of the original that this build follows |
+
+## Testing & CI
+
+Two layers, both gated on every push/PR by **`.github/workflows/ci.yml`**:
+
+```bash
+npm run typecheck   # tsc --noEmit (strict)
+npm test            # Vitest: scorer (vs. real checked-in vcpp fixtures) + data pipeline
+npm run test:e2e    # Playwright + axe-core: user flows, deep-links, keyboard/ARIA, a11y
+```
+
+Unit tests never touch the network; the scorer is covered by characterization tests
+against real `vcpp` payloads in `src/scoring/__fixtures__/`. The e2e suite runs against a
+hermetic 11-parcel fixture dataset (`e2e/fixtures/`) — no network, no real pipeline.
+Accessibility target is **Lighthouse a11y 100** (mobile + desktop). See
+[ADR 0005](./docs/adr/0005-testing-strategy.md).
+
 Current condemnation status: `npm run data:condemned` re-scores parcels against live city data → `condemned.json`; on load the client patches the CSV's stale `Condemned` flag so the map/filter/list reflect *currently*-condemned parcels (~1,939) rather than the CSV snapshot (2,376). Matches the original site's live count (~1,953). Absent → the CSV flag is used.
 
 ### Independent ingestion (experimental)
@@ -71,6 +99,14 @@ For a GitHub *project* page (`user.github.io/<repo>/`), set the repo variable `V
   - [x] **4a — real parcel polygons + crossfade**: sourced parcel geometry from the City of St. Louis assessor ArcGIS service (joined by `Handle`, 98.6% coverage), rendered as polygon fills that crossfade from the circle dot-map at z≈13 (faithful to §5.3) — both public and LSEM layer sets.
   - [x] **4b — PMTiles vector tiles**: the 18 MB polygon GeoJSON is baked into `parcels-poly.pmtiles` (tippecanoe) and served via the `pmtiles://` protocol — MapLibre loads only the visible tiles by HTTP range request (~43 KB for a street-level view instead of 18 MB upfront). Run `npm run tiles` to (re)build (requires `tippecanoe`).
   - [x] **4c — historical sparkline + percentile + parity check**: the 48-month "Indicators Over Time" sparkline is reproduced by re-running the scorer via `backDate` per month (`vacancyTimeline`); a "Compared to all vacant parcels" percentile ranks Vacancy/Burden against the dataset (`src/data/percentile.ts`). Reviewed the original's catalogued latent bugs (§13) — the clean rebuild does not reproduce them. Verified visual + feature parity against the live original (`docs/screenshots/parity_live_original.png`).
+
+### Post-rebuild roadmap
+
+- [x] **A + C** — data independence & features beyond the original: GitHub Pages + Actions deploy/cron, pre-baked score snapshots, owner-portfolio heatmap, neighborhood trend charts, GeoJSON export, permalinks + `?embed=1` widget, and the experimental independent-ingestion track. (See the deploy + pipeline docs.)
+- [x] **B — quality & confidence**: **Vitest** unit tests (scorer vs. checked-in `vcpp` fixtures + the data pipeline) and a **Playwright + axe-core** e2e suite (flows, deep-link round-trips, keyboard/ARIA), both gated in CI. Accessibility brought to **Lighthouse 100** on mobile *and* desktop (the a11y pass caught real WCAG contrast/target-size defects). Performance: the polygon PMTiles source is loaded lazily (only when zoomed in) and the points backbone was slimmed to the 25 fields the client reads (−21%); point-tiling the backbone was measured and rejected (worse at city-wide zoom — see [ADR 0002](./docs/adr/0002-pmtiles-and-no-point-tiling.md)).
+- [x] **E — responsive/print**: mobile bottom-sheet panels, collapsible filter drawer, and a print stylesheet.
+- [x] **D — docs**: this docset — [CONTRIBUTING](./CONTRIBUTING.md), [data-pipeline](./docs/DATA-PIPELINE.md), [deploy runbook](./docs/DEPLOY.md), and [ADRs](./docs/adr/).
+- [ ] **G — real backend**: a Firebase `DataProvider` against a documented schema with **server-enforced** case visibility (see [ADR 0003](./docs/adr/0003-swappable-dataprovider-mock-default.md)), Cloud-Function enrichments, and the bulk case-upload tool.
 
 ### Demo logins (mock provider, any password)
 
